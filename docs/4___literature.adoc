@@ -1,0 +1,5 @@
+[bibliography]
+== References
+
+- [[[PW13]]] Preston-Werner, T. (2013): **Semantic Versioning 2.0.0**.  https://semver.org/spec/v2.0.0.html
+

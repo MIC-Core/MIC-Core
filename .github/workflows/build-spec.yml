@@ -1,0 +1,51 @@
+name: Build Spec
+
+on:
+  push:
+    branches-ignore:
+      - 'temp/*'
+    tags:
+      - '*'
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  
+  generate-html:
+    runs-on: ubuntu-20.04
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        submodules: recursive
+
+    - name: Generate revnumber
+      run: |
+        [[ $GITHUB_REF_TYPE == "tag" ]] && REVNUMBER=${GITHUB_REF:11} || REVNUMBER=${GITHUB_SHA:0:7}
+        echo GITHUB_SHA:      $GITHUB_SHA
+        echo GITHUB_REF_TYPE: $GITHUB_REF_TYPE
+        echo GITHUB_REF:      $GITHUB_REF
+        echo REVNUMBER:       $REVNUMBER
+        echo "REVNUMBER=$REVNUMBER" >> $GITHUB_ENV
+
+    - name: Create build directory
+      run: |
+        mkdir -p build/images
+
+    - name: Generate HTML
+      uses: avattathil/asciidoctor-action@master
+      with:
+        program: "asciidoctor --base-dir . --destination-dir=build --backend=html5 --attribute=revnumber=${{ env.REVNUMBER }} --attribute=revdate=$(date +%F) docs/index.adoc"
+
+    - name: Copy resources
+      run: |
+        cp docs/images/* build/images
+
+    - name: Create ZIP archive
+      uses: actions/upload-artifact@v3
+      with:
+        name: MIC-Core-Specification
+        path: build/*
+        if-no-files-found: error

@@ -1,0 +1,16 @@
+== Introduction
+
+=== What is MIC Core [[what-is-mic-core]]
+
+=== Overview
+
+=== Properties and Guiding Ideas
+
+=== How to Read This Document
+
+Conventions used in this document:
+
+* Non-normative text is given in square brackets in italic font: _[Especially examples are defined in this style.]_
+
+* The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in https://tools.ietf.org/html/rfc2119[RFC 2119] (regardless of formatting and capitalization).
+

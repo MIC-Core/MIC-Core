@@ -1,0 +1,3 @@
+== Conformance [[mic-core-conformance]]
+
+TODO: Description of what conformance to this specification means.

@@ -1,0 +1,26 @@
+= MIC Core Specification
+:sectnums:
+:sectnumlevels: 5
+:sectlinks:
+:toc: left
+:toc-title: Contents
+:toclevels: 5
+:xrefstyle: short
+:docinfo: shared
+:docinfodir: docs
+:stylesheet: docs/mic-core-spec.css
+:stem: latexmath
+:source-highlighter: highlightjs
+:nofooter:
+:icons: font
+
+include::docs/0___preamble.adoc[]
+
+include::docs/1___overview.adoc[]
+
+include::docs/2___core_attributes.adoc[]
+
+include::docs/3___conformance.adoc[]
+
+include::docs/4___literature.adoc[]
+

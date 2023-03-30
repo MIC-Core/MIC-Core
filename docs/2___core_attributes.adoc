@@ -1,0 +1,3 @@
+== MIC Core Attributes [[mic-core-attributes]]
+
+TODO: Description of all core attributes in long form, tabular summary will be auto-generated.
