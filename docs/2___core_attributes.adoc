@@ -32,6 +32,7 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 *Cardinality:* 0..1 (recommended)
 
 *Value entry examples:*
+
 * part.Engine.combustion.BMW_S58Engine
 
 * 4fc009cc-2dae-4df9-b6b2-0b535038c8e8
