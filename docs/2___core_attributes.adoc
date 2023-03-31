@@ -74,3 +74,5 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 
 
 *_Additional explanation and rationale:_* The release should be specified in any case to help the recipient of the model to distinguish between different releases. The specification of the release is also important to facilitate the communication of development partners regarding the model.
+
+=== Release date
