@@ -71,3 +71,6 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 * 1.2.0-alpha.1+build.x64.010
 * Version 10.0.19044 Build 19044
 * 1.9.9.12-DB:C5:D9:3F:DA:19:C5:82:40:80:8B:A5:33:A4:DC:5F
+
+
+*_Additional explanation and rationale:_* The release should be specified in any case to help the recipient of the model to distinguish between different releases. The specification of the release is also important to facilitate the communication of development partners regarding the model.
