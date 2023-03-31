@@ -1,3 +1,19 @@
 == MIC Core Attributes [[mic-core-attributes]]
 
 TODO: Description of all core attributes in long form, tabular summary will be auto-generated.
+
+
+=== Model name
+
+*Atrribute descroption:* Human-readable way to refer to the model. Typically short and clear. Not necessarily unique. To be distinguished from the model identifier and the file name.
+
+*Cardinality:* 1 (mandatory)
+
+*Value entry examples:*
+
+* Electric motor/generator 
+* Mapped Motor
+* Permanent magnet DC machine
+* 2nd order mass
+
+*Additional explanation and rationale:* From a user's perspective, the model name is the most important characteristic of a model. A model name is easier to remember than a generic identifier, and when users want to search for or retrieve models, they search primarily by model name. When models are imported into a data management system, the system typically expects a model name as a mandatory attribute. 
