@@ -13,9 +13,12 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 
 *Value entry examples:*
 
-* Electric motor/generator 
+* Electric motor/generator
+
 * Mapped Motor
+
 * Permanent magnet DC machine
+
 * 2nd order mass
 
 *Additional explanation and rationale:* From a user's perspective, the model name is the most important characteristic of a model. A model name is easier to remember than a generic identifier, and when users want to search for or retrieve models, they search primarily by model name. When models are imported into a data management system, the system typically expects a model name as a mandatory attribute. 
