@@ -56,3 +56,7 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 * DRVELMT01 is a model of electric motor/generator with its converter. The output torque and power losses can be determined either by using data files or  characteristic parameters. This model is bidirectional.
 
 *Additional explanation and rationale:* Human readable, textual, general overview. Highlights important information about the model. May include some information formalized in other attributes, without expectation of completeness. For the recipient of a simulation model, a textual description or summary of the model's contents and possible uses may be helpful. A quick overview avoids having to look at all the attributes.
+
+=== Release 
+
+*Attribute descrption:* Preferably human-readable, unique identifier for the release of a particular simulation model. Required to distinguish between different releases of models. Represents the result of the intentional act of releasing a model at a particular stage to a particular audience (different from the more general notion of version).
