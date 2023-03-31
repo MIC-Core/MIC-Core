@@ -45,9 +45,9 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 
 *Attribute category:* Administrative data
 
-#*Attribute description:*#
+*Attribute description:* STILL MISSING
 
-*Cardinality:*
+*Cardinality:* 0-1 (recommended)
 
 *Value entry examples:*
 
@@ -60,3 +60,13 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 === Release 
 
 *Attribute descrption:* Preferably human-readable, unique identifier for the release of a particular simulation model. Required to distinguish between different releases of models. Represents the result of the intentional act of releasing a model at a particular stage to a particular audience (different from the more general notion of version).
+
+*Cardinality:* 1 (mandatory)
+
+*Value entry examples;*
+
+* V3.2.4
+* 0.1a
+* 1.2.0-alpha.1+build.x64.010
+* Version 10.0.19044 Build 19044
+* 1.9.9.12-DB:C5:D9:3F:DA:19:C5:82:40:80:8B:A5:33:A4:DC:5F
