@@ -5,6 +5,8 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 
 === Model name
 
+*Attribute category:* Administrative data
+
 *Atrribute descroption:* Human-readable way of referring to the model. Usually short and clear. Not necessarily unique. To be distinguished from the model identifier and file name.
 
 *Cardinality:* 1 (mandatory)
@@ -20,6 +22,8 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 
 === Model identifier
 
+*Attribute category:* Administrative data
+
 *Attribute descrption:* Unique identifier for the model. Possibly only locally unique. May not be specific to a given version of the model. The syntax and interpretation of the identifier is not standardized and open to the implementer. Can for example be based on a URI, a model path, or a UUID.
 
 *Cardinality:* 0..1 (recommended)
@@ -32,3 +36,17 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 *Additional explanation and rationale:* The model identifier, unlike the model name, is typically unchangeable and usually unique within an IT system's number range. This means that if a model is sent multiple times, it can have a different version number each time, while the model identifier is the same. Thus, the model identifier can be used to identify different model versions as versions of the same model, or to identify that there are two versions of different models. The model identifier is the most important and decisive attribute when importing models into a data management system and therefore must be provided for technical reasons.
 
 === Model description
+
+*Attribute category:* Administrative data
+
+#*Attribute description:*#
+
+*Cardinality:*
+
+*Value entry examples:*
+
+* This model simulates the heat exchange between S58 engine and cooling system
+
+* DRVELMT01 is a model of electric motor/generator with its converter. The output torque and power losses can be determined either by using data files or  characteristic parameters. This model is bidirectional.
+
+*Additional explanation and rationale:* Human readable, textual, general overview. Highlights important information about the model. May include some information formalized in other attributes, without expectation of completeness. For the recipient of a simulation model, a textual description or summary of the model's contents and possible uses may be helpful. A quick overview avoids having to look at all the attributes.
