@@ -18,7 +18,7 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 
 *Additional explanation and rationale:* From a user's perspective, the model name is the most important characteristic of a model. A model name is easier to remember than a generic identifier, and when users want to search for or retrieve models, they search primarily by model name. When models are imported into a data management system, the system typically expects a model name as a mandatory attribute. 
 
-===Model identifier
+=== Model identifier
 
 *Attribute descrption:* Unique identifier for the model. Possibly only locally unique. May not be specific to a given version of the model. The syntax and interpretation of the identifier is not standardized and open to the implementer. Can for example be based on a URI, a model path, or a UUID.
 
