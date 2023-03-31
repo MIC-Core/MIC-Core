@@ -5,7 +5,7 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 
 === Model name
 
-*Atrribute descroption:* Human-readable way to refer to the model. Typically short and clear. Not necessarily unique. To be distinguished from the model identifier and the file name.
+*Atrribute descroption:* Human-readable way of referring to the model. Usually short and clear. Not necessarily unique. To be distinguished from the model identifier and file name.
 
 *Cardinality:* 1 (mandatory)
 
@@ -17,3 +17,18 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 * 2nd order mass
 
 *Additional explanation and rationale:* From a user's perspective, the model name is the most important characteristic of a model. A model name is easier to remember than a generic identifier, and when users want to search for or retrieve models, they search primarily by model name. When models are imported into a data management system, the system typically expects a model name as a mandatory attribute. 
+
+===Model identifier
+
+*Attribute descrption:* Unique identifier for the model. Possibly only locally unique. May not be specific to a given version of the model. The syntax and interpretation of the identifier is not standardized and open to the implementer. Can for example be based on a URI, a model path, or a UUID.
+
+*Cardinality:* 0..1 (recommended)
+
+*Value entry examples:*
+*part.Engine.combustion.BMW_S58Engine
+*4fc009cc-2dae-4df9-b6b2-0b535038c8e8
+*//server/home/user/models/mymodel
+
+*Additional explanation and rationale:* The model identifier, unlike the model name, is typically unchangeable and usually unique within an IT system's number range. This means that if a model is sent multiple times, it can have a different version number each time, while the model identifier is the same. Thus, the model identifier can be used to identify different model versions as versions of the same model, or to identify that there are two versions of different models. The model identifier is the most important and decisive attribute when importing models into a data management system and therefore must be provided for technical reasons.
+
+===Model description
