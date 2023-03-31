@@ -46,17 +46,17 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 
 *_Attribute category:_* Administrative data
 
-*Attribute description:* STILL MISSING
+*Attribute description:* Human readable, textual, general overview. Highlights important information about the model. May include some information formalized in other attributes, without expectation of completeness. 
 
 *_Cardinality:_* 0-1 (recommended)
 
-*Value entry examples:*
+*Value entry examples:* For the recipient of a simulation model, a textual description or summary of the model's contents and possible uses may be helpful. A quick overview avoids having to look at all the attributes.
 
 * This model simulates the heat exchange between S58 engine and cooling system
 
 * DRVELMT01 is a model of electric motor/generator with its converter. The output torque and power losses can be determined either by using data files or  characteristic parameters. This model is bidirectional.
 
-*_Additional explanation and rationale:_* Human readable, textual, general overview. Highlights important information about the model. May include some information formalized in other attributes, without expectation of completeness. For the recipient of a simulation model, a textual description or summary of the model's contents and possible uses may be helpful. A quick overview avoids having to look at all the attributes.
+*_Additional explanation and rationale:_* Submitting this attribute is recommended to help the receiver of the model understand the model.
 
 ==== Release 
 
