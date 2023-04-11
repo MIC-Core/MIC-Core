@@ -125,6 +125,8 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 
 *_Additional explanation and rationale:_* The attribute is classified as mandatory because it is very important to know who provided the model, and because it is important to be able to contact the model provider in case of questions about the model. Otherwise, the use of the model may be made very difficult or even impossible.
 
+
+
 === Model confidentiality level
 
 *_Attribute descrption:_*  Protection level to apply to the model. Does not specify the organizational scope. Does not define what a receiver is allowed to do or is not allowed to do. Values should be "0: public", "1: internal", "2: confidential" or "3: strictly confidential".  Additional processes and tools are required to ensure confidentiality.
@@ -141,3 +143,22 @@ Note: Reference to ISO/IEC 27010:2015
 * 3: strictly confidential
 
 *_Additional explanation and rationale:_* While trust level specification is less relevant for cross-enterprise model exchange, it is all the more relevant for intra-enterprise sharing. Therefore, it is considered mandatory.
+
+=== Legal restriction
+
+*_Attribute descrption:_*  Defines the rules governing the distribution and usage of the simulation model in the form of an open field: royalties to pay, restriction to noncommercial use, right to modify, related legal contract, etc.
+
+Avoids a special field for licences
+
+*_Cardinality:_* 1 (mandatory)
+
+*_Value entry examples:_*
+
+* Company Z confidential
+* GPL
+* License MIT
+* Legal contract #0987654321
+
+*_Additional explanation and rationale:_* When using models, it is of legal relevance whether one is entitled to use a certain model and, if so, under which conditions. Among other things, but not exclusively, licenses play an important role here. Failure to pass on information about legal restrictions may result in considerable legal uncertainty for the recipient. Therefore, this information must be provided.
+
+=== Model purpose
