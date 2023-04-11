@@ -150,7 +150,7 @@ Note: Reference to ISO/IEC 27010:2015
 
 Avoids a special field for licences
 
-*_Cardinality:_* 1 (mandatory)
+*_Cardinality:_* 0..inf (optional)
 
 *_Value entry examples:_*
 
@@ -159,7 +159,7 @@ Avoids a special field for licences
 * License MIT
 * Legal contract #0987654321
 
-*_Additional explanation and rationale:_* When using models, it is of legal relevance whether one is entitled to use a certain model and, if so, under which conditions. Among other things, but not exclusively, licenses play an important role here. Failure to pass on information about legal restrictions may result in considerable legal uncertainty for the recipient. Therefore, this information must be provided.
+*_Additional explanation and rationale:_* To be done
 
 === Model purpose
 
@@ -203,7 +203,7 @@ Avoids a special field for licences
 
 3) typical keywords which permit to facilitate information retrieval (e.g. “Causal”, “Acausal”, “Bond graph”, “Transfer function”).
 
-*_Cardinality:_*0..1 (recommended)
+*_Cardinality:_*0..inf (recommended)
 
 *_Value entry examples:_*
 
@@ -227,7 +227,7 @@ Note: As this attribute can have multiple values, some of the examples below cou
 
 *_Attribute descrption:_*  Restrictions on the use of the model within the given scope of the model purpose that are not self-evident or not immediately apparent to a user (e.g. when the model provides an incorrect result). 
 
-*_Cardinality:_*0..1 (recommended)
+*_Cardinality:_*0..inf (recommended)
 
 *_Value entry examples:_*
 
@@ -247,17 +247,82 @@ Note: As this attribute can have multiple values, some of the examples below cou
 
 *_Attribute descrption:_*  Classifications of the model in terms, for example, of physics, engineering or implementation. Can refer to standard or locally standard schemes. It is recommended to refer to a scheme with the reverse domain notation prefix.
 
-*_Cardinality:_*0..1 (recommended)
+*_Cardinality:_*0..inf (recommended)
 
 *_Value entry examples:_*
 
 * Linear
 
-*_Additional explanation and rationale:_* The use of the attribute is recommended because further properties of the model may be transported via the classifications. However, the use basically depends on whether further properties are to be described.
-
-=== 
 * org.modelica.causality.acausal
 
 * org.iso.is11010-1.vhm.2-1
+
+*_Additional explanation and rationale:_* The use of the attribute is recommended because further properties of the model may be transported via the classifications. However, the use basically depends on whether further properties are to be described.
+
+=== Verification status
+
+*_Attribute descrption:_*  Indicates whether a given verification procedure has been followed to successfully reach verification criteria. Verification permits to confirm that a simulation technically works (code without bug, convergence of discretized models, etc.).
+
+*_Cardinality:_*0..1 (recommended)
+
+*_Value entry examples:_*
+
+* has been verified
+
+* has not be verified
+
+*_Additional explanation and rationale:_* To be done
+
+=== Validation status
+
+*_Attribute descrption:_*  Indicates whether a given validation procedure has been followed to successfully reach validation criteria. Validation permits to confirm that a simulation fulfills user needs. For example, validation permits to confirm that a simulation is close enough (which depends on the user needs) to a reference.
+
+*_Cardinality:_*0..1 (recommended)
+
+*_Value entry examples:_*
+
+* has been validated
+
+* has not been validated
+
+* validated with limitations
+
+*_Additional explanation and rationale:_* To be done
+
+=== Verification & Validation procedure and criteria
+
+*_Attribute descrption:_* Steps and methods followed as well as criteria to reach. Verification and validation can be covered together or separately.
+
+*_Cardinality:_*0..inf (recommended)
+
+*_Value entry examples:_*
+
+* ASME VV10
+
+* ASME VV40
+
+* Scale 2 of he NASA verification scale
+
+* Turing Test
+
+* Graphical Comparisons 
+
+* Boundary Analysis
+
+*_Additional explanation and rationale:_* To be done
+
+=== Verification & Validation report
+
+*_Attribute descrption:_* Reports describing the results of the verification and validation. Verification and validation can be covered together or separately. Can be summaries, to facilitate communication and distribution.
+
+Typically, it is a link to a report.
+
+*_Cardinality:_*0..inf (recommended)
+
+*_Value entry examples:_*
+
+* link Report XS
+
+*_Additional explanation and rationale:_* To be done
 
 
