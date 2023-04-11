@@ -162,3 +162,63 @@ Avoids a special field for licences
 *_Additional explanation and rationale:_* When using models, it is of legal relevance whether one is entitled to use a certain model and, if so, under which conditions. Among other things, but not exclusively, licenses play an important role here. Failure to pass on information about legal restrictions may result in considerable legal uncertainty for the recipient. Therefore, this information must be provided.
 
 === Model purpose
+
+*_Attribute descrption:_*  Purpose for which the model has been built/validated. Free textual field for human-readable description in short words  
+
+*_Cardinality:_*0..1 (recommended)
+
+*_Value entry examples:_*
+
+* Minimization of the maximum value of an engine's energy consumption 
+
+* Evaluation of the average breaking distance under uncertain weather conditions
+
+* Automated driving function validation in an OEM environment at object-list level
+
+* Efficency evaluation of a gear box in combination with a SW-function
+
+*_Additional explanation and rationale:_* Specifying the model purpose is not technically mandatory, but it is one of the most important from a user perspective. Therefore, the model purpose is classified as recommended.
+
+=== Modelled entity
+
+*_Attribute descrption:_*  Name or description of the object represented by the simulation model
+
+*_Cardinality:_*0..1 (recommended)
+
+*_Value entry examples:_*
+
+* Camera
+* Gear box type xyz23
+* Electrical car, model X, version Y, configuration Z
+
+*_Additional explanation and rationale:_* If something is to be simulated, a simulation model is usually created from a section of the real world. The search for the suitable model for a simulation always takes place in relation to the object to be simulated. Therefore, the Modeled entity attribute is recommended.
+
+=== Modeling choice
+
+*_Attribute descrption:_*  Explanation of the modeling choices, assumptions or simplifications made during implementation of the model. It should include: 
+
+1) effects or phenomena covered  introduced in general terms, such as vibration of thermal effects, and detailed;
+
+2) how they are covered (in an acausal approach, with a look-up table based on experimental data, etc.).
+
+3) typical keywords which permit to facilitate information retrieval (e.g. “Causal”, “Acausal”, “Bond graph”, “Transfer function”).
+
+*_Cardinality:_*0..1 (recommended)
+
+*_Value entry examples:_*
+
+Note: As this attribute can have multiple values, some of the examples below could apply together to the same model:
+
+* Sensor model is purely object-list driven
+
+* Weather effects are not modelled.
+
+* Typical hydraulic fluid is used, the medium is isotropic
+
+* Acausal thermal and electrical modelling with through and accross variables
+
+* The car is represented as a single track model
+
+* The motor is modeled with a look-up table based on experimental data 
+
+*_Additional explanation and rationale:_* #To be done#
