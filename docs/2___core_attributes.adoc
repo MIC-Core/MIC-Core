@@ -140,4 +140,4 @@ Note: Reference to ISO/IEC 27010:2015
 * 2: confidential 
 * 3: strictly confidential
 
-*_Additional explanation and rationale:_* 
+*_Additional explanation and rationale:_* While trust level specification is less relevant for cross-enterprise model exchange, it is all the more relevant for intra-enterprise sharing. Therefore, it is considered mandatory.
