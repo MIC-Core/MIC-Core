@@ -130,3 +130,14 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 *_Attribute descrption:_*  Protection level to apply to the model. Does not specify the organizational scope. Does not define what a receiver is allowed to do or is not allowed to do. Values should be "0: public", "1: internal", "2: confidential" or "3: strictly confidential".  Additional processes and tools are required to ensure confidentiality.
 
 Note: Reference to ISO/IEC 27010:2015
+
+*_Cardinality:_* 1 (mandatory)
+
+*_Value entry examples:_*
+
+* 0: public
+* 1: internal
+* 2: confidential 
+* 3: strictly confidential
+
+*_Additional explanation and rationale:_* 
