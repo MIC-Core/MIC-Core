@@ -159,7 +159,7 @@ Avoids a special field for licences
 * License MIT
 * Legal contract #0987654321
 
-*_Additional explanation and rationale:_* To be done
+*_Additional explanation and rationale:_* Information about legal restrictions can help avoid legal uncertainties in the use of models. However, since such restrictions do not always exist, this attribute is optional.
 
 === Model purpose
 
