@@ -323,6 +323,6 @@ Typically, it is a link to a report.
 
 * link Report XS
 
-*_Additional explanation and rationale:_* To be done
+*_Additional explanation and rationale:_* A validation and verification report may help document the detailed results.
 
 
