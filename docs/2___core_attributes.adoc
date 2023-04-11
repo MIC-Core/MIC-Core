@@ -105,3 +105,24 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 
 * *_Bad examples:_* outdated, optimization model
 
+*_Additional explanation and rationale:_* Specifying the release type gives the receiver of the release an indication of the status that the sender of the release assigns to the release.
+
+=== Model supplier
+
+*_Attribute descrption:_*  The responsible body and, if applicable, organizational unit within the body, that is responsible for supplying the model. Can be different from the owner or the creator of the model. Should be defined in a durable way, avoiding for example specific people names.  Relevant personal data protection guidelines should be takend into account. In case of model assembly, responsible of the overall assembly.
+
+*_Cardinality:_* 1 (mandatory)
+
+*_Value entry examples:_*
+
+* company Z, department SD
+
+* company-Z-models@dd.com
+
+* www.company-Z/models
+
+* personal data, e.g. company Z, Peter Miller can be problem
+
+*_Additional explanation and rationale:_* The attribute is classified as mandatory because it is very important to know who provided the model, and because it is important to be able to contact the model provider in case of questions about the model. Otherwise, the use of the model may be made very difficult or even impossible.
+
+=== Model confidentiality level
