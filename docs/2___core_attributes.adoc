@@ -222,3 +222,32 @@ Note: As this attribute can have multiple values, some of the examples below cou
 * The motor is modeled with a look-up table based on experimental data 
 
 *_Additional explanation and rationale:_* #To be done#
+
+=== Modeling limitations
+
+*_Attribute descrption:_*  Restrictions on the use of the model within the given scope of the model purpose that are not self-evident or not immediately apparent to a user (e.g. when the model provides an incorrect result). 
+
+*_Cardinality:_*0..1 (recommended)
+
+*_Value entry examples:_*
+
+* The model is only valid between 0 and 50 degrees
+
+* Not real-time capable
+
+* The model provides incorrect results at low speeds
+
+* Eddy currents are neglected
+
+* Thermal effects are not considered
+
+*_Additional explanation and rationale:_* The meaning of this attribute is similar to that of the Model Purpose attribute. When searching for a model, it is important to know what the model is intended to do, but it is also important to know what the model is not intended to do. Therefore, the use of this attribute will recommend what it is 
+
+=== Model classification
+
+*_Attribute descrption:_*  Classifications of the model in terms, for example, of physics, engineering or implementation. Can refer to standard or locally standard schemes. It is recommended to refer to a scheme with the reverse domain notation prefix.
+
+*_Cardinality:_*0..1 (recommended)
+
+*_Value entry examples:_*
+
