@@ -251,3 +251,13 @@ Note: As this attribute can have multiple values, some of the examples below cou
 
 *_Value entry examples:_*
 
+* Linear
+
+*_Additional explanation and rationale:_* The use of the attribute is recommended because further properties of the model may be transported via the classifications. However, the use basically depends on whether further properties are to be described.
+
+=== 
+* org.modelica.causality.acausal
+
+* org.iso.is11010-1.vhm.2-1
+
+
