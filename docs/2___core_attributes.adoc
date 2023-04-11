@@ -76,3 +76,32 @@ TODO: Description of all core attributes in long form, tabular summary will be a
 *_Additional explanation and rationale:_* The release should be specified in any case to help the recipient of the model to distinguish between different releases. The specification of the release is also important to facilitate the communication of development partners regarding the model.
 
 === Release date
+
+*_Attribute descrption:_*  Date on which a simulation model was released. Must respect ISO 8601.
+
+*_Cardinality:_* 0..1 (recommended)
+
+*_Value entry examples:_*
+
+* 2023-03-27T12:27:04Z
+
+*_Additional explanation and rationale:_* If there are multiple releases of a model and the releases do not differ in name, the release date is often a helpful differentiator. It may also be possible to determine which release is the most recent. Therefore, it is recommended to include the release date to assist the recipients of the release.
+
+=== Release type
+
+*_Attribute descrption:_*  Relates to the maturity of the model. To be distinguished from a changing status (e.g. outdated). Fixed at the time of the release and not changing. Allows the receiver to evaluate the usage limitations of a given release (e.g. a prelease shall not be used for final system validation).
+
+*_Cardinality:_* 0..1 (recommended)
+
+*_Value entry examples:_*
+
+* internal-release
+
+* pre-release
+
+* * production release
+
+* only for demonstration
+
+* *_Bad examples:_* outdated, optimization model
+
