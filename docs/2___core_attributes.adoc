@@ -221,7 +221,7 @@ Note: As this attribute can have multiple values, some of the examples below cou
 
 * The motor is modeled with a look-up table based on experimental data 
 
-*_Additional explanation and rationale:_* #To be done#
+*_Additional explanation and rationale:_* Information about the modeling choice helps to understand, how the model was created and to decide weather these comply to the intended usage of the model in a certain use case. Hence, it is recommended to Provide thes information to a recepient. 
 
 === Modeling limitations
 
