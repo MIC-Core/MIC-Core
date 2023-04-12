@@ -271,7 +271,7 @@ Note: As this attribute can have multiple values, some of the examples below cou
 
 * has not be verified
 
-*_Additional explanation and rationale:_* To be done
+*_Additional explanation and rationale:_* Knowing he verification status is essential to decide about trusting the model quality with respect to the given specification. Hence, it is recommended to provuide the status if, available.
 
 === Validation status
 
@@ -287,7 +287,7 @@ Note: As this attribute can have multiple values, some of the examples below cou
 
 * validated with limitations
 
-*_Additional explanation and rationale:_* To be done
+*_Additional explanation and rationale:_* Knowing he validation status is essential to decide about trusting the model quality with respect to the intended usesage of the model. Hence, it is recommended to provuide the status if, available.
 
 === Verification & Validation procedure and criteria
 
@@ -309,7 +309,7 @@ Note: As this attribute can have multiple values, some of the examples below cou
 
 * Boundary Analysis
 
-*_Additional explanation and rationale:_* To be done
+*_Additional explanation and rationale:_* A Inspecting the criteria may help deciding wheather the validation and verification citeria applied fulfill the expectatioons in detail with respect to the intended usage in a certain use case. Hence, it is recommended to provuide the ceteria if, available.
 
 === Verification & Validation report
 
@@ -323,6 +323,5 @@ Typically, it is a link to a report.
 
 * link Report XS
 
-*_Additional explanation and rationale:_* A validation and verification report may help document the detailed results.
-
+*_Additional explanation and rationale:_* A Inspecting the reports may help deciding wheather the validation and verification fulfill the expectatioons in detail with respect to the intended usage in a certain use case. Hence, it is recommended to provuide the report if, available.
 
