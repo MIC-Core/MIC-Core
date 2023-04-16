@@ -5,6 +5,10 @@ MIC Core is defining a standard of core attributes (key information on simulatio
 Goal is to have aset of aligned attributes, that means
   -  we are focussing on Meta data for simulation models
   -  also link to further detailed information which is needed for deeper traceability
+  
+-   we are open to future transfer of that specification to an other offical standardization body
+-   in the moment it is a cooperation of organizations
+-   the harmonization activity is result of a long standing cooperation of irt-systemX and prostep ivip, as well as more resent exchanges with other organisations   
 
 === Overview
 In the moment existing "standards" for simulation model meta data adress specific use cases, engineering domains or simulation levels like causal, acausal, geometry level, realtime,.... 
