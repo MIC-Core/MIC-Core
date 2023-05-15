@@ -46,11 +46,11 @@ Additional explanation and rationale:: The model identifier, unlike the model na
 
 Attribute category:: Administrative data
 
-*Attribute description:* Human readable, textual, general overview. Highlights important information about the model. May include some information formalized in other attributes, without expectation of completeness. 
+Attribute description:: Human readable, textual, general overview. Highlights important information about the model. May include some information formalized in other attributes, without expectation of completeness. 
 
 Cardinality:: 0-1 (recommended)
 
-*Value entry examples:* For the recipient of a simulation model, a textual description or summary of the model's contents and possible uses may be helpful. A quick overview avoids having to look at all the attributes.
+Value entry examples:: For the recipient of a simulation model, a textual description or summary of the model's contents and possible uses may be helpful. A quick overview avoids having to look at all the attributes.
 
 * This model simulates the heat exchange between S58 engine and cooling system
 
@@ -75,7 +75,7 @@ Value entry examples::
 
 Additional explanation and rationale:: The release should be specified in any case to help the recipient of the model to distinguish between different releases. The specification of the release is also important to facilitate the communication of development partners regarding the model.
 
-=== Release date
+==== Release date
 
 Attribute description::  Date on which a simulation model was released. Must respect ISO 8601.
 
@@ -87,7 +87,7 @@ Value entry examples::
 
 Additional explanation and rationale:: If there are multiple releases of a model and the releases do not differ in name, the release date is often a helpful differentiator. It may also be possible to determine which release is the most recent. Therefore, it is recommended to include the release date to assist the recipients of the release.
 
-=== Release type
+==== Release type
 
 Attribute description::  Relates to the maturity of the model. To be distinguished from a changing status (e.g. outdated). Fixed at the time of the release and not changing. Allows the receiver to evaluate the usage limitations of a given release (e.g. a prelease shall not be used for final system validation).
 
@@ -107,7 +107,7 @@ Value entry examples::
 
 Additional explanation and rationale:: Specifying the release type gives the receiver of the release an indication of the status that the sender of the release assigns to the release.
 
-=== Model supplier
+==== Model supplier
 
 Attribute description::  The responsible body and, if applicable, organizational unit within the body, that is responsible for supplying the model. Can be different from the owner or the creator of the model. Should be defined in a durable way, avoiding for example specific people names.  Relevant personal data protection guidelines should be takend into account. In case of model assembly, responsible of the overall assembly.
 
@@ -127,7 +127,7 @@ Additional explanation and rationale:: The attribute is classified as mandatory 
 
 
 
-=== Model confidentiality level
+==== Model confidentiality level
 
 Attribute description::  Protection level to apply to the model. Does not specify the organizational scope. Does not define what a receiver is allowed to do or is not allowed to do. Values should be "0: public", "1: internal", "2: confidential" or "3: strictly confidential".  Additional processes and tools are required to ensure confidentiality.
 
@@ -144,7 +144,7 @@ Value entry examples::
 
 Additional explanation and rationale:: While trust level specification is less relevant for cross-enterprise model exchange, it is all the more relevant for intra-enterprise sharing. Therefore, it is considered mandatory.
 
-=== Legal restriction
+==== Legal restriction
 
 Attribute description::  Defines the rules governing the distribution and usage of the simulation model in the form of an open field: royalties to pay, restriction to noncommercial use, right to modify, related legal contract, etc.
 
@@ -161,7 +161,7 @@ Value entry examples::
 
 Additional explanation and rationale:: Information about legal restrictions can help avoid legal uncertainties in the use of models. However, since such restrictions do not always exist, this attribute is optional.
 
-=== Model purpose
+==== Model purpose
 
 Attribute description::  Purpose for which the model has been built/validated. Free textual field for human-readable description in short words  
 
@@ -179,7 +179,7 @@ Value entry examples::
 
 Additional explanation and rationale:: Specifying the model purpose is not technically mandatory, but it is one of the most important from a user perspective. Therefore, the model purpose is classified as recommended.
 
-=== Modelled entity
+==== Modelled entity
 
 Attribute description::  Name or description of the object represented by the simulation model
 
@@ -193,7 +193,7 @@ Value entry examples::
 
 Additional explanation and rationale:: If something is to be simulated, a simulation model is usually created from a section of the real world. The search for the suitable model for a simulation always takes place in relation to the object to be simulated. Therefore, the Modeled entity attribute is recommended.
 
-=== Modeling choice
+==== Modeling choice
 
 Attribute description::  Explanation of the modeling choices, assumptions or simplifications made during implementation of the model. It should include: 
 
@@ -223,7 +223,7 @@ Note: As this attribute can have multiple values, some of the examples below cou
 
 Additional explanation and rationale:: Information about the modeling choice helps to understand, how the model was created and to decide weather these comply to the intended usage of the model in a certain use case. Hence, it is recommended to Provide thes information to a recepient. 
 
-=== Modeling limitations
+==== Modeling limitations
 
 Attribute description::  Restrictions on the use of the model within the given scope of the model purpose that are not self-evident or not immediately apparent to a user (e.g. when the model provides an incorrect result). 
 
@@ -243,7 +243,7 @@ Value entry examples::
 
 Additional explanation and rationale:: The meaning of this attribute is similar to that of the Model Purpose attribute. When searching for a model, it is important to know what the model is intended to do, but it is also important to know what the model is not intended to do. Therefore, the use of this attribute will recommend what it is 
 
-=== Model classification
+==== Model classification
 
 Attribute description::  Classifications of the model in terms, for example, of physics, engineering or implementation. Can refer to standard or locally standard schemes. It is recommended to refer to a scheme with the reverse domain notation prefix.
 
@@ -259,7 +259,7 @@ Value entry examples::
 
 Additional explanation and rationale:: The use of the attribute is recommended because further properties of the model may be transported via the classifications. However, the use basically depends on whether further properties are to be described.
 
-=== Verification status
+==== Verification status
 
 Attribute description::  Indicates whether a given verification procedure has been followed to successfully reach verification criteria. Verification permits to confirm that a simulation technically works (code without bug, convergence of discretized models, etc.).
 
@@ -273,7 +273,7 @@ Value entry examples::
 
 Additional explanation and rationale:: Knowing he verification status is essential to decide about trusting the model quality with respect to the given specification. Hence, it is recommended to provuide the status if, available.
 
-=== Validation status
+==== Validation status
 
 Attribute description::  Indicates whether a given validation procedure has been followed to successfully reach validation criteria. Validation permits to confirm that a simulation fulfills user needs. For example, validation permits to confirm that a simulation is close enough (which depends on the user needs) to a reference.
 
@@ -289,7 +289,7 @@ Value entry examples::
 
 Additional explanation and rationale:: Knowing he validation status is essential to decide about trusting the model quality with respect to the intended usesage of the model. Hence, it is recommended to provuide the status if, available.
 
-=== Verification & Validation procedure and criteria
+==== Verification & Validation procedure and criteria
 
 Attribute description:: Steps and methods followed as well as criteria to reach. Verification and validation can be covered together or separately.
 
@@ -311,7 +311,7 @@ Value entry examples::
 
 Additional explanation and rationale:: A Inspecting the criteria may help deciding wheather the validation and verification citeria applied fulfill the expectatioons in detail with respect to the intended usage in a certain use case. Hence, it is recommended to provuide the ceteria if, available.
 
-=== Verification & Validation report
+==== Verification & Validation report
 
 Attribute description:: Reports describing the results of the verification and validation. Verification and validation can be covered together or separately. Can be summaries, to facilitate communication and distribution.
 
