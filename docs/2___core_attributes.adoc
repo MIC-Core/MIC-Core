@@ -48,7 +48,7 @@ Attribute category:: Administrative data
 
 Attribute description:: Human readable, textual, general overview. Highlights important information about the model. May include some information formalized in other attributes, without expectation of completeness. 
 
-Cardinality:: 0-1 (recommended)
+Cardinality:: 0..1 (recommended)
 
 Value entry examples:: For the recipient of a simulation model, a textual description or summary of the model's contents and possible uses may be helpful. A quick overview avoids having to look at all the attributes.
 
