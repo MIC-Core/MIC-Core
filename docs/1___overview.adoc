@@ -35,6 +35,13 @@ We are open to future transfer of that specification to an other offical standar
 * the harmonization activity is result of a long standing cooperation of irt-systemX and prostep ivip, as well as more resent exchanges with other organisations   
      
 === Properties and Guiding Ideas
+The goal of MIC Core is not to have one standard, but to identify and harmonize the overlapping attributes.
+So, there is a common aligned part (MIC-Core) of attributes in every standard, but also, standard specific attributes according to the different use cases, domains in the standards.
+The standards will stay independent but will have aligned parts.
+Approach:
+we identified similar attributes in the standards like model.name, General information.Name, ModelName and definde a "Common Attribute Name" *Model Name*. The specific attributes differ slightly due to the naming conventions in the different standards. The important point was then the alignment of explanation and interpretation of the attribute name. With that approach a mapping and common understanding is achived. 
+
+
 
 === How to Read This Document
 
