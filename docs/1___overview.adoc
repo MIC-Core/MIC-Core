@@ -53,9 +53,9 @@ The specific attributes differ slightly due to the naming conventions in the dif
 
 We introduced three different kinds of attributes: Mandatory, Recommended, Optional.
 
-* Attributes are mandatory, if they are essential for traceability
-* Attributes are recommended, if the information is in general of high importance for understanding
-* Attributes are optional, if they are  important in special use cases
+* Attributes are *mandatory*, if they are essential for traceability
+* Attributes are *recommended*, if the information is in general of high importance for understanding
+* Attributes are *optional*, if they are  important in special use cases
 
 
 === How to Read This Document
