@@ -55,7 +55,7 @@ We introduced three different kinds of attributes: Mandatory, Recommended, Optio
 
 * Attributes are mandatory, if they are essential for traceability
 * Attributes are recommended, if the information is in general of high importance for understanding
-* Attributes are optional, if they are of importance in special use cases
+* Attributes are optional, if they are  important in special use cases
 
 
 === How to Read This Document
