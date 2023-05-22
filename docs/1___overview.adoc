@@ -1,5 +1,16 @@
 == Introduction
 
+=== Why MIC Core
+The exchange and reuse of simulation models within the company and with external partners is becoming increasingly important.
+
+For efficient exchange and reuse 
+
+* Information, metadata about the properties of the models is required (what does the model represent, which effects are implemented) 
+* as well as administrative information (name, owner, version,...).
+
+Currently there are several standards for model meta data, or they are being developed from several organisations
+
+
 === What is MIC Core [[what-is-mic-core]]
 MIC Core is defining a standard of core attributes (key information on simulation models that enables proper useage in the usecases) that other standards can adopt, extend, refine.
 Goal is to have a set of aligned attributes, that means
