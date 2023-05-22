@@ -3,6 +3,7 @@
 === What is MIC Core [[what-is-mic-core]]
 MIC Core is defining a standard of core attributes (key information on simulation models that enables proper useage in the usecases) that other standards can adopt, extend, refine.
 Goal is to have a set of aligned attributes, that means
+
 * we are focussing on meta data for simulation models
 * also link to further detailed information which is needed for deeper traceability
   
@@ -10,12 +11,15 @@ Goal is to have a set of aligned attributes, that means
 === Overview
 In the moment existing "standards" for simulation model meta data adress specific use cases, engineering domains or simulation levels like causal, acausal, geometry level, realtime,.... 
 We want to extract and align the core information from this approaches for
+
 * traceability 
 * support implementation in tools
 * not focusing
 ** on process information
 ** or how to implement
+
 We are open to future transfer of that specification to an other offical standardization body
+
 * in the moment it is a cooperation of organizations
 * the harmonization activity is result of a long standing cooperation of irt-systemX and prostep ivip, as well as more resent exchanges with other organisations   
      
