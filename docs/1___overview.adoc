@@ -48,6 +48,7 @@ We identified similar attributes in the standards like
 * ModelName  
 
 and definded a "Common Attribute Name" *Model Name*. 
+
 The specific attributes differ slightly due to the naming conventions in the different standards. The important point was then the alignment of explanation and interpretation of the attribute name. With that approach a mapping and common understanding is achived. 
 
 We introduced three different kinds of attributes: Mandatory, Recommended, Optional.
