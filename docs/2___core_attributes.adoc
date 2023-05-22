@@ -15,7 +15,7 @@ Value examples::
 
 * Electric motor/generator
 
-* Mapped Motor
+* parametrized motor
 
 * Permanent magnet DC machine
 
@@ -123,7 +123,7 @@ Value entry examples::
 
 * www.company-Z/models
 
-* personal data, e.g. company Z, Peter Miller can be problem
+* personal data, e.g. company Z, Peter Miller can be problematic
 
 Additional explanation and rationale:: The attribute is classified as mandatory because it is very important to know who provided the model, and because it is important to be able to contact the model provider in case of questions about the model.
 
@@ -235,7 +235,7 @@ Can have multiple values:: Yes
 
 Value entry examples::
 
-* The model is only valid between 0 and 50 degrees
+* The model is only valid between 0 and 50 degrees temperature
 
 * Not real-time capable
 
@@ -330,3 +330,15 @@ Value entry examples::
 * link Report XS
 
 Additional explanation and rationale:: A Inspecting the reports may help deciding wheather the validation and verification fulfill the expectatioons in detail with respect to the intended usage in a certain use case. Hence, it is recommended to provuide the report if, available.
+
+
+=== Software and hardware environment requirements
+
+Requirements regarding the software and hardware environment of the model, such as specific tool versions required or hardware required to achieve sufficient perfomance. 
+
+Cardinality:: 0..inf (recommended)
+
+Value entry examples::
+
+* Tool xy Version 4.5 and Compiler V
+* GPU with XY and core 5GB RAM
