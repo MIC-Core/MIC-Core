@@ -58,7 +58,7 @@ Additional explanation and rationale:: For the recipient of a simulation model, 
 
 === Release 
 
-Attribute description:: Unique identifier for the release of a particular simulation model. Represents the result of the intentional act of releasing a model at a particular stage to a particular audience (different from the more general notion of version).
+Attribute description:: Unique identifier, preferably human-readable (i.e. semantically meaningfull), for the release of a particular simulation model. Represents the result of the intentional act of releasing a model at a particular stage to a particular audience (different from the more general notion of version).
 
 Filling:: Mandatory
 
@@ -76,7 +76,7 @@ Additional explanation and rationale:: A human-readable release can help the rec
 
 === Release date
 
-Attribute description::  Date on which a simulation model was released. Must respect ISO 8601.
+Attribute description::  Date, and possibly time and timezone, of the release of a simulation model. Must respect ISO 8601.
 
 Filling:: Recommended
 
@@ -85,6 +85,8 @@ Can have multiple values:: No
 Value entry examples::
 
 * 2023-03-27T12:27:04Z
+
+Additional explanation and rationale:: Release dates permit to clarify the chronolgy of releases (How old is a simulation model? What simulation model came first? etc.).
 
 === Release type
 
@@ -106,7 +108,7 @@ Value entry examples::
 
 === Model supplier
 
-Attribute description::  The responsible body that is responsible for supplying the model. Can be different from the owner or the creator of the model. Should be as specific as possible but also durable, avoiding for example specific people names. Relevant personal data protection guidelines should be takend into account. In case of model assembly, responsible of the overall assembly.
+Attribute description::  The responsible body and, if applicable, organizational unit within the body, that is responsible for supplying the model. Can be different from the owner or the creator of the model. Should be as specific as possible but also durable, avoiding for example specific people names. Relevant personal data protection guidelines should be takend into account. In case of model assembly, responsible of the overall assembly.
 
 Filling:: Mandatory
 
@@ -139,7 +141,7 @@ Value entry examples::
 * 2: confidential 
 * 3: strictly confidential
 
-Additional explanation and rationale:: While such level is less relevant for cross-enterprise model exchange, it is highly relevant for intra-enterprise sharing.
+Additional explanation and rationale:: While such a confidentiality level is less relevant for cross-enterprise model exchange, it is highly relevant for intra-enterprise sharing.
 
 === Legal restriction
 
@@ -178,17 +180,19 @@ Value entry examples::
 
 === Modelled entity
 
-Attribute description::  Name or description of the object represented by the simulation model
+Attribute description::  Name or description of the object represented by the simulation model.
 
 Filling:: Recommended
 
-Can have multiple values:: Yes
+Can have multiple values:: No
 
 Value entry examples::
 
 * Camera
 * Gear box type xyz23
 * Electrical car, model X, version Y, configuration Z
+
+Additional explanation and rationale:: The modelled entity can typically be a system whose development is supported by simulation. There may not be any specific modelled ententy when a simulation rather represents general physical phenomena. 
 
 === Modeling choice
 
