@@ -1,4 +1,17 @@
 == MIC Core Attributes [[mic-core-attributes]
+This chapter provides and describes the list of MIC core attributes. Each attribute is introduced by a general desription and additionally by the indication of the attribute obligation, i.e. whether the attriobute is manatory, recommended or optional and the indication wheather the attribute may  multiply be instanciated. For the readers convinience some value examples and additional explenations or rationales for the attributes are givven.
+
+The attributes are organized by the following attribute groups:
+
+* Administrative data
+
+* Purpose and objectives
+
+* Subject information
+
+* Modeling implementation
+
+* Verification and validation
 
 TODO: Description of all core attributes in long form, tabular summary will be auto-generated.
 
