@@ -20,6 +20,8 @@ The attributes are organized by the following attribute groups:
 
 === Administrative data
 
+The Administrative Data category contains information used to identify and organize the models. For example, this may include the name, ID, and version information of the model. Administrative data also includes information about the authorization to use the model and the level of confidentiality of the model.
+
 ==== Model name
 
 Attribute description:: Human-readable way of referring to the model. Usually short and clear. Not necessarily unique. To be distinguished from the model identifier and file name.
@@ -180,6 +182,8 @@ Additional explanation and rationale:: Information about legal restrictions can 
 
 === Purpose and objectives
 
+Information in the category Purpose and Objectives describe the purpose for which the model is designed and what may be simulated with the model with which objective. This may be formulated quite generally, for example "Simulation of the electrical behavior of a DC motor". However, it may also be much more specific, for example "Simulation of the ramp-up current characteristics of a DC motor", if the model allows a very high sampling rate of the electrical current.
+
 ==== Model purpose
 
 Attribute description::  Purpose for which the model has been built/validated. Free textual field for short human-readable description.
@@ -200,6 +204,8 @@ Value entry examples::
 
 === Subject information
 
+Subject information is information that names the modeled concrete object, for example an individual system or product component, a system, an entire product or an assumed object from the environment of a product. This could be, for example, a very specific DC motor, an electronic vehicle stabilization system in a specific configuration, a specific vehicle type, or even a hypothetical pedestrian with a specific, specifically described set of properties.
+
 ==== Modelled entity
 
 Attribute description::  Name or description of the object represented by the simulation model.
@@ -217,6 +223,8 @@ Value entry examples::
 Additional explanation and rationale:: The modelled entity can typically be a system whose development is supported by simulation. There may not be any specific modelled ententy when a simulation rather represents general physical phenomena.
 
 === Modellintg implementation
+
+Information from the modeling implementation category describes how the model was created or how it should be created. This includes, for example, information on the modeling language and the modeling tool and, if necessary, on the compiler used. This can also include a description of the modeling approach.
 
 ==== Modeling choice
 
@@ -285,6 +293,8 @@ Value entry examples::
 * org.iso.is11010-1.vhm.2-1
 
 === Verification and validation
+
+The information in the Verification and Validation category takes into account all aspects of model quality assurance, for example whether certain standards have been met or are to be met and what additional measures have been taken and checks have been or should be met. 
 
 ==== Verification status
 
