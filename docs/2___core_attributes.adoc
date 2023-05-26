@@ -1,4 +1,6 @@
-== MIC Core Attributes [[mic-core-attributes]
+== MIC Core Attributes
+
+[[mic-core-attributes]
 This chapter introduces and describes the list of MIC core attributes. Each attribute is introduced with a general description and an indication of the attribute obligation, i.e., whether the attribute is mandatory, recommended, or optional, and whether the attribute can be instantiated multiple times or not. To enhance the understanding of an attribute, some value examples and additional explanation or rationale for the attribute are provided where applicable.
 
 The attributes are organized by the following attribute groups:
