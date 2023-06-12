@@ -368,7 +368,7 @@ Additional explanation and rationale:: A Inspecting the reports may help decidin
 
 === Attributes without defined category 
 
-==== Software and hardware environment requirements + + + ATTENTION: Still incomplete and incosistent + + + 
+==== Software and hardware environment requirements + + + ATTENTION: Still incomplete and inconsistent + + + 
 
 Requirements regarding the software and hardware environment of the model, such as specific tool versions required or hardware required to achieve sufficient perfomance. 
 
