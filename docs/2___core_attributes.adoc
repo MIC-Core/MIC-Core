@@ -296,14 +296,14 @@ Value entry examples::
 
 Requirements regarding the software and hardware environment of the model, such as specific tool versions required or hardware required to achieve sufficient perfomance. 
 
-Cardinality:: 0..inf (recommended)
+Obligation:: Recommended
+
+Can have multiple values:: Yes
 
 Value entry examples::
 
 * Tool xy Version 4.5 and Compiler V
 * GPU with XY and core 5GB RAM
-
-
 
 === Verification and validation
 
@@ -313,6 +313,7 @@ The information in the Verification and Validation category takes into account a
 ==== Software and hardware environment requirements + + + ATTENTION: Still incomplete and inconsistent + + + 
 
 Requirements regarding the software and hardware environment of the model, such as specific tool versions required or hardware required to achieve sufficient perfomance. 
+
 
 Cardinality:: 0..inf (recommended)
 
