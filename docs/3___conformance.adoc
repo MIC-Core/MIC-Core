@@ -16,4 +16,4 @@ Any standard that claims conformance with this specification must fulfil the fol
 For the purposes of the requirements set out above, the following terms are used according to these definitions:
 
 equivalent::
-  An attribute definition is deemed to be equivalent when the attribute definition is semantically identical, and matches in 
+  An attribute definition is deemed to be equivalent when the attribute definition is semantically identical, and matches in name and ordinality.
