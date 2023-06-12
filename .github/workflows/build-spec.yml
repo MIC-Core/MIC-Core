@@ -10,9 +10,21 @@ on:
     branches:
       - 'main'
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   
   generate-html:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-20.04
     steps:
 
@@ -49,3 +61,22 @@ jobs:
         name: MIC-Core-Specification
         path: build/*
         if-no-files-found: error
+
+    - name: Extract branch name
+      id: extract_branch
+      shell: bash
+      run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
+
+    - name: Move to published directory
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      shell: bash
+      run: mkdir _site && mv build _site/${{ steps.extract_branch.outputs.branch }}
+
+    - name: Upload Pages artifact
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      uses: actions/upload-pages-artifact@v1
+
+    - name: Deploy to Github Pages
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      id: deployment
+      uses: actions/deploy-pages@v2
