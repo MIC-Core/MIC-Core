@@ -3,3 +3,5 @@
 
 - [[[PW13]]] Preston-Werner, T. (2013): **Semantic Versioning 2.0.0**.  https://semver.org/spec/v2.0.0.html
 
+TODO: Add RFC 2119 Reference
+TODO: Refenece to MIC Specification or website
