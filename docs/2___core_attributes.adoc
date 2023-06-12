@@ -222,7 +222,7 @@ Value entry examples::
 
 Additional explanation and rationale:: The modelled entity can typically be a system whose development is supported by simulation. There may not be any specific modelled ententy when a simulation rather represents general physical phenomena.
 
-=== Modellintg implementation
+=== Modelling implementation
 
 Information from the modeling implementation category describes how the model was created or how it should be created. This includes, for example, information on the modeling language and the modeling tool and, if necessary, on the compiler used. This can also include a description of the modeling approach.
 
