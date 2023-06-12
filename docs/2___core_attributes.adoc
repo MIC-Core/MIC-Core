@@ -222,7 +222,7 @@ Value entry examples::
 
 Additional explanation and rationale:: The modelled entity can typically be a system whose development is supported by simulation. There may not be any specific modelled ententy when a simulation rather represents general physical phenomena.
 
-=== Modelling implementation
+=== Implementation
 
 Information from the modeling implementation category describes how the model was created or how it should be created. This includes, for example, information on the modeling language and the modeling tool and, if necessary, on the compiler used. This can also include a description of the modeling approach.
 
@@ -256,7 +256,7 @@ Note: As this attribute can have multiple values, some of the examples below cou
 
 * The motor is modeled with a look-up table based on experimental data 
 
-==== Modeling limitations + + +  ATTENTION: Name differs fron Excel table entry (--> model limitations) + + +  
+==== Model limitations  
 
 Attribute description::  Restrictions on the use of the model. Especially important if these restrictions are not self-evident to a user (e.g. when the model provides an incorrect result). 
 
@@ -292,9 +292,34 @@ Value entry examples::
 
 * org.iso.is11010-1.vhm.2-1
 
+==== Software and hardware environment requirements + + + ATTENTION: Still incomplete and inconsistent + + + 
+
+Requirements regarding the software and hardware environment of the model, such as specific tool versions required or hardware required to achieve sufficient perfomance. 
+
+Cardinality:: 0..inf (recommended)
+
+Value entry examples::
+
+* Tool xy Version 4.5 and Compiler V
+* GPU with XY and core 5GB RAM
+
+
+
 === Verification and validation
 
 The information in the Verification and Validation category takes into account all aspects of model quality assurance, for example whether certain standards have been met or are to be met and what additional measures have been taken and checks have been or should be met. 
+
+
+==== Software and hardware environment requirements + + + ATTENTION: Still incomplete and inconsistent + + + 
+
+Requirements regarding the software and hardware environment of the model, such as specific tool versions required or hardware required to achieve sufficient perfomance. 
+
+Cardinality:: 0..inf (recommended)
+
+Value entry examples::
+
+* Tool xy Version 4.5 and Compiler V
+* GPU with XY and core 5GB RAM
 
 ==== Verification status
 
@@ -368,13 +393,4 @@ Additional explanation and rationale:: A Inspecting the reports may help decidin
 
 === Attributes without defined category 
 
-==== Software and hardware environment requirements + + + ATTENTION: Still incomplete and inconsistent + + + 
 
-Requirements regarding the software and hardware environment of the model, such as specific tool versions required or hardware required to achieve sufficient perfomance. 
-
-Cardinality:: 0..inf (recommended)
-
-Value entry examples::
-
-* Tool xy Version 4.5 and Compiler V
-* GPU with XY and core 5GB RAM
