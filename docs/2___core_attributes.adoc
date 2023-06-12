@@ -377,6 +377,3 @@ Value entry examples::
 
 Additional explanation and rationale:: A Inspecting the reports may help deciding wheather the validation and verification fulfill the expectatioons in detail with respect to the intended usage in a certain use case. Hence, it is recommended to provuide the report if, available.
 
-=== Attributes without defined category 
-
-
