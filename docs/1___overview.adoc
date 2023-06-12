@@ -18,6 +18,7 @@ Goal is to have a set of aligned attributes, that means
 * we are focussing on meta data for simulation models
 * also link to further detailed information which is needed for deeper traceability
   
+The development of MIC Core was prompted by the Model Identity Card (MIC) and other metadata standards and the realization that certain core attributes should be standardized across the different metadata standards. 
 
 === Overview
 In the moment existing "standards" for simulation model meta data adress specific use cases, engineering domains or simulation levels like causal, acausal, geometry level, realtime,.... 
