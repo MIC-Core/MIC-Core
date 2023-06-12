@@ -1,3 +1,19 @@
 == Conformance [[mic-core-conformance]]
 
-TODO: Description of what conformance to this specification means.
+This specification provides a set of standardized attributes, which other standards that define meta-data and meta-data formats can adopt by claiming conformance.
+This section sets out what claiming conformance entails.
+
+Any standard that claims conformance with this specification must fulfil the following requirements:
+
+0. It MUST provide a sentence claiming conformance and pointing to the relevent version of this specification, as well as any clariffying information in its standard document.
+1. It MUST contain equivalent definitions for all attributes of section <<mic-core-attributes>> marked as mandatory.
+2. It MUST require users of said standard to mandatorily provide values for all attributes of section <<mic-core-attributes>> marked as mandatory.
+3. It MUST contain equivalent definitions for all attributes of section <<mic-core-attributes>> marked as recommended, unless the application domain of the standard excludes a meaningful use of the attribute.
+4. It MUST provide guidance to users of said standard to recommend the provision of values for all attributes of section <<mic-core-attributes>> marked as recommended that the standard has adopted.
+5. It CAN contain equivalent definitions for all attributes of section <<mic-core-attributes>> marked as optional, when the application domain of the standard makes the attribute potentially meaningful.
+6. For any of the attributes specified in section <<mic-core-attributes>>, a standard MUST NOT contain any same-named attribute with a non-equivalent definition.
+
+For the purposes of the requirements set out above, the following terms are used according to these definitions:
+
+equivalent::
+  An attribute definition is deemed to be equivalent when the attribute definition is semantically identical, and matches in 
