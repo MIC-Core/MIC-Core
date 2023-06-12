@@ -36,7 +36,7 @@ We are open to future transfer of that specification to an other offical standar
      
 === Properties and Guiding Ideas
 The goal of MIC Core is not to have one standard, but to identify and harmonize the overlapping attributes.
-So, there is a common aligned part (MIC-Core) of attributes in every standard, but also, standard specific attributes according to the different use cases, domains in the standards.
+So, there is a common aligned part (MIC Core) of attributes in every standard, but also, standard specific attributes according to the different use cases, domains in the standards.
 The standards will stay independent but will have aligned parts.
 
 Approach:
@@ -57,6 +57,20 @@ We introduced three different kinds of attributes: Mandatory, Recommended, Optio
 * Attributes are *recommended*, if the information is in general of high importance for understanding
 * Attributes are *optional*, if they are  important in special use cases
 
+
+=== Versioning
+
+This specification uses semantic version numbers, as defined in <<PW13>>, where the standard version consists of a triple of version numbers, consisting of major version, minor version, and patch version numbers.
+
+In the context of MIC Core, major versions can add, delete or change attribute definitions, minor versions can only add or clarify attribute definitions, and patch versions can only clarify attribute definitions.
+
+=== How to Apply this Standard
+
+This specification is directed at authors of meta-data and meta-data format standards.
+It is intended that standards that want to adopt the MIC Core set of attributes shall do so by claiming conformance as specified in section <<mic-core-conformance>>.
+This involves the adoption of the attribute definitions of the MIC Core under the rules set down in section <<mic-core-conformance>>.
+
+End users of these standards will look towards the standards for the full specifications of all attributes, whether adopted from MIC Core or not.
 
 === How to Read This Document
 
