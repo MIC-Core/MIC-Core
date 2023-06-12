@@ -58,7 +58,6 @@ We introduced three different kinds of attributes: Mandatory, Recommended, Optio
 * Attributes are *recommended*, if the information is in general of high importance for understanding
 * Attributes are *optional*, if they are  important in special use cases
 
-
 === Versioning
 
 This specification uses semantic version numbers, as defined in <<PW13>>, where the standard version consists of a triple of version numbers, consisting of major version, minor version, and patch version numbers.
