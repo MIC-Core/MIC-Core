@@ -256,7 +256,7 @@ Note: As this attribute can have multiple values, some of the examples below cou
 
 * The motor is modeled with a look-up table based on experimental data 
 
-==== Modeling limitations + + +  ATTENTION: Name differs fron Excel table entry + + +  
+==== Modeling limitations + + +  ATTENTION: Name differs fron Excel table entry (--> model limitations) + + +  
 
 Attribute description::  Restrictions on the use of the model. Especially important if these restrictions are not self-evident to a user (e.g. when the model provides an incorrect result). 
 
