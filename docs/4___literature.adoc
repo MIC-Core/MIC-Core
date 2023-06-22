@@ -2,6 +2,6 @@
 == References
 
 - [[[PW13]]] Preston-Werner, T. (2013): **Semantic Versioning 2.0.0**.  https://semver.org/spec/v2.0.0.html
+- [[[RFC 2119]]] Bradner, S. (1997): **Key words for use in RFCs to Indicate Requirement Levels**. IETF RFC 2119.  https://www.rfc-editor.org/rfc/rfc2119
 
-TODO: Add RFC 2119 Reference
 TODO: Refenece to MIC Specification or website
