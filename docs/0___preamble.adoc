@@ -1,10 +1,8 @@
-TODO: Intro Statements
+The MIC Core specification is a free standard that defines a set of harmonized model meta data attributes that meta-data standards can adopt to avoid ambuity and incompatibility in common attributes across domains and standards. It is maintained as a joint undertaking of IRT SystemX and prostep ivip. Releases and issues can be found on github.com/MIC-Core/MIC-Core.
 
 {empty} +
 {empty}
 
 Copyright (C) 2022-2023 IRT SystemX and 2022-2023 prostep ivip.
-
-TODO: License here
 
 {empty}
