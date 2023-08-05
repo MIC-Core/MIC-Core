@@ -66,3 +66,17 @@ Conventions used in this document:
 
 * The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in https://tools.ietf.org/html/rfc2119[RFC 2119] (regardless of formatting and capitalization).
 
+== Implementation of MIC-Core in the SRMD metadata format
+
+=== Introduction
+
+In the following, an exemplary implementation of the MIC-Core standard into the SRMD metadata format will be shown.
+The SRMD (Simulation Resoure Meta Data) metadata format is a subset of the SSP traceability STMD (Simulation Task Meta Data) format. These formats are part of the Modelica Association Project SSP (System Structuring and Parametrization).
+The SRMD format allows to specify any metadata, attributes in the form of key value pairs. The format description also specifies where this metadata file should be stored in an FMU or SSP (link to SSP traceability).
+
+=== Maping of MIC-Core attributes to the SRMD format
+
+The following table shows the implementation.
+In the first column the attributes defined in the MIC core are listed.
+The second column lists the conversion of the attribute names to SRMD. For easier machine processability, clustering via presented terms separated by period is used here. No spaces are used.
+In column 3 an abbreviated explanation of the attributes is listed
