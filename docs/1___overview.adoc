@@ -104,3 +104,13 @@ In column 3 an abbreviated explanation of the attributes is listed
 | Verification & Validation procedure and criteria | verification-validation.procedure-criteria | Steps and methods followed as well as criteria to reach. Verification and validation can be covered together or separately.
 | Verification & Validation report | verification-validation.report | Reports describing the results of the verification and validation.
 |===
+
+=== XML SRMD-Schema for MIC-Core
+
+In the following the according XML SRMD schema is shown. 
+
+=== Example  
+
+In the following a little example is shown.
+At the section “verification-validation.report” it is shown how multiple entries of an attribute are handled.
+It is also shown how with the type approach of the SRMD format different name spaces or mixing of classifications from different standards, company specific classifications can be handled
