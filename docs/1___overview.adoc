@@ -80,3 +80,10 @@ The following table shows the implementation.
 In the first column the attributes defined in the MIC core are listed.
 The second column lists the conversion of the attribute names to SRMD. For easier machine processability, clustering via presented terms separated by period is used here. No spaces are used.
 In column 3 an abbreviated explanation of the attributes is listed
+
+[cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
+|===
+| Option| Argument | Beschreibung
+| -a | attribute | Die Option -a kann mehrfach angegeben werden
+| -d | doctype | Der Typ des Dokumentes
+|===
