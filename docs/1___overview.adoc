@@ -83,7 +83,7 @@ In column 3 an abbreviated explanation of the attributes is listed
 
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
-| Option| Argument | Beschreibung
-| -a | attribute | Die Option -a kann mehrfach angegeben werden
-| -d | doctype | Der Typ des Dokumentes
+| MIC-Core Name| SRMD Mapping | Short Explanation
+| Model name | administrative-data.model.name | Human-readable way of referring to the model. Usually short and clear. Not necessarily unique
+| Model identifier | administrative-data.model.identifier | Unique identifier for the model.
 |===
