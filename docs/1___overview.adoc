@@ -86,4 +86,21 @@ In column 3 an abbreviated explanation of the attributes is listed
 | MIC-Core Name| SRMD Mapping | Short Explanation
 | Model name | administrative-data.model.name | Human-readable way of referring to the model. Usually short and clear. Not necessarily unique
 | Model identifier | administrative-data.model.identifier | Unique identifier for the model.
+| Model description | administrative-data.model.description | Human-readable, textual, general overview. Highlights important information about the model.
+| Model supplier | administrative-data.model.supplier | The responsible body and, if applicable, organizational unit within the body, that is responsible for supplying the model.
+| Model confidentiality level | administrative-data.model.confidentiality-level | Protection level to apply to the model.
+| Legal restriction | administrative-data.legal-restriction | Defines the rules governing the distribution and usage of the simulation model, including licensing, 
+| Release | administrative-data.release | Unique identifier, preferably human-readable (i.e. semantically meaningfull), for the release of a particular simulation model.
+| Release date | administrative-data.release.date | Date, and possibly time and timezone, of the release of a simulation model. Must respect ISO 8601.
+| Release type| administrative-data.release.type | Relates to the maturity of the model.
+| Model purpose | purpose-objectives.model | Purpose for which the model has been built/validated.
+| Modelled entity | subject-information.modelled-entity | Name or description of the object represented by the simulation model.
+| Modeling choice | implementation.modeling-choice | Explanation of the modeling choices, assumptions or simplifications made during the implementation of the model.
+| Model limitations | implementation.model.limitations | Restrictions on the use of the model.
+| Model classification | implementation.model.classification | Keyword-based classifications of the model in terms, for example, of physics, engineering or implementation.
+| Software and hardware environment requirements | implementation.software-hardware-environment-requirements | Requirements regarding the software and hardware environment of the model.
+| Verification status | verification-validation.verification-status | Indicates whether a given verification procedure has been followed to successfully reach verification criteria.
+| Validation status | verification-validation.validation-status | Indicates whether a given validation procedure has been followed to successfully reach validation criteria.
+| Verification & Validation procedure and criteria | verification-validation.procedure-criteria | Steps and methods followed as well as criteria to reach. Verification and validation can be covered together or separately.
+| Verification & Validation report | verification-validation.report | Reports describing the results of the verification and validation.
 |===
