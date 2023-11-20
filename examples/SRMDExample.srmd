@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/SRMDMICCore.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<srmd:SimulationResourceMetaData
+    version="1.0"
+    name="Demo"
+    xmlns:srmd="http://ssp-standard.org/SSPTraceability1/SimulationResourceMetaData"
+    xmlns:stc="http://ssp-standard.org/SSPTraceability1/SSPTraceabilityCommon"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://ssp-standard.org/SSPTraceability1/SimulationResourceMetaData ../schemas/SRMDMICCore.xsd">
+    <stc:Classification type="org.mic-core.mic-core">
+        <stc:ClassificationEntry keyword="administrative-data.model.name">MyModel</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative-data.model.identifier">MyModel</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative-data.model.description">Model of something</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative-data.model.supplier">PMSF</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative-data.release">1.0.0</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative-data.release.date">2023-11-11</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative-data.release.type">Final</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative-data.model.confidentiality-level">0: public</stc:ClassificationEntry>
+    </stc:Classification>
+</srmd:SimulationResourceMetaData>
