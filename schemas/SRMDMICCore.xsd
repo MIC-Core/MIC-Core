@@ -208,7 +208,7 @@
                             <sqf:title>Add missing classification entry</sqf:title>
                         </sqf:description>
                         <sqf:add position="last-child">
-                            <stc:ClassificationEntry keyword="verification-validation.verification-status">Status</stc:ClassificationEntry>
+                            <stc:ClassificationEntry keyword="verification-validation.validation-status">Status</stc:ClassificationEntry>
                         </sqf:add>
                     </sqf:fix>
                     <sch:assert test="stc:ClassificationEntry[@keyword='verification-validation.procedure-criteria']" sqf:fix="add-procedure-criteria-entry">
