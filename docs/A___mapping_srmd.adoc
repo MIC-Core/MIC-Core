@@ -63,6 +63,12 @@ include::../schemas/SRMDMICCore.xsd[]
 
 === Example
 
-In the following a little example is shown.
-At the section “verification-validation.report” it is shown how multiple entries of an attribute are handled.
-It is also shown how with the type approach of the SRMD format different name spaces or mixing of classifications from different standards, company specific classifications can be handled.
+In the following a small example SRMD file is shown.
+
+[source, xml]
+----
+include::../examples/SRMDExample.srmd[]
+----
+
+It demonstrates how multiple entries of an attribute are handled with the classification entry of type `verification-validation.report`.
+It also shows how different classifications beside the MIC-Core classification can be included in the same file, as intended by the SSP Traceability specification.
