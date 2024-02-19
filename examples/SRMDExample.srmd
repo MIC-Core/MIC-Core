@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/SRMDMICCore.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<srmd:SimulationResourceMetaData
+    version="1.0"
+    name="Demo"
+    xmlns:srmd="http://ssp-standard.org/SSPTraceability1/SimulationResourceMetaData"
+    xmlns:stc="http://ssp-standard.org/SSPTraceability1/SSPTraceabilityCommon"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://ssp-standard.org/SSPTraceability1/SimulationResourceMetaData ../schemas/SRMDMICCore.xsd">
+    <stc:Classification type="org.mic-core.mic-core">
+        <stc:ClassificationEntry keyword="administrative-data.model.name">MyModel</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative-data.model.identifier">MyModel</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative-data.model.description">Model of something</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative-data.model.supplier">PMSF</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative-data.release">1.0.0</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative-data.release.date">2023-11-11</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative-data.release.type">Final</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="administrative-data.model.confidentiality-level">0: public</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="subject-information.modelled-entity">Entity</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="purpose-objectives.model">Initial </stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.model.classification">Physics</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.model.limitations">Ignores quantum effects</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.modeling-choice">Modeling Choice</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="implementation.software-hardware-environment-requirements">Requirements</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="verification-validation.verification-status">Status</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="verification-validation.validation-status">Validated</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="verification-validation.procedure-criteria">Fullfills all requirements and is valid within 5% of real world part over operating range</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="verification-validation.report" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="VerificationReport.pdf">Verification Report</stc:ClassificationEntry>
+        <stc:ClassificationEntry keyword="verification-validation.report" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ValidationReport.pdf">Validation Report</stc:ClassificationEntry>
+    </stc:Classification>
+    <stc:Classification type="net.pmsf.srmd.demo-classification">
+        <stc:ClassificationEntry keyword="project-number">12345678-90</stc:ClassificationEntry>
+    </stc:Classification>
+</srmd:SimulationResourceMetaData>

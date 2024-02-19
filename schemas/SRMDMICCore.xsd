@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1"
+    xmlns:srmd="http://ssp-standard.org/SSPTraceability1/SimulationResourceMetaData"
+    xmlns:stc="http://ssp-standard.org/SSPTraceability1/SSPTraceabilityCommon"
+    xmlns:ssc="http://ssp-standard.org/SSP1/SystemStructureCommon"
+    xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+    xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+    targetNamespace="http://ssp-standard.org/SSPTraceability1/SimulationResourceMetaData">
+
+    <xs:include schemaLocation="https://pmsfit.github.io/SSPTraceability/master/SRMD.xsd"/>
+
+    <xs:annotation>
+        <xs:appinfo>
+            <sch:title>MIC Core Classification Checks</sch:title>
+            <sch:ns uri="http://ssp-standard.org/SSPTraceability1/SimulationResourceMetaData" prefix="srmd"/>
+            <sch:ns uri="http://ssp-standard.org/SSPTraceability1/SSPTraceabilityCommon" prefix="stc"/>
+
+            <sch:pattern>
+                <sch:title>MIC Core: Classification Presence</sch:title>
+                <sch:let name="mic-core-type" value="'org.mic-core.mic-core'"/>
+                <sch:rule context="/srmd:SimulationResourceMetaData" role="info">
+                    <sch:assert test="count(stc:Classification[@type=$mic-core-type])=1" >
+                        Missing or more than one MIC Core classification.
+                    </sch:assert>
+                </sch:rule>
+            </sch:pattern>
+
+            <sch:pattern>
+                <sch:title>MIC Core: Mandatory Attributes</sch:title>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]">
+                    <sch:assert test="stc:ClassificationEntry[@keyword='administrative-data.model.name']" sqf:fix="add-model-name-entry">
+                        Missing mandatory model name attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-model-name-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="administrative-data.model.name">Model</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                    <sch:assert test="stc:ClassificationEntry[@keyword='administrative-data.model.supplier']" sqf:fix="add-model-supplier-entry">
+                        Missing mandatory model supplier attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-model-supplier-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="administrative-data.model.supplier">ACME Inc.</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                    <sch:assert test="stc:ClassificationEntry[@keyword='administrative-data.model.confidentiality-level']" sqf:fix="add-model-confidentiality-entry">
+                        Missing mandatory model confidentiality level attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-model-confidentiality-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="administrative-data.model.confidentiality-level">1: internal</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                    <sch:assert test="stc:ClassificationEntry[@keyword='administrative-data.release']" sqf:fix="add-release-entry">
+                        Missing mandatory release attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-release-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="administrative-data.release">0.1.0</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                </sch:rule>
+            </sch:pattern>
+
+            <sch:pattern>
+                <sch:title>MIC Core: Recommended Attributes</sch:title>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]" role="info">
+                    <sch:assert test="stc:ClassificationEntry[@keyword='administrative-data.model.identifier']" sqf:fix="add-identifier-entry">
+                        Missing recommended model identifier attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-identifier-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="administrative-data.model.identifier">Value</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                    <sch:assert test="stc:ClassificationEntry[@keyword='administrative-data.model.description']" sqf:fix="add-description-entry">
+                        Missing recommended model description attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-description-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="administrative-data.model.description">Value</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                    <sch:assert test="stc:ClassificationEntry[@keyword='administrative-data.release.date']" sqf:fix="add-release-date-entry">
+                        Missing recommended release data attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-release-date-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="administrative-data.release.date">1900-01-01T01:00:00Z</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                    <sch:assert test="stc:ClassificationEntry[@keyword='administrative-data.release.type']" sqf:fix="add-release-type-entry">
+                        Missing recommended release type attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-release-type-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="administrative-data.release.type">pre-release</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                    <sch:assert test="stc:ClassificationEntry[@keyword='purpose-objectives.model']" sqf:fix="add-purpose-objectives-entry">
+                        Missing recommended model purpose attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-purpose-objectives-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="purpose-objectives.model">Purpose</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                    <sch:assert test="stc:ClassificationEntry[@keyword='subject-information.modelled-entity']" sqf:fix="add-modelled-entity-entry">
+                        Missing recommended modelled entity attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-modelled-entity-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="subject-information.modelled-entity">Entity</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                    <sch:assert test="stc:ClassificationEntry[@keyword='implementation.modeling-choice']" sqf:fix="add-modeling-choice-entry">
+                        Missing recommended modeling choice attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-modeling-choice-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="implementation.modeling-choice">Modeling Choice</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                    <sch:assert test="stc:ClassificationEntry[@keyword='implementation.model.limitations']" sqf:fix="add-model-limitations-entry">
+                        Missing recommended model limitations attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-model-limitations-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="implementation.model.limitations">Limitation</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                    <sch:assert test="stc:ClassificationEntry[@keyword='implementation.model.classification']" sqf:fix="add-model-classification-entry">
+                        Missing recommended model classification attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-model-classification-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="implementation.model.classification">Classification</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                    <sch:assert test="stc:ClassificationEntry[@keyword='implementation.software-hardware-environment-requirements']" sqf:fix="add-software-hardware-requirements-entry">
+                        Missing recommended software and hardware environment requirements attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-software-hardware-requirements-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="implementation.software-hardware-environment-requirements">Requirements</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                    <sch:assert test="stc:ClassificationEntry[@keyword='verification-validation.verification-status']" sqf:fix="add-verification-status-entry">
+                        Missing recommended verification status attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-verification-status-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="verification-validation.verification-status">Status</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                    <sch:assert test="stc:ClassificationEntry[@keyword='verification-validation.validation-status']" sqf:fix="add-validation-status-entry">
+                        Missing recommended validation status attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-validation-status-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="verification-validation.validation-status">Status</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                    <sch:assert test="stc:ClassificationEntry[@keyword='verification-validation.procedure-criteria']" sqf:fix="add-procedure-criteria-entry">
+                        Missing recommended verification and validation procedure and criteria attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-procedure-criteria-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="verification-validation.procedure-criteria">Criteria</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                    <sch:assert test="stc:ClassificationEntry[@keyword='verification-validation.report']" sqf:fix="add-report-entry">
+                        Missing recommended verification and validation report attribute.
+                    </sch:assert>
+                    <sqf:fix id="add-report-entry">
+                        <sqf:description>
+                            <sqf:title>Add missing classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:add position="last-child">
+                            <stc:ClassificationEntry keyword="verification-validation.report">Report</stc:ClassificationEntry>
+                        </sqf:add>
+                    </sqf:fix>
+                </sch:rule>
+            </sch:pattern>
+
+            <sch:pattern>
+                <sch:title>MIC Core: Attribute Rules</sch:title>
+                <sch:rule abstract="true" id="singleton">
+                    <sch:assert test="count(preceding-sibling::element()[@keyword=current()/@keyword])=0" sqf:fix="fix-delete-entry">
+                        The attribute '<sch:value-of select="@keyword"/>' occurred more than once.
+                    </sch:assert>
+                    <sqf:fix id="fix-delete-entry">
+                        <sqf:description>
+                            <sqf:title>Remove duplicate classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:delete/>
+                    </sqf:fix>
+                </sch:rule>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='administrative-data.model.name']">
+                    <sch:extends rule="singleton"/>
+                </sch:rule>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='administrative-data.model.identifier']">
+                    <sch:extends rule="singleton"/>
+                </sch:rule>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='administrative-data.model.description']">
+                    <sch:extends rule="singleton"/>
+                </sch:rule>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='administrative-data.model.supplier']">
+                    <sch:extends rule="singleton"/>
+                </sch:rule>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='administrative-data.model.confidentiality-level']" role="warn">
+                    <sch:extends rule="singleton"/>
+                    <sch:assert test="matches(.,'^(0: public|1: internal|2: confidential|3: strictly confidential)$')">
+                        Unknown confidentiality level '<sch:value-of select="."/>'.
+                    </sch:assert>
+                </sch:rule>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='administrative-data.legal-restriction']"/>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='administrative-data.release']">
+                    <sch:extends rule="singleton"/>
+                </sch:rule>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='administrative-data.release.date']">
+                    <sch:extends rule="singleton"/>
+                    <sch:assert test="matches(.,'^(?:[1-9]\d{3}(-?)(?:(?:0[1-9]|1[0-2])\1(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])\1(?:29|30)|(?:0[13578]|1[02])(?:\1)31|00[1-9]|0[1-9]\d|[12]\d{2}|3(?:[0-5]\d|6[0-5]))|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)(?:(-?)02(?:\2)29|-?366))(?:T(?:[01]\d|2[0-3])(:?)[0-5]\d(?:\3[0-5]\d)?)?(?:Z|[+-][01]\d(?:\3[0-5]\d)?)?$')">
+                        Invalid ISO8601 release date '<sch:value-of select="."/>'.
+                    </sch:assert>
+                </sch:rule>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='administrative-data.release.type']">
+                    <sch:extends rule="singleton"/>
+                </sch:rule>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='purpose-objectives.model']">
+                    <sch:extends rule="singleton"/>
+                </sch:rule>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='subject-information.modelled-entity']">
+                    <sch:extends rule="singleton"/>
+                </sch:rule>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='implementation.modeling-choice']"/>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='implementation.model.limitations']"/>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='implementation.model.classification']"/>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='implementation.software-hardware-environment-requirements']"/>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='verification-validation.verification-status']">
+                    <sch:extends rule="singleton"/>
+                </sch:rule>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='verification-validation.validation-status']">
+                    <sch:extends rule="singleton"/>
+                </sch:rule>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='verification-validation.procedure-criteria']"/>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry[@keyword='verification-validation.report']"/>
+                <sch:rule context="/srmd:SimulationResourceMetaData/stc:Classification[@type=$mic-core-type]/stc:ClassificationEntry">
+                    <sch:assert test="false()" sqf:fix="fix-delete-entry">
+                        Unknown MIC Core classification attribute '<sch:value-of select="@keyword"/>'.
+                    </sch:assert>
+                    <sqf:fix id="fix-delete-entry">
+                        <sqf:description>
+                            <sqf:title>Remove unknown classification entry</sqf:title>
+                        </sqf:description>
+                        <sqf:delete/>
+                    </sqf:fix>
+                </sch:rule>
+            </sch:pattern>
+        </xs:appinfo>
+    </xs:annotation>
+
+</xs:schema>
