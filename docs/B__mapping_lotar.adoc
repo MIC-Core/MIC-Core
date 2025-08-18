@@ -9,6 +9,7 @@ It provides an mapping of the MIC-Core standard attributes to the attributes of 
 In the following, the mapping of the MIC-Core standard attributes to the attributes of the LOTAR standard will be shown.
 
 **Breef explanation of LOTAR**.
+
 LOTAR stands for **Long-term archiving and retrieval (LOTAR)**
 It was initiated by teh aircraft industry.
 Aircraft have very long lifecycles. There can be 80 years between the initial design for a new program and the end of life of the last one delivered. Throughout the product lifecycle, the data defined for archiving and retrieval must be provided in a standardized format that can be read and reused regardless of changes to the original IT environment. Ensuring this is the goal of LOTAR.
