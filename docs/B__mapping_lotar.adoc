@@ -7,25 +7,23 @@ It provides an mapping of the MIC-Core standard attributes to the attributes of 
 === Introduction
 
 In the following, the mapping of the MIC-Core standard attributes to the attributes of the LOTAR standard will be shown.
+
 **Breef explanation of LOTAR**.
+
 LOTAR stands for **Long-term archiving and retrieval (LOTAR)**
+
 It was initiated by teh aircraft industry.
 Aircraft have very long lifecycles. There can be 80 years between the initial design for a new program and the end of life of the last one delivered. Throughout the product lifecycle, the data defined for archiving and retrieval must be provided in a standardized format that can be read and reused regardless of changes to the original IT environment. Ensuring this is the goal of LOTAR.
 Additional information and related standards to LOTAR are in chapter Information about LOTAR
 
-=== Maping of MIC-Core attributes to the SRMD format
+=== Maping of MIC-Core attributes to the LOTAR standard
 
-The `type` attribute of the `Classification` element must be specified as `org.mic-core.mic-core`.
-This `Classification` element must only contain `ClassificationEntry` elements with `keyword` attributes from the following table.
-It should contain entries for all MIC-Core attributes that are considered mandatory.
-
-The following table shows the mapping of MIC-Core attributes to SRMD classification entries.
+The following table shows the mapping of MIC-Core attributes to LOTAR attributes.
 In the first column the attributes defined in the MIC-Core are listed.
-The second column lists the conversion of the attribute names to SRMD classification entry keywords.
-For easier machine processability, clustering via presented terms separated by a period is used here.
-No spaces are used.
+The second column lists the mapping of the attribute names to the LOTAR attributes.
+
 In column three an abbreviated explanation of the attributes is listed to provide a better overview.
-Note that the abbreviated explanations are not considered a normative part of this specification, and should not be considered to suupercede the normative definitions in the MIC-Core specification.
+
 
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
