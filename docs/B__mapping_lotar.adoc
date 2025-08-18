@@ -1,18 +1,17 @@
 [appendix]
-== Mapping of MIC-Core to SSP Traceability SRMD Format
+== Mapping of MIC-Core to LOTAR standard
 
 This appendix is an optional part of the MIC-Core specification.
-It provides an implementation of the MIC-Core standard attributes in the SRMD (Simulation Resource Meta Data) format.
-It is normative for any mapping to the SRMD format that uses the specified classification type.
+It provides an mapping of the MIC-Core standard attributes to the attributes of the LOTAR standard.
 
 === Introduction
 
-In the following, an exemplary implementation of the MIC-Core standard into the SRMD metadata format will be shown.
-The SRMD (Simulation Resoure Meta Data) metadata format is one of the formats specified in the SSP Traceability specification.
-These formats form part of the Modelica Association Project SSP (System Structuring and Parametrization) provided format specifications.
-The SRMD format allows to specify any metadata or other attributes in the form of key value pairs in an XML-based format.
-The format description also specifies where this metadata file should be stored in an FMU or SSP archive.
-The SSP Traceability specification is a normative reference for this appendix.
+In the following, the mapping of the MIC-Core standard attributes to the attributes of the LOTAR standard will be shown.
+**Breef explanation of LOTAR**.
+LOTAR stands for **Long-term archiving and retrieval (LOTAR)**
+It was initiated by teh aircraft industry.
+Aircraft have very long lifecycles. There can be 80 years between the initial design for a new program and the end of life of the last one delivered. Throughout the product lifecycle, the data defined for archiving and retrieval must be provided in a standardized format that can be read and reused regardless of changes to the original IT environment. Ensuring this is the goal of LOTAR.
+Additional information and related standards to LOTAR are in chapter Information about LOTAR
 
 === Maping of MIC-Core attributes to the SRMD format
 
@@ -52,20 +51,7 @@ Note that the abbreviated explanations are not considered a normative part of th
 | Verification & Validation report | modelSummaryReport | Reports describing the results of the verification and validation.
 |===
 
-=== XML SRMD-Schema for MIC-Core
+=== Information about LOTAR
 
-As part of the specification an XML Schema is provided that extends the SRMD Schema with embedded Schematron rules and Schematron Quick Fixes to check compliance against this specification.
+** additional information about LOTAR and corresponding standards.**
 
-[source, xml]
-----
-include::../schemas/SRMDMICCore.xsd[]
-----
-
-=== Example
-
-In the following a small example SRMD file is shown.
-
-[source, xml]
-----
-include::../examples/SRMDExample.srmd[]
-----
