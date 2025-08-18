@@ -48,5 +48,5 @@ In column three an abbreviated explanation of the attributes is listed to provid
 
 === Information about LOTAR
 
-** additional information about LOTAR and corresponding standards.**
+**additional information about LOTAR and corresponding standards.**
 
