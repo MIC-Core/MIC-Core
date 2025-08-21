@@ -68,7 +68,7 @@ image::Lotar-structure.png[]
 The business case for data preservation is more than data reuse and includes regulatory requirements, accident investigations, product support and modifications, part/design obsolescence, software fixes, and the evolution of tools.
 
 [#im-timeline-archiving]
-.life time for data preservation 
+.Life time for data preservation 
 image::Timeline-Archiving.png[]
 
 
