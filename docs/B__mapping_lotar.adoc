@@ -57,23 +57,23 @@ But LOTAR has also more specific attributes in this context like: devToolName, d
 
 === Information about LOTAR
 
-**LOTAR International Link einfügen https://lotar-international.org/**  is a project being conducted by leading OEMs, suppliers, and solution providers in the aerospace and defense industry under the joint auspices of Aerospace Industries Association of America (AIA), the AeroSpace and Defense Industries Association of Europe for Standardization (ASD-STAN), PDES, Inc., and the prostep ivip association. 
+**LOTAR International https://lotar-international.org/**  is a project being conducted by leading OEMs, suppliers, and solution providers in the aerospace and defense industry under the joint auspices of Aerospace Industries Association of America (AIA), the AeroSpace and Defense Industries Association of Europe for Standardization (ASD-STAN), PDES, Inc., and the prostep ivip association. 
 Based on the ISO 14721, the Open Archival Information System (OAIS) Reference Model, the LOTAR organization is divided into domain workgroups.
-
-**Bild**
 
 [#im-lotar-structure]
 .Structure of LOTAR organisation
 image::Lotar-structure.png[]
 
+
 The business case for data preservation is more than data reuse and includes regulatory requirements, accident investigations, product support and modifications, part/design obsolescence, software fixes, and the evolution of tools.
 
-**Bild**
+[#im-timeline-archiving]
+.life time for data preservation 
+image::Timeline-Archiving.png[]
 
-[#im-credibledecisionprocess]
-.Credible Decision Process
-image::CredibleDecisionProcess.png[]
 
 The Model-Based Systems Engineering (MBSE) workgroup is focused on delivering process instructions for specific model types.  In addition to general modeling and quality standards, the instructions identify data standards applicable to the individual modeling domains. Examples include ReqIF, NAS-STD-7009B, FMI/SSP, SysMLv2, AP243, RDF/OWL/OSLC.
 
-**Bild**
+[#im-lotar-domain-parts]
+.Modeling domains of Model-Based Systems Engineering (MBSE) workgroup 
+image::Lotar-domain-parts.png[]
