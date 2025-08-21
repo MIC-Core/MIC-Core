@@ -62,9 +62,17 @@ Based on the ISO 14721, the Open Archival Information System (OAIS) Reference Mo
 
 **Bild**
 
+[#im-lotar-structure]
+.Structure of LOTAR organisation
+image::Lotar-structure.png[]
+
 The business case for data preservation is more than data reuse and includes regulatory requirements, accident investigations, product support and modifications, part/design obsolescence, software fixes, and the evolution of tools.
 
 **Bild**
+
+[#im-credibledecisionprocess]
+.Credible Decision Process
+image::CredibleDecisionProcess.png[]
 
 The Model-Based Systems Engineering (MBSE) workgroup is focused on delivering process instructions for specific model types.  In addition to general modeling and quality standards, the instructions identify data standards applicable to the individual modeling domains. Examples include ReqIF, NAS-STD-7009B, FMI/SSP, SysMLv2, AP243, RDF/OWL/OSLC.
 
