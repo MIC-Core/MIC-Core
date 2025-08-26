@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -25,11 +26,11 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     steps:
 
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         submodules: recursive
 
@@ -56,7 +57,7 @@ jobs:
         cp docs/images/* build/images
 
     - name: Create ZIP archive
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: MIC-Core-Specification
         path: build/*
@@ -74,9 +75,9 @@ jobs:
 
     - name: Upload Pages artifact
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v4
 
     - name: Deploy to Github Pages
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       id: deployment
-      uses: actions/deploy-pages@v2
+      uses: actions/deploy-pages@v4
