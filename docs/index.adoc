@@ -26,3 +26,5 @@ include::docs/4___literature.adoc[]
 
 include::docs/A___mapping_srmd.adoc[]
 
+include::docs/B___mapping_lotar.adoc[]
+
