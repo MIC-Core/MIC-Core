@@ -13,7 +13,7 @@
 :source-highlighter: highlightjs
 :nofooter:
 :icons: font
-:imagesdir: docs/images
+:imagesdir: images
 
 include::docs/0___preamble.adoc[]
 
