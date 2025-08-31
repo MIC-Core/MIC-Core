@@ -1,37 +1,37 @@
 [appendix]
-== Mapping of MIC-Core to SSP Traceability SRMD Format
+== Mapping of MIC Core to SSP Traceability SRMD Format
 
-This appendix is an optional part of the MIC-Core specification.
-It provides an implementation of the MIC-Core standard attributes in the SRMD (Simulation Resource Meta Data) format.
+This appendix is an optional part of the MIC Core specification.
+It provides an implementation of the MIC Core standard attributes in the SRMD (Simulation Resource Meta Data) format.
 It is normative for any mapping to the SRMD format that uses the specified classification type.
 
 === Introduction
 
-In the following, an exemplary implementation of the MIC-Core standard into the SRMD metadata format will be shown.
+In the following, an exemplary implementation of the MIC Core standard into the SRMD metadata format will be shown.
 The SRMD (Simulation Resoure Meta Data) metadata format is one of the formats specified in the SSP Traceability specification.
 These formats form part of the Modelica Association Project SSP (System Structuring and Parametrization) provided format specifications.
 The SRMD format allows to specify any metadata or other attributes in the form of key value pairs in an XML-based format.
 The format description also specifies where this metadata file should be stored in an FMU or SSP archive.
 The SSP Traceability specification is a normative reference for this appendix.
 
-=== Maping of MIC-Core attributes to the SRMD format
+=== Maping of MIC Core attributes to the SRMD format
 
 The `type` attribute of the `Classification` element must be specified as `org.mic-core.mic-core`.
 This `Classification` element must only contain `ClassificationEntry` elements with `keyword` attributes from the following table.
-It should contain entries for all MIC-Core attributes that are considered mandatory.
+It should contain entries for all MIC Core attributes that are considered mandatory.
 
-The following table shows the mapping of MIC-Core attributes to SRMD classification entries.
-In the first column the attributes defined in the MIC-Core are listed.
+The following table shows the mapping of MIC Core attributes to SRMD classification entries.
+In the first column the attributes defined in the MIC Core are listed.
 The second column lists the conversion of the attribute names to SRMD classification entry keywords.
 For easier machine processability, clustering via presented terms separated by a period is used here.
 No spaces are used.
 In column three an abbreviated explanation of the attributes is listed to provide a better overview.
-Note that the abbreviated explanations are not considered a normative part of this specification, and should not be considered to suupercede the normative definitions in the MIC-Core specification.
+Note that the abbreviated explanations are not considered a normative part of this specification, and should not be considered to suupercede the normative definitions in the MIC Core specification.
 
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
-| MIC-Core Name| SRMD Mapping | Short Explanation
-| Model name | administrative-data.model.name | Human-readable way of referring to the model. Usually short and clear. Not necessarily unique
+| MIC Core Name| SRMD Mapping | Short Explanation
+| Model name | administrative-data.model.name | Human-readable way of referring to the model. Usually short and clear. Not necessarily unique.
 | Model identifier | administrative-data.model.identifier | Unique identifier for the model.
 | Model description | administrative-data.model.description | Human-readable, textual, general overview. Highlights important information about the model.
 | Model supplier | administrative-data.model.supplier | The responsible body and, if applicable, organizational unit within the body, that is responsible for supplying the model.
@@ -52,7 +52,7 @@ Note that the abbreviated explanations are not considered a normative part of th
 | Verification & Validation report | verification-validation.report | Reports describing the results of the verification and validation.
 |===
 
-=== XML SRMD-Schema for MIC-Core
+=== XML SRMD-Schema for MIC Core
 
 As part of the specification an XML Schema is provided that extends the SRMD Schema with embedded Schematron rules and Schematron Quick Fixes to check compliance against this specification.
 
@@ -71,4 +71,4 @@ include::../examples/SRMDExample.srmd[]
 ----
 
 It demonstrates how multiple entries of an attribute are handled with the classification entry of type `verification-validation.report`.
-It also shows how different classifications beside the MIC-Core classification can be included in the same file, as intended by the SSP Traceability specification.
+It also shows how different classifications beside the MIC Core classification can be included in the same file, as intended by the SSP Traceability specification.
