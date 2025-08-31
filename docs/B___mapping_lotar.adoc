@@ -1,8 +1,8 @@
 [appendix]
-== Mapping of MIC-Core to LOTAR standard
+== Mapping of MIC Core to LOTAR standard
 
-This appendix is an optional part of the MIC-Core specification.
-It provides a mapping of the MIC-Core standard attributes to the attributes of the LOTAR standard.
+This appendix is an optional part of the MIC Core specification.
+It provides a mapping of the MIC Core standard attributes to the attributes of the LOTAR standard.
 
 === Introduction
 
@@ -14,21 +14,21 @@ There can be 80 years between the initial design for a new program and the end o
 Throughout the product lifecycle, the data defined for archiving and retrieval must be provided in a standardized format that can be read and reused regardless of changes to the original IT environment.
 Ensuring the on-going use of the original data and models is the goal of LOTAR.
 The LOTAR MBSE Metadata Manifest was created to support the integration of models from multiple domains and was originally derived from the MIC and the MoSSEC (Modeling and Simulation information in a collaborative Systems Engineering Context) standards.
-Additional information and related LOTAR standards are in the section “Information about LOTAR”.
+Additional information and related LOTAR standards are in the section <<Information about LOTAR>>.
 
-In the following, the mapping of the MIC-Core standard attributes to the attributes of the LOTAR standard will be shown.
+In the following, the mapping of the MIC Core standard attributes to the attributes of the LOTAR standard will be shown.
 
-=== Maping of MIC-Core attributes to the LOTAR standard
+=== Maping of MIC Core attributes to the LOTAR standard
 
-The following table shows the mapping of MIC-Core attributes to LOTAR attributes.
-In the first column the attributes defined in the MIC-Core are listed.
+The following table shows the mapping of MIC Core attributes to LOTAR attributes.
+In the first column the attributes defined in the MIC Core are listed.
 The second column lists the mapping of the attribute names to the LOTAR attributes.
 In column three an abbreviated explanation of the attributes is listed to provide a better overview.
 
 
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
-| MIC-Core Name| LOTAR Mapping | Short Explanation
+| MIC Core Name| LOTAR Mapping | Short Explanation
 | Model name | modelName | Human-readable way of referring to the model. Usually short and clear. Not necessarily unique.
 | Model identifier | Unique_object_id | Unique identifier for the model.
 | Model description | modelObjective | Human-readable, textual, general overview. Highlights important information about the model.
@@ -50,15 +50,15 @@ In column three an abbreviated explanation of the attributes is listed to provid
 | Verification & Validation report | modelSummaryReport | Reports describing the results of the verification and validation.
 |===
 
-=== Detailing about mapping MIC-Core to LOTARR
+=== Relationship between MIC Core and LOTAR specific attributes
 
-As in chapter 1.2 descripted, the MIC-Core standard defines a set of core attributes that other standards can adopt, extend, refine.
-Goal is to have a core set of aligned attributes.
-All the standards have specific use cases; therefore they also have more specific attributes to support these use cases.
+As described in <<What is MIC Core>>, the MIC Core standard defines a set of core attributes that other standards can adopt, extend, and refine.
+The goal is to have a core set of aligned attributes, while giving standards the freedom to cater to their specific use cases.
+Therefore they also have more specific attributes, going beyond the MIC Core attributes, to support these use cases.
 As an example:
 
-MIC-Core has the attribute **Software and hardware environment requirements** which fits to the LOTAR attribute **ModelDev_Integration_Execution_Inf2**.
-But LOTAR has also more specific attributes in this context like: devToolName, devToolVersion, devToolLicense, devOSname, devOSversion, devOSlicense, devCompilerName, devCompilerVersion, devCompilerLicense, devLanguage, CPUnumber, RAMsize, targetToolName
+MIC Core has the attribute **Software and hardware environment requirements** which fits to the LOTAR attribute **ModelDev_Integration_Execution_Inf2**.
+But LOTAR has also more specific attributes in this context like **devToolName**, **devToolVersion**, **devToolLicense**, **devOSname**, **devOSversion**, **devOSlicense**, **devCompilerName**, **devCompilerVersion**, **devCompilerLicense**, **devLanguage**, **CPUnumber**, **RAMsize**, and **targetToolName**.
 
 === Information about LOTAR
 
@@ -69,13 +69,11 @@ Based on the ISO 14721, the Open Archival Information System (OAIS) Reference Mo
 .Structure of LOTAR organisation
 image::Lotar-structure.png[]
 
-
 The business case for data preservation is more than data reuse and includes regulatory requirements, accident investigations, product support and modifications, part/design obsolescence, software fixes, and the evolution of tools.
 
 [#im-timeline-archiving]
 .Life time for data preservation
 image::Timeline-Archiving.png[]
-
 
 The Model-Based Systems Engineering (MBSE) workgroup is focused on delivering process instructions for specific model types.
 In addition to general modeling and quality standards, the instructions identify data standards applicable to the individual modeling domains.
