@@ -13,6 +13,7 @@
 :source-highlighter: highlightjs
 :nofooter:
 :icons: font
+:imagesdir: images
 
 include::docs/0___preamble.adoc[]
 
@@ -25,4 +26,6 @@ include::docs/3___conformance.adoc[]
 include::docs/4___literature.adoc[]
 
 include::docs/A___mapping_srmd.adoc[]
+
+include::docs/B___mapping_lotar.adoc[]
 
