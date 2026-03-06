@@ -255,40 +255,9 @@ Can have multiple values:: Yes
 Value examples:: camera34, camera34-A-sampleV23
 Additional explanation and rationale:: Providing the _Name of Item under Test_ attribute helps clarifying the subject of simulation.
 
-==== Item under Test Version
-
-Attribute description:: The _Item under Test Version_ is a human readable version designation for the overall product.
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The _Item under Test Version_ attribute is essential information that helps keep track of which _Overall Product Version_ the simulation task was generated for.
-
-==== ID of Item under Test
-
-Attribute description:: The _Item under Test identifier_ is the unique master ID of the overall product within the company's project management IT infrastructure, whose development or validation requires the respective simulation. If the company has a versioning mechanism for products in the project management IT infrastructure, the version ID is included in the identifier so that the product can be referenced with version accuracy.
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The (version accurate) _Item under Test identifier_ attribute is essential information needed to facilitate automated traceability to the overall product for which the simulation is initially requested and executed. "Overall product? can also refer to a customer's product if a company develops and simulates a relevant product as a system or component specifically for a customer product.
-
-==== Item under Test URL
-
-Attribute description:: The _Item under Test URL_ is an alternate way to identify the overall product. All information given to the _Overall Product Identifier_ attribute apply here.
-Obligation and Level:: Level 1 Optional
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: All of the information provided for the _Item under Test Identifier_ attribute applies here as well.
-
-==== Item under Test Full Name
-
-Attribute description:: The _Item under Test Full Name_ is the commonly known name of the overall product, whose development or validation requires the respective simulation.
-Obligation and Level:: Level 1 Optional
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: Providing the _Item under Test Full Name_ attribute with potentially relevant details helps quickly understand the overall product context for which the simulation is initially requested and executed. "Overall product? can also refer to a customer's product if a company develops and simulates a relevant product as a system or component specifically for a customer product.
-
 ==== Higher Level Engineering Task
 
 Attribute description:: The _Higher Level Engineering Task_ is a _Higher Level Engineering Task_ that sets the context of the _Specific Engineering Task_.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: No
 Value examples:: (e.g. development of an AD driving function based on camera signals)
 Additional explanation and rationale:: The _Higher Level Engineering Task_ attribute in combination with the _Specific Engineering Task_ attribute supports understanding the context in which the simulation is placed.
@@ -296,7 +265,6 @@ Additional explanation and rationale:: The _Higher Level Engineering Task_ attri
 ==== Specific Engineering Task
 
 Attribute description:: The _Specific Engineering Task_ is the engineering that directly benefits from the simulation results.
-Obligation and Level:: Level 1 Recommended
 Can have multiple values:: No
 Value examples:: (e.g. detection of critical occlusions when turning right with pedestrians)
 Additional explanation and rationale:: The _Specific Engineering Task_ attribute in combination with the _Higher Level Engineering Task_ attribute supports understanding the context in which the simulation is placed.
@@ -304,7 +272,6 @@ Additional explanation and rationale:: The _Specific Engineering Task_ attribute
 ==== Simulation Task Target
 
 Attribute description:: The _Simulation Task Target_ represents the engineering question that is to be answered by the simulation task.
-Obligation and Level:: Level 1 Mandatory
 Can have multiple values:: Yes
 Value examples:: (e.g. assessment of the camera resolution by simulation)
 Additional explanation and rationale:: Providing the _Simulation Task Target_ attribute helps keep the focus on the target and to ensures that the entire simulation task is streamlined to the target.
@@ -312,7 +279,6 @@ Additional explanation and rationale:: Providing the _Simulation Task Target_ at
 ==== Simulation Objective
 
 Attribute description:: The _Simulation Objective_ describes, in numerical notation, exactly what is to be determined, confirmed, or refuted by a simulation.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: (e.g. the distance between vehicle and pedestrian must be higher than 1.5m)
 Additional explanation and rationale:: Providing the Simulation objectives attribute is an important input for the development of the test cases of a simulation. By specifying the simulation objectives numerically, the simulation results can be mathematically compared to the objectives.
@@ -320,7 +286,6 @@ Additional explanation and rationale:: Providing the Simulation objectives attri
 ==== Quality Criterion
 
 Attribute description:: A _Quality Criterion_ is a quality requirement that must be met during the simulation, particularly given the importance of the decision to be made.
-Obligation and Level:: Level 3 Man
 Can have multiple values:: Yes
 Value examples:: companyZ simulation quality assessment
 Additional explanation and rationale:: The _Quality Criterion_ attribute facilitate the configuration of the simulation setup.
@@ -328,7 +293,6 @@ Additional explanation and rationale:: The _Quality Criterion_ attribute facilit
 ==== Verification Criterion
 
 Attribute description:: A _Verification Criterion_ is a quality requirement that must be met during the simulation in order to verify that the simulation results align with the specified objectives of the simulation task.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Verification Criterion_ attribute helps to align with the _Specific Engineering Task_ and to facilitate the simulation setup by providing clear instructions.
@@ -336,7 +300,6 @@ Additional explanation and rationale:: Providing the _Verification Criterion_ at
 ==== Validation Criterion
 
 Attribute description:: A _Validation Criterion_ is a quality requirement that must be met during the simulation in order to validate that the simulation results align with the needs of the _Specific Engineering Task_ that requested the simulation.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: The _Validation Criterion_ attribute helps  to guarantee that the simulation objectives and targets align with the specific engineering requirements and to define the simulation setup.
@@ -344,7 +307,6 @@ Additional explanation and rationale:: The _Validation Criterion_ attribute help
 ==== Analysis Phase Verification Result
 
 Attribute description:: The _Analysis Phase Verification Result_ is the conclusion of the analysis phase closing verification.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: No
 Value examples:: 
 Additional explanation and rationale:: The _Analysis Phase Verification Result_ attribute serves to confirm that the analysis of the engineering task has been properly performed. This could be a link to a document.
@@ -354,7 +316,6 @@ Additional explanation and rationale:: The _Analysis Phase Verification Result_ 
 ==== Model Purpose and Objectives
 
 Attribute description:: The _Model Purpose and Objectives_ are indicating, based on the simulation purpose and objectives, individual _Model Purpose and Objectives_.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: specification of camera resolution for Automated driving function at object-list level
 Additional explanation and rationale:: The _Model Purpose and Objectives_ attribute, in alignment with the simulation purpose and objectives, facilitates the specification of individual simulation models and parameters.
@@ -362,7 +323,6 @@ Additional explanation and rationale:: The _Model Purpose and Objectives_ attrib
 ==== Modeled Entity
 
 Attribute description:: The _Modeled Entity_ is the real-world entity that is to be modeled.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: camera34-A-sampleV23
 Additional explanation and rationale:: Providing the _Modeled Entity_ attribute enables specification of individual simulation models and parameters. This could not only comprise the item under test, but all additional entities modeled needed to conduct the simulation.
@@ -370,7 +330,6 @@ Additional explanation and rationale:: Providing the _Modeled Entity_ attribute 
 ==== Required Modeled Effect
 
 Attribute description:: The _Required Modeled Effect_ is a real-world physical effect that is to be considered in the modeling.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: resolution of camera
 Additional explanation and rationale:: The _Required Modeled Effect_ is a real-world physical effect that should be considered in modeling.
@@ -378,7 +337,6 @@ Additional explanation and rationale:: The _Required Modeled Effect_ is a real-w
 ==== Further Model Requirements
 
 Attribute description:: The _Further Model Requirements_ is additional requirements placed on a model, including things that explicitly shall / are not be considered in the model.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: The _Further Model Requirements_ shall be considered in the same liability as the required modeled effects. This may not yet be available at the start of the simulation task. The attribute could therefore be omitted. It should be present once the simulation task has been completed.
@@ -386,7 +344,6 @@ Additional explanation and rationale:: The _Further Model Requirements_ shall be
 ==== Simulation Model Confidentiality Level
 
 Attribute description:: The _Simulation Model Confidentiality Level_ is a  classification with respect to the access to classified information.
-Obligation and Level:: Level 2 Recommended
 Can have multiple values:: No
 Value examples:: CSC-0: public CSC-1: internal CSC-2: confidential CSC-3: strictly confidential
 Additional explanation and rationale:: The _Simulation Model Confidentiality Level_ attribute uses a classification system that specifies how confidential the information contained in the classified document is to be treated. Typically, there is a set of rules that specifies what may and may not be done with a document and the information it contains.
@@ -394,7 +351,6 @@ Additional explanation and rationale:: The _Simulation Model Confidentiality Lev
 ==== Model Quality Requirement
 
 Attribute description:: A _Model Quality Requirement_ is a requirement placed on a simulation model.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Model Quality Requirement_ attribute helps specify the implementation of simulation models.
@@ -402,7 +358,6 @@ Additional explanation and rationale:: Providing the _Model Quality Requirement_
 ==== Entity Parameter
 
 Attribute description:: The _Entity Parameter_ reference provided parameters of the entity to be modeled.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: # data sheet of camera # material database
 Additional explanation and rationale:: Providing the _Entity parameter_ attribute is essential input information for the parameterization.
@@ -410,7 +365,6 @@ Additional explanation and rationale:: Providing the _Entity parameter_ attribut
 ==== Value Distribution Function
 
 Attribute description:: The _Value Distribution Function_ (value deviation) specifies the probability of deviations certain value.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: The _Value Distribution Function_ attribute serves for ensuring that the simulation results are robust against little value deviation in a real world situation (required tolerances uncertainties).
@@ -418,7 +372,6 @@ Additional explanation and rationale:: The _Value Distribution Function_ attribu
 ==== Parameter Confidentiality Level
 
 Attribute description:: The _Parameter Confidentiality Level_ is a  classification with respect to the access to classified information.
-Obligation and Level:: Level 2 Recommended
 Can have multiple values:: No
 Value examples:: CSC-0: public CSC-1: internal CSC-2: confidential CSC-3: strictly confidential
 Additional explanation and rationale:: The _Parameter Confidentiality Level_ attribute uses a classification system that specifies how confidential the information contained in the classified document is to be treated. Typically, there is a set of rules that specifies what may and may not be done with a document and the information it contains.
@@ -426,7 +379,6 @@ Additional explanation and rationale:: The _Parameter Confidentiality Level_ att
 ==== Parameter Quality Requirement
 
 Attribute description:: A _Parameter Quality Requirement_ is a requirement placed on (a set of) parameters.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Parameter Quality requirements_ in requirements phase attribute helps specify the implementation of parameters.
@@ -434,7 +386,6 @@ Additional explanation and rationale:: Providing the _Parameter Quality requirem
 ==== Simulation Environment Requirement
 
 Attribute description:: A _Simulation Environment Requirement_ is a requirement placed on the simulation environment.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: # tool for causal modeling and simulation and supporting FMI # FEM
 Additional explanation and rationale:: Providing the _Simulation Environment Requirement_ attribute helps specify the required simulation environment.
@@ -442,7 +393,6 @@ Additional explanation and rationale:: Providing the _Simulation Environment Req
 ==== Simulation Environment Quality Requirement
 
 Attribute description:: A _Simulation Environment Quality Requirement_ is a requirement placed on the simulation environment.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Simulation Environment Quality Requirement_ attribute helps specify the required simulation environment.
@@ -450,7 +400,6 @@ Additional explanation and rationale:: Providing the _Simulation Environment Qua
 ==== Simulation Integration Requirement
 
 Attribute description:: A _Simulation Integration Requirement_ is a requirement placed on the interaction of the simulation setup elements.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Simulation Integration Requirement_ attribute helps specify the required simulation integration, i.e. to specify how all elements of the simulation setup should interact.
@@ -458,7 +407,6 @@ Additional explanation and rationale:: Providing the _Simulation Integration Req
 ==== Simulation Integration Quality Requirement
 
 Attribute description:: A _Simulation Integration Quality Requirement_ is a requirement that is placed on the simulation integration.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Simulation Integration Quality Requirement_ attribute helps specify the needed simulation integration, i.e., specify how all elements of the simulation setup shall interact.
@@ -466,7 +414,6 @@ Additional explanation and rationale:: Providing the _Simulation Integration Qua
 ==== Test Case Requirements
 
 Attribute description:: The _Test Case Requirements_ is the description of the goals and objectives of a test case.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Test Case Requirements_ attribute helps specify the implementation of test cases.
@@ -474,7 +421,6 @@ Additional explanation and rationale:: Providing the _Test Case Requirements_ at
 ==== Test Case Quality Requirement
 
 Attribute description:: A _Test Case Quality Requirement_ is a requirement that is placed on a test case.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing _Test Case Quality Requirement_ attribute helps specify the implementation of test cases.
@@ -482,7 +428,6 @@ Additional explanation and rationale:: Providing _Test Case Quality Requirement_
 ==== Quality Assurance Requirements
 
 Attribute description:: A _Quality Assurance Requirements_ is a requirements that is placed on the quality assurance in the requirements phase.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Quality Assurance Requirements_ attribute helps understand the quality assurance measures made in the requirements phase. The attribute contains the derivation or decomposition of the quality criteria specified in the objectives section.
@@ -492,7 +437,6 @@ Additional explanation and rationale:: Providing the _Quality Assurance Requirem
 // In den Beschreibungen: Requirements Verification Result oder Requirements Phase Verification Result
 
 Attribute description:: The _Requirements Verification Result_ is the result of the verification activity  in the requirements phase.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: No
 Value examples:: 
 Additional explanation and rationale:: Providing a _Requirements Verification Result_ attribute helps recognize the quality status of the requirements phase results. This attribute can contain a link to a verification report.
@@ -502,7 +446,6 @@ Additional explanation and rationale:: Providing a _Requirements Verification Re
 ==== Model Design Specification
 
 Attribute description:: A _Model Design Specification_ is the definition of how models are to be implemented, including model approaches, interfaces model structure, etc.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: The _Model Design Specification_ attribute provides the base for the model implementation. Typically, the attribute contains a link to the appropriate document or the model name and version which should be used.
@@ -510,7 +453,6 @@ Additional explanation and rationale:: The _Model Design Specification_ attribut
 ==== Model Quality Requirement
 
 Attribute description:: A _Model Quality Requirement_ is a requirement that is placed on a simulation model.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Model Quality Requirement_ helps to implement simulation models with appropriate and sufficient quality.
@@ -518,7 +460,6 @@ Additional explanation and rationale:: Providing the _Model Quality Requirement_
 ==== Parameter Design Specification
 
 Attribute description:: A _Parameter Design Specification_ is the definition of how parameters are to be implemented, including parameter structures, names, values, tolerances, etc.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: # format  test environment  # links to data sheets, measurements, material data  # specifications on handling tolerances  uncertainties
 Additional explanation and rationale:: The _Parameter Design Specification_ attribute provides the base for the (set of ) parameters implementation. Typically, the attribute contains a link to the appropriate document or the Parameter Name and version which should be used.
@@ -526,7 +467,6 @@ Additional explanation and rationale:: The _Parameter Design Specification_ attr
 ==== Parameter Quality Requirement
 
 Attribute description:: A _Parameter Quality Requirement_ is a requirement that is placed on (a set of) parameters.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Parameter Quality Requirement_ attribute helps to implement the (set of) parameters with appropriate and sufficient quality.
@@ -534,7 +474,6 @@ Additional explanation and rationale:: Providing the _Parameter Quality Requirem
 ==== Simulation Environment Design Specification
 
 Attribute description:: A _Simulation Environment Design Specification_ is the definition of how simulation environment is to be implemented or which tool and version should be used
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: The _Simulation Environment Design Specification_ attribute provides the base for the  Simulation environment implementation. Typically the attribute contains a link to the appropriate document or the tool name and version which should be used
@@ -542,7 +481,6 @@ Additional explanation and rationale:: The _Simulation Environment Design Specif
 ==== Simulation Environment Quality Requirement
 
 Attribute description:: A _Simulation Environment Quality Requirement_ is a requirement that is placed on a simulation environment.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Simulation Environment Quality Requirement_ attribute helps to implement the simulation environment with appropriate and sufficient quality or the chosen tool has to fulfill.
@@ -550,7 +488,6 @@ Additional explanation and rationale:: Providing the _Simulation Environment Qua
 ==== Simulation Integration Design Specification
 
 Attribute description:: A _Simulation Integration Design Specification_ is the definition of how simulation components are to be integrated
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: No
 Value examples:: 
 Additional explanation and rationale:: The _Simulation Integration Design Specification_ attribute provides the base for the  Simulation integration implementation. Typically the attribute contains a link to the appropriate document.
@@ -558,7 +495,6 @@ Additional explanation and rationale:: The _Simulation Integration Design Specif
 ==== Simulation Integration Quality Requirement
 
 Attribute description:: A _Simulation Integration Quality Requirement_ is a requirement that is placed on a simulation environment.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Simulation Integration Quality Requirement_ attribute helps to implement the simulation environment with appropriate and sufficient quality. This includes all interactions of simulation setup elements.
@@ -566,7 +502,6 @@ Additional explanation and rationale:: Providing the _Simulation Integration Qua
 ==== Test Case Design Specification
 
 Attribute description:: A _Test Case Design Specification_ is the definition of how test cases are to be implemented.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: i.e. formats  structure  clarification
 Additional explanation and rationale:: The _Test Case Design Specification_ are the base for test cases.
@@ -574,7 +509,6 @@ Additional explanation and rationale:: The _Test Case Design Specification_ are 
 ==== Test Case Quality Requirement
 
 Attribute description:: A _Test Case Quality Requirement_ is a requirement that is placed on a test cases.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Test Case Quality Requirement_ helps to implement test cases with appropriate and sufficient quality.
@@ -582,7 +516,6 @@ Additional explanation and rationale:: Providing the _Test Case Quality Requirem
 ==== Design Phase Quality Assurance
 
 Attribute description:: A _Design Phase Quality Assurance_ describe a quality assurance measure in the design phase.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Design Phase Quality Assurance_ helps understanding the quality assurance measures made in the design phase.
@@ -592,7 +525,6 @@ Additional explanation and rationale:: Providing the _Design Phase Quality Assur
 // in der Beschreibung: Design Phase Verification Result oder Design Verification Result
 
 Attribute description:: The _Design Verification Result_ is the result of the verification activity  in the design phase.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: No
 Value examples:: 
 Additional explanation and rationale:: Providing the _Design Verification Result_ helps to recognize the quality status of the requirements phase results.  This attribute can contain a link to a verification report.
@@ -602,47 +534,14 @@ Additional explanation and rationale:: Providing the _Design Verification Result
 ==== Simulation Model Name
 
 Attribute description:: The _Simulation Model Name_ is the given name for the implemented simulation model within the company's project management IT infrastructure.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Simulation Model Name_ attribute makes it easier to track and trace the simulation models implemented.
 
-==== Simulation Model Version
-
-Attribute description:: The _Simulation Model Version_ is a human readable version designation for the simulation model.
-Obligation and Level:: Level 2 Mandatory
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The _Simulation Model Version_ attribute is essential information that helps keep track of which received _Simulation Model Version_ the generated a certain simulation task refers to.
-
-==== Simulation Model Identifier
-
-Attribute description:: The _Simulation Model Identifier_ is the unique master ID of the simulation model within the company's project management IT infrastructure.  If the company has a versioning mechanism for simulation models in the project management IT infrastructure, the version ID is included in the identifier so that the simulation model can be referenced with version accuracy.
-Obligation and Level:: Level 2 Mandatory
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The (version accurate) _Simulation Model Identifier_ attribute is essential information needed to facilitate automated traceability of simulation tasks and simulation requests to the simulation models implemented.
-
-==== Simulation Model URL
-
-Attribute description:: The _Simulation Model URL_ is a alternate way to identify the simulation model. All information given to the _Simulation Model Identifier_ attribute apply here.
-Obligation and Level:: Level 2 Optional
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: All of the information provided for the _Simulation Model Identifier_ attribute applies here as well.
-
-==== Simulation Model Full Name
-
-Attribute description:: The Simulation Model Full Name is a descriptive name for the simulation model.
-Obligation and Level:: Level 2 Optional
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: Providing the Simulation Model Full Name attribute helps quickly recognize and understand the meaning of a simulation model.
 
 ==== Simulation Model Confidentiality Level
 
 Attribute description:: The Simulation Model Confidentiality Level is a  classification with respect to the access to classified information.
-Obligation and Level:: Level 2 Recommended
 Can have multiple values:: No
 Value examples:: CSC-0: public CSC-1: internal CSC-2: confidential CSC-3: strictly confidential
 Additional explanation and rationale:: The Simulation Model Confidentiality Level attribute uses a classification system that specifies how confidential the information contained in the classified document is to be treated. Typically, there is a set of rules that specifies what may and may not be done with a document and the information it contains.
@@ -650,7 +549,6 @@ Additional explanation and rationale:: The Simulation Model Confidentiality Leve
 ==== Simulation Model Quality
 
 Attribute description:: The Simulation Model Quality is a statement of any kind that describes the model quality actually achieved by implementation.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the Simulation Model Quality attribute helps to assess the quality of a model.
@@ -658,47 +556,15 @@ Additional explanation and rationale:: Providing the Simulation Model Quality at
 ==== Parameter Name
 
 Attribute description:: The Parameter Name is the given name for the implemented (set of) parameters within the company's project management IT infrastructure.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the Parameter Name attribute makes it easier to track and trace the (set of) parameters implemented.
 
-==== Parameter Version
 
-Attribute description:: The Parameter Version is a parameter or parameter set version.
-Obligation and Level:: Level 2 Mandatory
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The combination of Parameter Name and Parameter Version shall be unique.
-
-==== Parameter Identifier
-
-Attribute description:: The Parameter Identifier is the unique master ID of the parameter within the company's project management IT infrastructure.  If the company has a versioning mechanism for parameters in the project management IT infrastructure, the version ID is included in the identifier so that the parameters can be referenced with version accuracy.
-Obligation and Level:: Level 2 Mandatory
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The (version accurate) Parameter Identifier attribute is essential information needed to facilitate automated traceability of simulation tasks and simulation requests to the parameters implemented.
-
-==== Parameter URL
-
-Attribute description:: The Parameter URL is a alternate way to identify the parameter. All information given to the Parameter Identifier attribute apply here.
-Obligation and Level:: Level 2 Optional
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: All of the information provided for the Parameter Identifier attribute applies here as well.
-
-==== Parameter Full Name
-
-Attribute description:: The _Parameter Full Name_ is a descriptive name for the parameter.
-Obligation and Level:: Level 2 Optional
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: Providing the _Parameter Full Name_ attribute helps quickly recognize and understand the meaning of a parameter.
 
 ==== Parameter Confidentiality Level
 
 Attribute description:: The Parameter Confidentiality Level is a  classification with respect to the access to classified information.
-Obligation and Level:: Level 2 Recommended
 Can have multiple values:: No
 Value examples:: CSC-0: public CSC-1: internal CSC-2: confidential CSC-3: strictly confidential
 Additional explanation and rationale:: The Parameter Confidentiality Level attribute uses a classification system that specifies how confidential the information contained in the classified document is to be treated. Typically, there is a set of rules that specifies what may and may not be done with a document and the information it contains.
@@ -706,7 +572,6 @@ Additional explanation and rationale:: The Parameter Confidentiality Level attri
 ==== Parameter Quality
 
 Attribute description:: The Parameter Quality is a statement of any kind that describes the Parameter Quality actually achieved by implementation.
-Obligation and Level:: Level 2 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the Parameter Quality attribute helps to assess the quality of a parameter or a set of parameters.
@@ -714,47 +579,15 @@ Additional explanation and rationale:: Providing the Parameter Quality attribute
 ==== Simulation Environment Name
 
 Attribute description:: The Simulation Environment Name  is the given name for the implemented simulation environment within the company's project management IT infrastructure.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the Simulation Environment Name attribute makes it easier to track and trace the simulation environment implemented.
 
-==== Simulation Environment Version
 
-Attribute description:: The Simulation Environment Version is an implemented simulation environment.
-Obligation and Level:: Level 2 Mandatory
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The combination of Simulation Environment Name and Simulation Environment Version shall be unique.
-
-==== Simulation Environment Identifier
-
-Attribute description:: The Simulation Environment Identifier is the unique master ID of the simulation environment within the company's project management IT infrastructure.  If the company has a versioning mechanism for simulation environments in the project management IT infrastructure, the version ID is included in the identifier so that the simulation environment can be referenced with version accuracy.
-Obligation and Level:: Level 2 Mandatory
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The (version accurate) Simulation Environment Identifier attribute is essential information needed to facilitate automated traceability of simulation tasks and simulation requests to the simulation environment implemented.
-
-==== Simulation Environment URL
-
-Attribute description:: The Simulation Environment URL is a alternate way to identify the simulation environment . All information given to the simulation environment  identifier attribute apply here.
-Obligation and Level:: Level 2 Optional
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: All of the information given for the Simulation Environment Identifier attribute applies here as well.
-
-==== Simulation Environment Full Name
-
-Attribute description:: The Simulation Environment Full Name is a descriptive name for the simulation environment.
-Obligation and Level:: Level 2 Optional
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: Providing the Simulation Environment Full Name attribute helps quickly recognize and understand the meaning of a simulation environment.
 
 ==== Simulation Environment Quality
 
 Attribute description:: The Simulation Environment Quality is a statement of any kind that describes the Simulation Environment Quality actually achieved by implementation.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the Simulation Environment Quality attribute helps to assess the quality of a simulation environment.
@@ -762,47 +595,14 @@ Additional explanation and rationale:: Providing the Simulation Environment Qual
 ==== Test Case Name
 
 Attribute description:: The Test Case Name is the given name for the implemented test cases within the company's project management IT infrastructure.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the Test Case Name attribute makes it easier to track and trace the test cases implemented.
 
-==== Test Case Version
-
-Attribute description:: The Test Case Version is a  version of an implemented test case.
-Obligation and Level:: Level 2 Mandatory
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The combination of Test Case Name and Test Case Version shall be unique.
-
-==== Test Case Identifier
-
-Attribute description:: The Test Case Identifier is the unique master ID of the test case within the company's project management IT infrastructure.  If the company has a versioning mechanism for test cases in the project management IT infrastructure, the version ID is included in the identifier so that the test case can be referenced with version accuracy.
-Obligation and Level:: Level 2 Mandatory
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The (version accurate) Test Case Identifier attribute is essential information needed to facilitate automated traceability of simulation tasks and simulation requests to the test cases implemented.
-
-==== Test Case URL
-
-Attribute description:: The Test Case URL is a alternate way to identify the test case. All information given to the Test Case Identifier attribute apply here.
-Obligation and Level:: Level 2 Optional
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: All of the information given for the Test Case Identifier attribute applies here as well.
-
-==== Test Case Full Name
-
-Attribute description:: The Test Case Full Name is a descriptive name for the test case.
-Obligation and Level:: Level 2 Optional
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: Providing the Test Case Full Name attribute helps quickly recognize and understand the meaning of a test case.
 
 ==== Test Case Confidentiality Level
 
 Attribute description:: The Test Case Confidentiality Level is a  classification with respect to the access to classified information.
-Obligation and Level:: Level 2 Recommended
 Can have multiple values:: No
 Value examples:: CSC-0: public CSC-1: internal CSC-2: confidential CSC-3: strictly confidential
 Additional explanation and rationale:: The Test Case Confidentiality Level attribute uses a classification system that specifies how confidential the information contained in the classified document is to be treated. Typically, there is a set of rules that specifies what may and may not be done with a document and the information it contains.
@@ -810,7 +610,6 @@ Additional explanation and rationale:: The Test Case Confidentiality Level attri
 ==== Test Case Quality
 
 Attribute description:: The Test Case Quality is a statement of any kind that describes the Test Case Quality actually achieved by implementation.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the Test Case Quality attribute helps to assess the quality of a test case+J38.
@@ -818,47 +617,14 @@ Additional explanation and rationale:: Providing the Test Case Quality attribute
 ==== Simulation Integration Name
 
 Attribute description:: The Simulation integration is the given name for the implemented simulation integration within the company's project management IT infrastructure.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the Simulation Integration Name attribute makes it easier to track and trace the simulation integration implemented.
 
-==== Simulation Integration Version
-
-Attribute description:: The Simulation Integration Version is an implemented simulation integration.
-Obligation and Level:: Level 2 Mandatory
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The combination of Simulation Integration Name and Simulation Integration Version shall be unique.
-
-==== Simulation Integration Identifier
-
-Attribute description:: The Simulation Integration Identifier is the unique master ID of the simulation integration within the company's project management IT infrastructure.  If the company has a versioning mechanism for simulation integrations in the project management IT infrastructure, the version ID is included in the identifier so that the simulation integration can be referenced with version accuracy.
-Obligation and Level:: Level 2 Mandatory
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The (version accurate) Simulation Integration Identifier attribute is essential information needed to facilitate automated traceability of simulation tasks and simulation requests to the simulation integration implemented.
-
-==== Simulation Integration URL
-
-Attribute description:: The Simulation Integration URL is a alternate way to identify the simulation integration. All information given to the Simulation Integration Identifier attribute apply here.
-Obligation and Level:: Level 2 Optional
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: All of the information given for the Simulation Integration Identifier attribute applies here as well.
-
-==== Simulation Integration Full Name
-
-Attribute description:: The Simulation Integration Full Name is a descriptive name for the simulation integration.
-Obligation and Level:: Level 2 Optional
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: Providing the Simulation Integration Full Name attribute helps quickly recognize and understand the meaning of a simulation integration.
 
 ==== Solver Setting
 
 Attribute description:: A Solver Setting is a specific parameter that control the behavior of simulation solver tools.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the Solver Setting attribute helps to complete the simulation setup with recommended settings to control the requested behavior of the solver tool..
@@ -866,7 +632,6 @@ Additional explanation and rationale:: Providing the Solver Setting attribute he
 ==== Simulation Integration Quality
 
 Attribute description:: The Simulation Integration Quality is a statement of any kind that describes the Simulation Integration Quality actually achieved by implementation.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the Simulation Integration Quality attribute helps to assess the quality of a simulation integration.
@@ -874,7 +639,6 @@ Additional explanation and rationale:: Providing the Simulation Integration Qual
 ==== Implementation Quality Assurance Results
 
 Attribute description:: The Implementation Quality Assurance Results describe the outcome of quality measurements done.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the  Implementation Quality Assurance Results attribute helps to recognize and understand the base of the Implementation Quality Verdict.  This attribute can contain a link to the results or quality assurance report.
@@ -882,7 +646,6 @@ Additional explanation and rationale:: Providing the  Implementation Quality Ass
 ==== Implementation Quality Verdict
 
 Attribute description:: The Implementation Quality Verdict is the yes or no resp. passed or failed decision to the final implementation quality assurance.
-Obligation and Level:: Level 4 Optional
 Can have multiple values:: No
 Value examples:: 
 Additional explanation and rationale:: Providing the Implementation Quality Verdict attribute helps to recognize the quality status of the overall implementation work.  This attribute can contain a link to a signed quality assurance protocol.
@@ -892,7 +655,6 @@ Additional explanation and rationale:: Providing the Implementation Quality Verd
 ==== Execution Raw Data
 
 Attribute description:: The attribute Execution Raw Data refers to the data that originally resulted from a simulation run before any digital or manual processing was carried out.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: The Execution Raw Data is usually only stored for further processing for a limited time and discarded as soon as the desired or required relevant simulation results have been extracted from the raw data and processed, e.g. incorporated into design decisions. However, this does not always have to be the case. If raw data is discarded, a link to the raw data would fail.
@@ -900,79 +662,23 @@ Additional explanation and rationale:: The Execution Raw Data is usually only st
 ==== Used Simulation Model Name
 
 Attribute description:: The Used _Simulation Model Name_ is the given name of a simulation model actually used in simulation execution.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the Used _Simulation Model Name_ attribute makes it easier to track and trace the simulation model actually used in the simulation.
 
-==== Used Simulation Model Version
-
-Attribute description:: The Used _Simulation Model Version_ is the given version identifier of a simulation model actually used in simulation execution.
-Obligation and Level:: Level 2 Mandatory
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The Used _Simulation Model Version_ attribute is essential information that helps keep track and trace the _Simulation Model Version_ actually used in the simulation.
-
-==== Used Simulation Model Identifier
-
-Attribute description:: The Used _Simulation Model Identifier_ is the unique master ID of the used simulation model within the company's project management IT infrastructure. If the company has a versioning mechanism for simulation models in project management IT infrastructure, the version ID is included in the identifier so that the model can be referenced with version accuracy.
-Obligation and Level:: Level 2 Mandatory
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The (version accurate) _Simulation Model Identifier_ attribute is essential information needed to facilitate automated traceability to the used simulation model.
-
-==== Used Simulation Model URL
-
-Attribute description:: The Used _Simulation Model URL_ is a alternate way to identify the used simulation model. All information given to the used _Simulation Model Identifier_ attribute apply here.
-Obligation and Level:: Level 2 Optional
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: All of the information given for the Used _Simulation Model Identifier_ attribute applies here as well.
 
 ==== Used Parameter Name
 
 Attribute description:: The _Used Parameter Name_ is the given name of a parameter or parameter set actually used in simulation execution.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Used Parameter Name_ attribute makes it easier to track and trace the simulation model actually used in the simulation.
 
-==== Used Parameter Version
 
-Attribute description:: The _Used Parameter Version_ is the given version identifier of a parameter or parameter set actually used in simulation execution.
-Obligation and Level:: Level 2 Mandatory
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The _Used Parameter Version_ attribute is essential information that helps keep track and trace the _Simulation Model Version_ actually used in the simulation.
-
-==== Used Parameter Identifier
-
-Attribute description:: The _Used Parameter Identifier_ is the unique master ID of the used parameter within the company's project management IT infrastructure. If the company has a versioning mechanism for parameters in project management IT infrastructure, the version ID is included in the identifier so that the model can be referenced with version accuracy.
-Obligation and Level:: Level 2 Mandatory
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The (version accurate) _Used Parameter Identifier_ attribute is essential information needed to facilitate automated traceability to the used parameter.
-
-==== Used Parameter URL
-
-Attribute description:: The _Used Parameter URL_ is a alternate way to identify the used parameter. All information given to the _Used Parameter Identifier_ attribute apply here.
-Obligation and Level:: Level 2 Optional
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: All of the information given for the _Used Parameter Identifier_ attribute applies here as well.
-
-==== Used Parameter Full Name
-
-Attribute description:: The _Used Parameter Full Name_ is a descriptive name for the used parameter.
-Obligation and Level:: Level 2 Optional
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: Providing the _Used Parameter Full Name_ attribute helps quickly recognize and understand the meaning of a used parameter.
 
 ==== Used Test Case Name
 
 Attribute description:: The _Used Test Case Name_ is the given name of a test case actually used in simulation execution.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: The combination of _Used Test Case Name_ and _Used Test Case Version_ shall be unique.
@@ -980,7 +686,6 @@ Additional explanation and rationale:: The combination of _Used Test Case Name_ 
 ==== Used Test Case Version
 
 Attribute description:: The _Used Test Case Version_ is the given version identifier of a test case actually used in simulation execution.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: The combination of _Used Test Case Name_ and _Used Test Case Version_ shall be unique.
@@ -988,7 +693,6 @@ Additional explanation and rationale:: The combination of _Used Test Case Name_ 
 ==== Used Test Case Identifier
 
 Attribute description:: The _Used Test Case Identifier_ is the unique master ID of the used test case within the company's project management IT infrastructure. If the company has a versioning mechanism for test cases in project management IT infrastructure, the version ID is included in the identifier so that the model can be referenced with version accuracy.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: The (version accurate) _Used Test Case Identifier_ attribute is essential information needed to facilitate automated traceability to the used test case.
@@ -996,7 +700,6 @@ Additional explanation and rationale:: The (version accurate) _Used Test Case Id
 ==== Used Test Case URL
 
 Attribute description:: The _Used Test Case URL_ is a alternate way to identify the used test case. All information given to the _Used Test Case Identifier_ attribute apply here.
-Obligation and Level:: Level 2 Optional
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: All of the information given for the _Used Test Case Identifier_ attribute applies here as well.
@@ -1004,7 +707,6 @@ Additional explanation and rationale:: All of the information given for the _Use
 ==== Used Test Case Full Name
 
 Attribute description:: The _Used Test Case Full Name_ is a descriptive name for the used test case.
-Obligation and Level:: Level 2 Optional
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Used Test Case Full Name_ attribute helps quickly recognize and understand the meaning of a used test case.
@@ -1012,23 +714,14 @@ Additional explanation and rationale:: Providing the _Used Test Case Full Name_ 
 ==== Used Tool Name
 
 Attribute description:: The _Used Tool Name_ is the given name of a tool actually used in simulation execution.
-Obligation and Level:: Level 2 Mandatory
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: The combination of _Used Tool Name_ and _Used Tool Version_ shall be unique.
 
-==== Used Tool Version
-
-Attribute description:: The _Used Tool Version_ is the given version identifier of a tool actually used in simulation execution.
-Obligation and Level:: Level 2 Mandatory
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The combination of _Used Tool Name_ and _Used Tool Version_ shall be unique.
 
 ==== Used Tool Settings
 
 Attribute description:: The _Used Tool Settings_ is a tool specific setting actually applied to in simulation execution.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: The Tool settings are very similar to parameters. They can also consist of a parameter and a parameter value. However, tool settings are not applied to models but to tools. They must therefore be compatible with the used tool if they are applied in simulation execution.
@@ -1036,7 +729,6 @@ Additional explanation and rationale:: The Tool settings are very similar to par
 ==== Execution Log
 
 Attribute description:: The _Execution Log_ records all relevant activities within the simulation environment chronologically and usually saves them in a simple text file with the date and time, sometimes even in millisecond intervals.
-Obligation and Level:: Level 4 Optional
 Can have multiple values:: No
 Value examples:: 
 Additional explanation and rationale:: The _Execution Log_ is usually consulted if the technical execution of a simulation is not running smoothly or if there are even errors or process aborts.
@@ -1046,7 +738,6 @@ Additional explanation and rationale:: The _Execution Log_ is usually consulted 
 ==== Evaluation Results
 
 Attribute description:: The _Evaluation Results_ are the key results that emerges from the processing of the raw results.
-Obligation and Level:: Level 1 Mandatory
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Typically the attribute _Evaluation Results_ contains a link to the result data files.
@@ -1054,7 +745,6 @@ Additional explanation and rationale:: Typically the attribute _Evaluation Resul
 ==== Evaluation Quality-Assurance Results
 
 Attribute description:: The _Evaluation Quality-Assurance Results_ describe the outcome of quality measurements done.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: No
 Value examples:: 
 Additional explanation and rationale:: Providing the _Evaluation Quality-Assurance Results_ attribute helps to recognize and understand the base of the Implementation Quality Verdict.  This attribute can contain a link to the results or quality assurance report.
@@ -1062,7 +752,6 @@ Additional explanation and rationale:: Providing the _Evaluation Quality-Assuran
 ==== Evaluation Quality Verdict
 
 Attribute description:: The _Evaluation Quality Verdict_ the the result of the evolution of the simulation results. i.e. whether the simulation results could be considered valid and can appropriately meet the simulation objectives.
-Obligation and Level:: Level 4 Optional
 Can have multiple values:: No
 Value examples:: 
 Additional explanation and rationale:: Providing the _Evaluation Quality Verdict_ attribute helps to recognize the quality status of the simulation results.  This attribute can contain a link to a signed quality assurance protocol.
@@ -1072,7 +761,6 @@ Additional explanation and rationale:: Providing the _Evaluation Quality Verdict
 ==== Objectives Fulfilled
 
 Attribute description:: The _Objectives Fulfilled_ attribute is the clear and unambiguous documentation of a objective fulfillment decision with a predefined set of applicable entries, that indicates whether the objectives linked with the simulation task are fulfilled or not or whether a statement of the objectives fulfillment is not possible.
-Obligation and Level:: Level 1 Mandatory
 Can have multiple values:: No
 Value examples:: Yes: Objectives are fulfilled No; Objectives are not fulfilled No statement possible
 Additional explanation and rationale:: The Objective fulfillment attribute helps quickly recognize and assess the simulation results without having to inspect all the details of a simulation task.
@@ -1080,7 +768,6 @@ Additional explanation and rationale:: The Objective fulfillment attribute helps
 ==== Credibility Fulfilled
 
 Attribute description:: The _Credibility Fulfilled_ attribute is the clear and unambiguous documentation of a credibility fulfillment decision with a predefined set of applicable entries, that indicates whether the simulation task fulfills credibility requirements or not or whether a statement of the credibility fulfillment is not possible.
-Obligation and Level:: Level 1 Mandatory
 Can have multiple values:: No
 Value examples:: Yes: Credibility sufficient. Statements about objectives are possible No; Credibility not sufficient e.g. tolerances of sim results, confidence intervals do not allow statements about objectives No statement possible: No specifications for credibility or no evaluation carried out
 Additional explanation and rationale:: The Credibility fulfillment attribute helps quickly recognize and assess the simulation credibility without having to inspect all the details of a simulation task.
@@ -1088,7 +775,6 @@ Additional explanation and rationale:: The Credibility fulfillment attribute hel
 ==== Task Fulfilled
 
 Attribute description:: The _Task Fulfilled_ attribute is the final assessment of the entire simulation task. The attribute comprises the combination and conclusion from the assessment of objective fulfillment and the assessment of credibility fulfillment.
-Obligation and Level:: Level 1 Mandatory
 Can have multiple values:: No
 Value examples:: Yes: Statements about credibility, objectives are possible No; Canceled, so no statements about credibility, objectives possible In Progress: In progress
 Additional explanation and rationale:: The _Task Fulfilled_ attribute helps quickly recognize and assess the simulation task fulfillment without having to inspect all the details of a simulation task.
@@ -1096,7 +782,6 @@ Additional explanation and rationale:: The _Task Fulfilled_ attribute helps quic
 ==== Fulfillment Evidence
 
 Attribute description:: The _Fulfillment Evidence_ attribute links a more detailed report documenting the objective, credibility and task fulfillment assessment and decision.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: No
 Value examples:: 
 Additional explanation and rationale:: The _Fulfillment Evidence_ attribute helps learn more about the evidence of the task fulfillment decision without having to inspect to much details behind the decision.
