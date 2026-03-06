@@ -271,19 +271,19 @@ Can have multiple values:: No
 Value examples:: (e.g. detection of critical occlusions when turning right with pedestrians)
 Additional explanation and rationale:: The _Specific Engineering Task_ attribute in combination with the _Higher Level Engineering Task_ attribute supports understanding the context in which the simulation is placed.
 
-==== Simulation Task Target
-
-Attribute description:: The _Simulation Task Target_ represents the engineering question that is to be answered by the simulation task.
-Can have multiple values:: Yes
-Value examples:: (e.g. assessment of the camera resolution by simulation)
-Additional explanation and rationale:: Providing the _Simulation Task Target_ attribute helps keep the focus on the target and to ensures that the entire simulation task is streamlined to the target.
-
 ==== Simulation Objective
 
-Attribute description:: The _Simulation Objective_ describes, in numerical notation, exactly what is to be determined, confirmed, or refuted by a simulation.
+Attribute description:: The _Simulation objective_ represents the engineering question that is to be answered by the simulation task.
+Can have multiple values:: Yes
+Value examples:: (e.g. assessment of the camera resolution by simulation)
+Additional explanation and rationale:: Providing the _Simulation Objective_ attribute helps keep the focus on the target and to ensures that the entire simulation task is streamlined to the target.
+
+==== Simulation further Requirements
+
+Attribute description:: The _Simulation further Requirements_  what is to be determined, confirmed, or neglected by a simulation.
 Can have multiple values:: Yes
 Value examples:: (e.g. the distance between vehicle and pedestrian must be higher than 1.5m)
-Additional explanation and rationale:: Providing the Simulation objectives attribute is an important input for the development of the test cases of a simulation. By specifying the simulation objectives numerically, the simulation results can be mathematically compared to the objectives.
+Additional explanation and rationale:: Providing the Simulation further requirement attribute is an important input for the development of the test cases of a simulation. Often detailed information is linked.
 
 ==== Quality Criterion
 
@@ -565,7 +565,6 @@ Value examples::
 Additional explanation and rationale:: Providing the Parameter Name attribute makes it easier to track and trace the (set of) parameters implemented.
 
 
-
 ==== Parameter Confidentiality Level
 
 Attribute description:: The Parameter Confidentiality Level is a  classification with respect to the access to classified information.
@@ -586,7 +585,6 @@ Attribute description:: The Simulation Environment Name  is the given name for t
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the Simulation Environment Name attribute makes it easier to track and trace the simulation environment implemented.
-
 
 
 ==== Simulation Environment Quality
@@ -687,33 +685,6 @@ Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: The combination of _Used Test Case Name_ and _Used Test Case Version_ shall be unique.
 
-==== Used Test Case Version
-
-Attribute description:: The _Used Test Case Version_ is the given version identifier of a test case actually used in simulation execution.
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The combination of _Used Test Case Name_ and _Used Test Case Version_ shall be unique.
-
-==== Used Test Case Identifier
-
-Attribute description:: The _Used Test Case Identifier_ is the unique master ID of the used test case within the company's project management IT infrastructure. If the company has a versioning mechanism for test cases in project management IT infrastructure, the version ID is included in the identifier so that the model can be referenced with version accuracy.
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The (version accurate) _Used Test Case Identifier_ attribute is essential information needed to facilitate automated traceability to the used test case.
-
-==== Used Test Case URL
-
-Attribute description:: The _Used Test Case URL_ is a alternate way to identify the used test case. All information given to the _Used Test Case Identifier_ attribute apply here.
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: All of the information given for the _Used Test Case Identifier_ attribute applies here as well.
-
-==== Used Test Case Full Name
-
-Attribute description:: The _Used Test Case Full Name_ is a descriptive name for the used test case.
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: Providing the _Used Test Case Full Name_ attribute helps quickly recognize and understand the meaning of a used test case.
 
 ==== Used Tool Name
 
@@ -776,12 +747,12 @@ Can have multiple values:: No
 Value examples:: Yes: Credibility sufficient. Statements about objectives are possible No; Credibility not sufficient e.g. tolerances of sim results, confidence intervals do not allow statements about objectives No statement possible: No specifications for credibility or no evaluation carried out
 Additional explanation and rationale:: The Credibility fulfillment attribute helps quickly recognize and assess the simulation credibility without having to inspect all the details of a simulation task.
 
-==== Task Fulfilled
+==== Task status
 
-Attribute description:: The _Task Fulfilled_ attribute is the final assessment of the entire simulation task. The attribute comprises the combination and conclusion from the assessment of objective fulfillment and the assessment of credibility fulfillment.
+Attribute description:: The _Task Fulfilled_ attribute is the final assessment of the entire simulation task. The attribute shows whether the task is still in progress, abortet, finished or checked out (possible in status in progress).
 Can have multiple values:: No
-Value examples:: Yes: Statements about credibility, objectives are possible No; Canceled, so no statements about credibility, objectives possible In Progress: In progress
-Additional explanation and rationale:: The _Task Fulfilled_ attribute helps quickly recognize and assess the simulation task fulfillment without having to inspect all the details of a simulation task.
+Value examples:: In Progress: In progress Checked out; in progress but checked out from data management system Abortet: simultion task is aborted, Finished: Task is finished
+Additional explanation and rationale:: The _Task status_ attribute helps to quickly recognize the status of  the simulation task .
 
 ==== Fulfillment Evidence
 
