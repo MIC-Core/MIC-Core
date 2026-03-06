@@ -136,268 +136,88 @@ The attribute includes the following sub-attributes (details in appendix):
 
 *	Full Name
 
-=== Administration
+=== *Administration*
 
-==== Overall Product Name
+==== *Mandatory*
 
-Attribute description:: The _Overall Product Name_ is the unique master name of the overall product within the company's project management IT infrastructure, whose development or validation requires the respective simulation.
-Obligation and Level:: Level 1 Recommended
-Can have multiple values:: Yes
-Value examples:: carZZ, aeroplaneTT
-Additional explanation and rationale:: Providing the _Overall Product Name_ attribute makes it easier to track and trace the impact of a simulation result on the overall product for which the simulation is initially being requested and executed. "Overall product" can also refer to a customer's product if a company develops and simulates a relevant product as a system or component specifically for a customer product.
-
-==== Overall Product Version
-
-Attribute description:: The _Overall Product Version_ is a human readable version designation for the overall product.
-Obligation and Level:: Level 1 Recommended
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The _Overall Product Version_ attribute is essential information that helps keep track of which _Overall Product Version_ the simulation task was generated for.
-
-==== Overall Product Identifier
-
-Attribute description:: The _Overall Product Identifier_ is the unique master ID of the overall product within the company's project management IT infrastructure, whose development or validation requires the respective simulation. If the company has a versioning mechanism for products in the project management IT infrastructure, the version ID is included in the identifier so that the product can be referenced with version accuracy.
-Obligation and Level:: Level 1 Recommended
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: The (version accurate) _Overall Product Identifier_ attribute is essential information needed to facilitate automated traceability to the overall product for which the simulation is initially requested and executed. "Overall product? can also refer to a customer's product if a company develops and simulates a relevant product as a system or component specifically for a customer product.
-
-==== Overall Product URL
-
-Attribute description:: The _Overall Product URL_ is an alternate way to identify the overall product. All information given to the _Overall Product Identifier_ attribute apply here.
-Obligation and Level:: Level 1 Optional
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: All of the information provided for the _Overall Product Identifier_ attribute applies here as well.
-
-==== Overall Product Full Name
-
-Attribute description:: The _Overall Product Full Name_ is the commonly known name of the overall product, whose development or validation requires the respective simulation.
-Obligation and Level:: Level 1 Optional
-Can have multiple values:: Yes
-Value examples:: 
-Additional explanation and rationale:: Providing the _Overall Product Full Name_ attribute with potentially relevant details helps quickly understand the overall product context for which the simulation is initially requested and executed. "Overall product? can also refer to a customer's product if a company develops and simulates a relevant product as a system or component specifically for a customer product.
-
-==== Specific Product Name
+===== Specific Product Name
 
 Attribute description:: The _Specific Product Name_ is the unique master name of the specific product within the company's project management IT infrastructure, whose development or validation requires the respective simulation.
-Obligation and Level:: Level 1 Mandatory
 Can have multiple values:: No
 Value examples:: AD-34basic
 Additional explanation and rationale:: Providing the _Specific Product Name_ attribute makes it easier to track and trace the impact of a simulation result on the specific product for which the simulation is initially being requested.
 
-==== Specific Product Version
-
-Attribute description:: The _Specific Product Version_ is a human readable version designation for the specific product.
-Obligation and Level:: Level 1 Recommended
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: The _Specific Product Version_ attribute is essential information that helps keep track of which _Specific Product Version_ the simulation task was generated for.
-
-==== Specific Product Identifier
-
-Attribute description:: The _Specific Product Identifier_ is the unique master ID of the specific product within the company's project management IT infrastructure, whose development or validation requires the respective simulation. If the company has a versioning mechanism for products in project management IT infrastructure, the version ID is included in the identifier so that the product can be referenced with version accuracy.
-Obligation and Level:: Level 1 Mandatory
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: The (version accurate) _Specific Product Identifier_ attribute is essential information needed to facilitate automated traceability to the specific product for which the simulation is initially requested.
-
-==== Specific Product URL
-
-Attribute description:: The _Specific Product URL_ is a alternate way to identify the specific product. All information given to the _Specific Product Identifier_ attribute apply here.
-Obligation and Level:: Level 1 Optional
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: All of the information provided for the _Specific Product Identifier_ attribute applies here as well.
-
-==== Specific Product Full Name
-
-Attribute description:: The _Specific Product Full Name_ is the commonly known name of the specific product, whose development or validation requires the respective simulation.
-Obligation and Level:: Level 1 Optional
-Can have multiple values:: No
-Value examples:: autonomous driving function based on camera
-Additional explanation and rationale:: Providing the _Overall Product Full Name_ with potentially relevant details helps quickly understand the overall product context for which the simulation is initially requested.
-
-==== Ordering Project Name
+===== Ordering Project Name
 
 Attribute description:: The _Ordering Project Name_ is the unique master name of the ordering development project within the company's project management IT infrastructure.
-Obligation and Level:: Level 1 Mandatory
 Can have multiple values:: No
 Value examples:: cam34basic
 Additional explanation and rationale:: Providing the _Ordering Project Name_ attribute makes it easier to track and trace the simulation task and the simulation request back to the ordering development project and its engineering context.
 
-==== Ordering Project Version
 
-Attribute description:: The Specific product _Ordering Project Version_ is a human readable version designation for the ordering project.
-Obligation and Level:: Level 1 Recommended
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: The _Ordering Project Version_ attribute is essential information that helps keep track of which _Ordering Project Version_ the simulation task was generated for.
-
-==== Ordering Project Identifier
-
-Attribute description:: The _Ordering Project Identifier_ is the unique master ID of the ordering development project within the company's project management IT infrastructure.
-Obligation and Level:: Level 1 Mandatory
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: The _Ordering Project Identifier_ is essential information needed to facilitate automated traceability of simulation tasks and simulation requests to the ordering development project.
-
-==== Ordering Project URL
-
-Attribute description:: The _Ordering Project URL_ is a alternate way to identify the ordering project. All information given to the _Ordering Project Identifier_ attribute apply here.
-Obligation and Level:: Level 1 Optional
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: All of the information provided for the _Ordering Project Identifier_ attribute applies here as well.
-
-==== Ordering Project Full Name
-
-Attribute description:: The _Ordering Project Full Name_ is the commonly known name of the project that requires the respective simulation.
-Obligation and Level:: Level 1 Optional
-Can have multiple values:: No
-Value examples:: camera34 for autonomous driving function
-Additional explanation and rationale:: Providing the _Ordering Project Full Name_ attribute helps quickly understand the development context from which the simulation is initially requested.
-
-==== Simulation Request Name
+===== Simulation Request Name
 
 Attribute description:: The _Simulation Request Name_ is the unique name of the simulation request within the company's project management IT infrastructure.
-Obligation and Level:: Level 1 Mandatory
 Can have multiple values:: No
 Value examples:: 
 Additional explanation and rationale:: Providing  the _Simulation Request Name_ attribute makes it easier to trace back to the simulation request when it is referenced in a simulation task or simulation delivery, for example.
 
-==== Simulation Request Version
-
-Attribute description:: The _Simulation Request Version_ is a human readable version designation for the simulation request.
-Obligation and Level:: Level 1 Recommended
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: The _Simulation Request Version_ attribute is essential information that helps keep track of which received _Simulation Request Version_ the generated simulation task refers to.
-
-==== Simulation Request Identifier
-
-Attribute description:: The _Simulation Request Identifier_ is the unique master ID of the simulation request within the company's project management IT infrastructure.  If the company has a versioning mechanism for simulation requests in the project management IT infrastructure, the version ID is included in the identifier so that the simulation request can be referenced with version accuracy.
-Obligation and Level:: Level 1 Mandatory
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: The (version accurate) _Simulation Request Identifier_ attribute is essential information to ensure that a simulation executed on request and its results can be uniquely assigned to the simulation request.
-
-==== Simulation Request URL
-
-Attribute description:: The _Simulation Request URL_ is a alternate way to identify the simulation request. All information given to the _Simulation Request Identifier_ attribute apply here.
-Obligation and Level:: Level 1 Optional
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: All of the information provided for the _Simulation Request Identifier_ attribute applies here as well.
-
-==== Simulation Request Full Name
-
-Attribute description:: The _Simulation Request Full Name_ is a descriptive name of the simulation request.
-Obligation and Level:: Level 1 Optional
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: Providing the _Simulation Request Full Name_ attribute helps quickly recognize and understand the meaning of a simulation request.
-
-==== Simulation Request Creator Name
-
-Attribute description:: The _Simulation Request Creator Name_ is the name or other regulatory-compliant valid identifier of the person who initially created the simulation request in the project management IT system.
-Obligation and Level:: Level 4 Optional
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: The _Simulation Request Creator Name_ attribute should automatically be extracted from the project management IT system
-
-==== Simulation Request Creation Date
-
-Attribute description:: The _Simulation Request Creation Date_ is the name or other regulatory-compliant valid identifier of the person who initially created the simulation request in the project management IT system.
-Obligation and Level:: Level 4 Optional
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: The _Simulation Request Creation Date_ attribute should automatically be extracted from the project management IT system
-
-==== Simulation Task Name
+===== Simulation Task Name
 
 Attribute description:: The _Simulation Task Name_ is the unique name of the simulation task within the originating company's project management IT infrastructure.
-Obligation and Level:: Level 1 Mandatory
 Can have multiple values:: No
 Value examples:: 
 Additional explanation and rationale:: Providing the _Simulation Task Name_ attribute  makes it easier to trace back to the simulation task when it is referenced in a simulation delivery.
 
-==== Simulation Task Version
+==== Recommended
 
-Attribute description:: The _Simulation Task Version_ is a human readable version designation for the simulation task.
-Obligation and Level:: Level 1 Recommended
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: The _Simulation Task Version_ attribute is essential information that helps keep track of which _Simulation Task Version_ a generated simulation delivery refers to.
+===== Overall Product Name
 
-==== Simulation Task Identifier
+Attribute description:: The _Overall Product Name_ is the unique master name of the overall product within the company's project management IT infrastructure, whose development or validation requires the respective simulation.
+Can have multiple values:: Yes
+Value examples:: carZZ, aeroplaneTT
+Additional explanation and rationale:: Providing the _Overall Product Name_ attribute makes it easier to track and trace the impact of a simulation result on the overall product for which the simulation is initially being requested and executed. "Overall product" can also refer to a customer's product if a company develops and simulates a relevant product as a system or component specifically for a customer product.
 
-Attribute description:: The _Simulation Task Identifier_ is the unique master ID of the simulation task within the  company's project management IT infrastructure.  If the  company has a versioning mechanism for simulation tasks in the project management IT infrastructure, the version ID is included in the identifier so that the simulation task can be referenced with version accuracy.
-Obligation and Level:: Level 1 Mandatory
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: The (version accurate) _Simulation Task Identifier_ attribute is essential information to ensure that the simulation results generated by the simulation task can be uniquely assigned to the simulation task.
 
-==== Simulation Task URL
-
-Attribute description:: The _Simulation Task URL_ is a alternate way to identify the simulation task. All information given to the _Simulation Task Identifier_ attribute apply here.
-Obligation and Level:: Level 1 Optional
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: All of the information provided for the _Simulation Task Identifier_ attribute applies here as well.
-
-==== Simulation Task Full Name
-
-Attribute description:: The _Simulation Task Full Name_ is a descriptive name for the simulation task.
-Obligation and Level:: Level 1 Optional
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: Providing the _Simulation Task Full Name_ attribute helps quickly recognize and understand the meaning of a simulation task.
-
-==== Simulation Task Confidentiality Level
+===== Simulation Task Confidentiality Level
 
 Attribute description:: The _Simulation Task Confidentiality Level_ is a  classification with respect to the access to contained information.
-Obligation and Level:: Level 1 Recommended
 Can have multiple values:: No
 Value examples:: CSC-0: public CSC-1: internal CSC-2: confidential CSC-3: strictly confidential
 Additional explanation and rationale:: The _Simulation Task Confidentiality Level_ attribute uses a classification system that specifies how confidential the information contained in the classified document is to be treated. Typically, there is a set of rules that specifies what may and may not be done with a document and the information it contains.
 
-==== Simulation Task Creator Name
+===== Simulation Request Creator Name
 
-Attribute description:: The _Simulation Task Creator Name_ is the name or other regulatory-compliant valid identifier of the person who initially created the simulation task in the project management IT system.
-Obligation and Level:: Level 4 Optional
+Attribute description:: The _Simulation Request Creator Name_ is the name or other regulatory-compliant valid identifier of the person who initially created the simulation request in the project management IT system.
 Can have multiple values:: No
 Value examples:: 
-Additional explanation and rationale:: The _Simulation Task Creator Name_ attribute should automatically be extracted from the project management IT system
+Additional explanation and rationale:: The _Simulation Request Creator Name_ attribute should automatically be extracted from the project management IT system
 
-==== Simulation Task Creation Date
+===== Simulation Request Creation Date
 
-Attribute description:: The _Simulation Task Creation Date_ is the date the simulation request in the project management IT system was created.
-Obligation and Level:: Level 4 Optional
+Attribute description:: The _Simulation Request Creation Date_ is the name or other regulatory-compliant valid identifier of the person who initially created the simulation request in the project management IT system.
 Can have multiple values:: No
 Value examples:: 
-Additional explanation and rationale:: The _Simulation Task Creation Date_ attribute should automatically be extracted from the project management IT system
+Additional explanation and rationale:: The _Simulation Request Creation Date_ attribute should automatically be extracted from the project management IT system
 
-==== Predicted Simulation Start Date
+
+===== Predicted Simulation Start Date
 
 Attribute description:: The _Predicted Simulation Start Date_ is the date at which all information will have been provided so that the simulation service can start.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: No
 Value examples:: 
 Additional explanation and rationale:: The _Predicted Simulation Start Date_ is meaningful information for the simulation engineers for simulation process planning and team workload planning.
 
-==== Requested Simulation Delivery Date
+===== Requested Simulation Delivery Date
 
 Attribute description:: The _Requested Simulation Delivery Date_ is the due date that the simulation results will be appreciated by the ordering person or organization.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: No
 Value examples:: 
 Additional explanation and rationale:: Providing a _Requested Simulation Delivery Date_ attribute helps plan the details of a simulation process depending on available organizational and technical resources and the expected process duration.
 
-==== Requesting Person
+===== Requesting Person
 
 Attribute description:: The _Requesting Person_ is the person who needs the obtained simulation results on a technical level and will work with the results.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Requesting Person_ attribute in combination with the _Contracting Person_ attribute helps streamline communication in the event of questions about the details of the request or a need for technical clarification. Which _Requesting Person's_ information is actually provided depends on negotiations and regulations.
@@ -405,15 +225,13 @@ Additional explanation and rationale:: Providing the _Requesting Person_ attribu
 ==== Requesting Entity
 
 Attribute description:: The _Requesting Entity_ is the department or external company that needs the obtained simulation results on a technical level and will work with the results.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing the _Requesting Entity_ attribute in combination with the _Contracting Entity_ attribute helps streamline communication in the event of questions about the details of the request or a need for technical clarification. What information about the _Requesting Entity's_ information is actually provided depends on negotiations and regulations.
 
-==== Contracting Person
+===== Contracting Person
 
 Attribute description:: The _Contracting Person_ is the person who accepts the simulation request to provide a simulation service.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: No
 Value examples:: 
 Additional explanation and rationale:: Providing the _Contracting Person_ attribute, in combination with the Requesting Person attribute helps streamline communication in the event of administrative questions about the details of the request or a need for administrative clarification. Which _Contracting Person's_ information is actually provided depends on negotiations and regulations.
@@ -421,17 +239,32 @@ Additional explanation and rationale:: Providing the _Contracting Person_ attrib
 ==== Contracting Entity
 
 Attribute description:: The _Contracting Entity_ is the department or external company who accepts the simulation request to provide a simulation service.
-Obligation and Level:: Level 3 Recommended
 Can have multiple values:: No
 Value examples:: 
 Additional explanation and rationale:: Providing the _Contracting Entity_ attribute in combination with the _Requesting Entity_ attribute helps streamline communication in the event of questions about the details of the request or a need for technical clarification. What information about the _Contracting Entity's_ information is actually provided depends on negotiations and regulations.
+
+==== *Optional*
+
+===== Simulation Task Creator Name
+
+Attribute description:: The _Simulation Task Creator Name_ is the name or other regulatory-compliant valid identifier of the person who initially created the simulation task in the project management IT system.
+Can have multiple values:: No
+Value examples:: 
+Additional explanation and rationale:: The _Simulation Task Creator Name_ attribute should automatically be extracted from the project management IT system
+
+===== Simulation Task Creation Date
+
+Attribute description:: The _Simulation Task Creation Date_ is the date the simulation request in the project management IT system was created.
+Can have multiple values:: No
+Value examples:: 
+Additional explanation and rationale:: The _Simulation Task Creation Date_ attribute should automatically be extracted from the project management IT system
+
 
 === Objectives
 
 ==== Name of Item under Test
 
 Attribute description:: The _Name of Item under Test_ specifies the product, system, component, or software, etc.  that is subject of a simulation being requested by a simulation request or performed by a simulation task.
-Obligation and Level:: Level 1 Mandatory
 Can have multiple values:: Yes
 Value examples:: camera34, camera34-A-sampleV23
 Additional explanation and rationale:: Providing the _Name of Item under Test_ attribute helps clarifying the subject of simulation.
@@ -439,7 +272,6 @@ Additional explanation and rationale:: Providing the _Name of Item under Test_ a
 ==== Item under Test Version
 
 Attribute description:: The _Item under Test Version_ is a human readable version designation for the overall product.
-Obligation and Level:: Level 1 Mandatory
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: The _Item under Test Version_ attribute is essential information that helps keep track of which _Overall Product Version_ the simulation task was generated for.
@@ -447,7 +279,6 @@ Additional explanation and rationale:: The _Item under Test Version_ attribute i
 ==== ID of Item under Test
 
 Attribute description:: The _Item under Test identifier_ is the unique master ID of the overall product within the company's project management IT infrastructure, whose development or validation requires the respective simulation. If the company has a versioning mechanism for products in the project management IT infrastructure, the version ID is included in the identifier so that the product can be referenced with version accuracy.
-Obligation and Level:: Level 1 Mandatory
 Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: The (version accurate) _Item under Test identifier_ attribute is essential information needed to facilitate automated traceability to the overall product for which the simulation is initially requested and executed. "Overall product? can also refer to a customer's product if a company develops and simulates a relevant product as a system or component specifically for a customer product.
