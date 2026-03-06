@@ -61,24 +61,39 @@ The definition of metadata attributes in this document follows the same methodol
 The metadata structure defined in this extension follows a simulation process aligned with the *Credible Simulation Process Framework.*
 
 This process distinguishes the following phases:
-1.	Administration
-2.	Analysis
-3.	Requirements
-4.	Design Specification
-5.	Implementation
-6.	Execution
-7.	Evaluation
-8.	Fulfillment
+
+.	Administration
+
+.	Analysis
+
+.	Requirements
+
+.	Design Specification
+
+.	Implementation
+
+.	Execution
+
+.	Evaluation
+
+.	Fulfillment
+
 Each phase contains specific metadata attributes that describe the state and context of the simulation task within the engineering workflow.
 This process-oriented structure supports traceability across the complete lifecycle of a simulation task.
 
 === Traceability and Credibility
 In large engineering organizations, simulation results often serve as evidence for design decisions, verification activities, and certification processes.
+
 For this reason, the traceability of simulation activities and the credibility of simulation results are essential.
+
 To support this objective, the attributes defined in this extension are categorized into three obligation levels:
-*	Mandatory – required to ensure traceability and reproducibility
-*	Recommended – important for consistent documentation
-*	Optional – additional information supporting extended use cases
+
+*	*Mandatory* – required to ensure traceability and reproducibility
+
+*	*Recommended* – important for consistent documentation
+
+*	*Optional* – additional information supporting extended use cases
+
 Mandatory attributes are considered essential to document simulation tasks in a way that allows reliable interpretation and verification of simulation results.
 
 == MIC Simulation Task Extension Attributes
