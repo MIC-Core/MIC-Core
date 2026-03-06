@@ -1,8 +1,79 @@
-== SSP Attributes
+== Introduction for MIC Simulation Task Extension
 
-[[SSP-attributes]]
+[[Introduction for MIC Simulation Task Extension]]
 
-This chapter introduces and describes the list of SSP attributes. Each attribute is introduced with a attribute description and an indication of the attribute obligation based on the Level, i.e., whether the attribute is mandatory, recommended, or optional for a specific Level of a simulation task, and whether the attribute can be instantiated multiple times or not. To enhance the understanding of an attribute, some value examples and, if applicable, additional explanations or rationales for the attribute are provided .
+=== Motivation 
+Simulation-based engineering has become an essential component of modern product development. Simulation models are increasingly exchanged between organizations and engineering domains in order to support design decisions, verification activities, and system validation.
+The MIC Core specification provides a standardized approach for describing metadata of simulation models. It enables consistent identification, management, and exchange of simulation models across organizations.
+However, simulation models are rarely used in isolation. In engineering practice they are typically applied within simulation tasks that follow a structured engineering workflow. These simulation tasks are initiated by simulation requests, use simulation models and other resources, and produce results that support engineering decisions.
+In complex development environments, especially in large organizations and cross-company collaborations, the traceability of simulation activities becomes critical. It must be possible to answer questions such as:
+
+*	Which engineering question was addressed by a simulation?
+
+*	Which models and parameters were used?
+
+*	Which simulation environment and tools were applied?
+
+*	Which quality criteria were defined and verified?
+
+*	Whether the simulation objectives and credibility requirements were fulfilled.
+
+While the MIC Core specification provides metadata for simulation models, it does not describe the simulation tasks in which those models are used.
+This extension addresses this gap.
+
+=== Purpose of this Extension
+The purpose of this extension is to introduce a standardized metadata structure for simulation tasks and simulation requests.
+The extension enables:
+
+*	traceability of simulation activities
+
+*	reproducibility of simulation results
+
+*	consistent documentation of simulation processes
+
+*	improved collaboration across engineering teams and organizations
+
+The extension defines harmonized metadata attributes describing simulation tasks along the phases of a simulation engineering process.
+
+=== Relation to MIC Core
+This document is an extension of the MIC Core specification.
+The extension does not modify the existing MIC Core model metadata definitions. Instead, it complements them by introducing metadata describing the context in which simulation models are used.
+Simulation tasks reference simulation models defined according to the MIC Core specification.
+The definition of metadata attributes in this document follows the same methodological principles as MIC Core, including:
+
+*	structured attribute descriptions
+
+*	classification of attributes by obligation level
+
+*	support for extensibility
+
+*	clear semantic definitions
+
+=== Simulation Process Context
+The metadata structure defined in this extension follows a simulation process aligned with the Credible Simulation Process Framework.
+This process distinguishes the following phases:
+1.	Administration
+2.	Analysis
+3.	Requirements
+4.	Design Specification
+5.	Implementation
+6.	Execution
+7.	Evaluation
+8.	Fulfillment
+Each phase contains specific metadata attributes that describe the state and context of the simulation task within the engineering workflow.
+This process-oriented structure supports traceability across the complete lifecycle of a simulation task.
+
+=== Traceability and Credibility
+In large engineering organizations, simulation results often serve as evidence for design decisions, verification activities, and certification processes.
+For this reason, the traceability of simulation activities and the credibility of simulation results are essential.
+To support this objective, the attributes defined in this extension are categorized into three obligation levels:
+*	Mandatory – required to ensure traceability and reproducibility
+*	Recommended – important for consistent documentation
+*	Optional – additional information supporting extended use cases
+Mandatory attributes are considered essential to document simulation tasks in a way that allows reliable interpretation and verification of simulation results.
+
+== MIC Simulation Task Extension Attributes
+This chapter introduces and describes the list of MIC Simulation Task Extension Attributes. Each attribute is introduced with a attribute description and an indication of the attribute obligation based on the Level, i.e., whether the attribute is mandatory, recommended, or optional for a specific Level of a simulation task, and whether the attribute can be instantiated multiple times or not. To enhance the understanding of an attribute, some value examples and, if applicable, additional explanations or rationales for the attribute are provided .
 
 The attributes are organized by the following attribute groups:
 
