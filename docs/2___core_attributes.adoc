@@ -186,20 +186,6 @@ Can have multiple values:: No
 Value examples:: CSC-0: public CSC-1: internal CSC-2: confidential CSC-3: strictly confidential
 Additional explanation and rationale:: The _Simulation Task Confidentiality Level_ attribute uses a classification system that specifies how confidential the information contained in the classified document is to be treated. Typically, there is a set of rules that specifies what may and may not be done with a document and the information it contains.
 
-===== Simulation Request Creator Name
-
-Attribute description:: The _Simulation Request Creator Name_ is the name or other regulatory-compliant valid identifier of the person who initially created the simulation request in the project management IT system.
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: The _Simulation Request Creator Name_ attribute should automatically be extracted from the project management IT system
-
-===== Simulation Request Creation Date
-
-Attribute description:: The _Simulation Request Creation Date_ is the name or other regulatory-compliant valid identifier of the person who initially created the simulation request in the project management IT system.
-Can have multiple values:: No
-Value examples:: 
-Additional explanation and rationale:: The _Simulation Request Creation Date_ attribute should automatically be extracted from the project management IT system
-
 
 ===== Predicted Simulation Start Date
 
