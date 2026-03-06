@@ -103,7 +103,7 @@ The attributes are organized by the following attribute groups (process phases):
 
 * Administrative data
 
-* Objectives
+* Analysis
 
 * Requirements
 
@@ -169,7 +169,7 @@ Can have multiple values:: No
 Value examples:: 
 Additional explanation and rationale:: Providing the _Simulation Task Name_ attribute  makes it easier to trace back to the simulation task when it is referenced in a simulation delivery.
 
-==== Recommended
+==== *Recommended*
 
 ===== Overall Product Name
 
@@ -246,7 +246,9 @@ Value examples::
 Additional explanation and rationale:: The _Simulation Task Creation Date_ attribute should automatically be extracted from the project management IT system
 
 
-=== Objectives
+=== Analysis
+
+==== *Mandatory*
 
 ==== Name of Item under Test
 
@@ -289,6 +291,8 @@ Attribute description:: A _Quality Criterion_ is a quality requirement that must
 Can have multiple values:: Yes
 Value examples:: companyZ simulation quality assessment
 Additional explanation and rationale:: The _Quality Criterion_ attribute facilitate the configuration of the simulation setup.
+
+==== *Recommended*
 
 ==== Verification Criterion
 
