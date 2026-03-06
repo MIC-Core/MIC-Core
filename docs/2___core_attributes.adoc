@@ -97,9 +97,9 @@ To support this objective, the attributes defined in this extension are categori
 Mandatory attributes are considered essential to document simulation tasks in a way that allows reliable interpretation and verification of simulation results.
 
 == MIC Simulation Task Extension Attributes
-This chapter introduces and describes the list of MIC Simulation Task Extension Attributes. Each attribute is introduced with a attribute description and an indication of the attribute obligation based on the Level, i.e., whether the attribute is mandatory, recommended, or optional for a specific Level of a simulation task, and whether the attribute can be instantiated multiple times or not. To enhance the understanding of an attribute, some value examples and, if applicable, additional explanations or rationales for the attribute are provided .
+This chapter introduces and describes the list of MIC Simulation Task Extension Attributes. Each attribute is introduced with a attribute description and whether the attribute can be instantiated multiple times or not. To enhance the understanding of an attribute, some value examples and, if applicable, additional explanations or rationales for the attribute are provided .
 
-The attributes are organized by the following attribute groups:
+The attributes are organized by the following attribute groups (process phases):
 
 * Administrative data
 
@@ -116,6 +116,25 @@ The attributes are organized by the following attribute groups:
 * Evaluation
 
 * Fulfillment
+
+=== Composite attributes
+Attributes marked with an asterisk (*) represent composite attributes with a predefined internal structure. In the list the sub-attributes are not separately listed.
+
+Example:
+
+*Simulation Model Name**
+
+The attribute includes the following sub-attributes (details in appendix):
+
+*	Name (that is listed in the main List)
+
+*	Version
+
+*	Identifier
+
+*	URL
+
+*	Full Name
 
 === Administration
 
