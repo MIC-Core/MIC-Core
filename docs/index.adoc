@@ -29,3 +29,4 @@ include::docs/A___mapping_srmd.adoc[]
 
 include::docs/B___mapping_lotar.adoc[]
 
+include::docs/C_1__simtask.adoc[]
