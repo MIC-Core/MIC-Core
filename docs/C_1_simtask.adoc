@@ -1,7 +1,5 @@
 == Introduction for MIC Simulation Task Extension
 
-[[Introduction for MIC Simulation Task Extension]]
-
 === Motivation 
 Simulation-based engineering has become an essential component of modern product development. Simulation models are increasingly exchanged between organizations and engineering domains in order to support design decisions, verification activities, and system validation.
 
