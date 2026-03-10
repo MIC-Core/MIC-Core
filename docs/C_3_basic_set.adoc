@@ -177,6 +177,7 @@ Examples include:
 *Search for related simulations*
 
 Example queries:
+
 *	Simulations performed for a specific project
 
 *	Simulations analyzing a specific item under test
@@ -185,8 +186,26 @@ Example queries:
 
 *Reuse of simulation setups*
 
-The attributes usedModel, usedTool, and simulationObjective allow engineers to identify simulation tasks that may serve as templates for new simulations.
+The attributes *used Model, used Tool, and simulation Objective* allow engineers to identify simulation tasks that may serve as templates for new simulations.
 
 *Project traceability*
 
 The attribute simulationRequestID links the simulation task to the corresponding simulation request and therefore provides traceability to the originating engineering decision or project context.
+
+=== Automatic Metadata Generatio
+To ensure high user acceptance, the basic attribute set is designed so that a large portion of the metadata can be generated automatically.
+
+Typical examples include:
+
+[cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
+|===
+| Attribute | Automatic Source
+| Simulation Task ID| Simulation management system
+| Used Tool | Simulation tool
+| Used Tool Version | Simulation tool
+| Used Models | Simulation tool
+| Project Name | Project management system | 
+|===
+
+
+Only a small number of attributes, such as *simulation Objective or Item under Test*, typically require manual input by the simulation engineer or originate from the simulation request.
