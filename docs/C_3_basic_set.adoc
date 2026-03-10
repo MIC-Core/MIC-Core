@@ -158,8 +158,14 @@ This grouping allows simple implementation while supporting common traceability 
 | Simulation task ID | Administrative Data | Mandatory | Unique identifier of the simulation task | Tool / system
 | Item under Test | Analysis | Mandatory | System, component, or product being analyzed | Tool / system
 | Simulation Objective | Analysis | Mandatory | Objective or purpose of the simulation | User
-| Quality Criterion | Analysis | Mandatory | Criteria used to evaluate simulation success | User
-| Quality Criterion | Analysis | Mandatory | Criteria used to evaluate simulation success | User
+| Quality, credibility Criterion | Analysis | Mandatory | Criteria used to evaluate simulation success | User
+| Used Model | Used Elements | Mandatory | Model used for the simulation | Tool / system
+| Used Model Version | Used Elements | Mandatory | Version of model used for the simulation | Tool / system
+| Used Tool | Used Elements | Mandatory | Tool used for the simulation | Tool / system
+| Used Tool Version | Used Elements | Mandatory | Version of Tool used for the simulation | Tool / system
+| Task status | Result Status | Mandatory | Is the task still in progress abortet, finished | User
+| Credibility fulfilled | Result Status | Mandatory | Documentation of the credibility fulfillment decision | User
+| Objectives fulfilled | Result Status | Mandatory | Documentation of the objectives fulfillment decision  | User
 |===
 
 === Example Traceability Usage
