@@ -1,1 +1,133 @@
+[appendix]
+== Basic Set of Attributes
+
+=== Purpose 
+
+Metadata for simulation tasks are currently only sparsely established in industrial environments. Different tools and organizations often use heterogeneous or proprietary metadata structures, which limits the ability to trace, search, and reuse simulation results.
+
+To lower the barrier for implementation, this specification defines a *minimal basic set of attributes* for simulation tasks. The goal of this basic set is not to provide a comprehensive metadata model, but to define the *minimum information required to support basic traceability* of simulation activities.
+
+This minimal attribute set enables immediate benefits for essential use cases such as:
+
+*	search for existing simulation tasks
+
+*	identification of simulations related to a specific product or project
+
+*	reuse of existing simulation setups
+
+*	overview of simulation context and objectives
+
+The basic set can serve as a *starting point for organizations introducing simulation metadata management* and may be extended with additional attributes depending on specific use cases.
+
+=== Design Principles
+
+The definition of the basic attribute set follows several key principles.
+
+*Minimal effort for implementation*
+
+Only attributes that provide clear value for traceability and reuse are included. The number of required attributes is intentionally kept small in order to simplify implementation.
+
+*High user acceptance*
+
+User acceptance is considered a critical success factor. Therefore, the attribute set avoids excessive manual data entry requirements.
+
+*Tool-supported metadata generation*
+
+Where possible, metadata should be automatically provided by simulation tools, simulation environments, or project management systems. This reduces manual effort and increases data consistency.
+
+Typical sources for metadata include:
+
+*	project management systems
+
+*	simulation tools
+
+*	model management environments
+
+*	user-provided engineering information
+
+=== Scope of the Basic Attribute Set
+
+The basic attribute set focuses on metadata that support *basic traceability of simulation tasks.*
+
+These attributes typically cover three main aspects:
+
+*Administrative and project context*
+
+Information that connects the simulation task to a project or request context.
+
+Examples include:
+
+*	simulation task name
+
+*	associated project or simulation request
+
+*	responsible organization or engineer
+
+*Simulation context*
+
+Information describing the purpose and object of the simulation.
+
+Examples include:
+
+*	item under test
+
+*	simulation objective
+
+*	quality or evaluation criteria
+
+*Used elements*
+
+Information about the key elements used during the simulation.
+
+Examples include:
+
+*	simulation models
+
+*	simulation tools
+
+*	relevant parameters or test cases
+
+*Results*
+
+Information about the resultsof the simulation.
+
+Examples include:
+
+*	Task status
+
+*	Credibility fulfilled
+
+* objectives fulfilled
+
+This information enables users to understand *what was simulated, why it was simulated, and with which tools and models the simulation was performed.*
+
+=== Relation to Extended Metadata
+
+The basic attribute set is intentionally limited to information required for *basic traceability, search, and reuse.*
+
+More detailed metadata may be required for advanced use cases such as:
+
+*	detailed reproducibility of simulations
+
+*	credibility assessment of simulation results
+
+*	automated simulation workflows
+
+*	detailed analysis of simulation execution
+
+Such information can be captured using extended metadata sets defined in this specification or in organization-specific extensions.
+
+The basic set should therefore be considered as a *foundation layer* that can be extended without affecting interoperability.
+
+===Implementation Considerations
+
+When implementing the basic attribute set, it is recommended that organizations prioritize:
+
+*	*automatic generation of metadata by simulation tools*
+
+*	*integration with project or simulation request management systems*
+
+*	*minimal manual input by simulation engineers*
+
+This approach helps ensure both *data quality and user acceptance,* which are essential for the successful adoption of simulation metadata management.
 
