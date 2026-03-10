@@ -37,6 +37,7 @@ In particular, attributes belonging to the following groups should typically be 
 
 *	Administrative Data
 *	Analysis
+
 These attributes describe the context, purpose, and basic configuration of the simulation activity and are normally known at the time the simulation is requested.
 
 Typical examples include:
