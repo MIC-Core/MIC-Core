@@ -1,1 +1,91 @@
+[appendix]
+== Attributes of the Simulation Request
+
+=== Purpose of the Simulation Request
+
+The *Simulation Request* represents the link between a decision-making activity and the execution of a simulation task. It serves as the formal request to initiate and perform a simulation within a project or engineering process.
+
+The Simulation Request contains the information required to define, initiate, and manage a simulation task. Therefore, it is a key element for ensuring *traceability and transparency* in simulation-based engineering processes.
+
+Typically, the Simulation Request is created and maintained within a project management, requirement management, or simulation management system.
+
+=== Relationship Between Simulation Request and Simulation Task
+
+Within the simulation process, the Simulation Request acts as the initiating element for a Simulation Task.
+
+Its main functions are:
+
+*	to formally request the execution of a simulation
+
+*	to provide the initial context and objectives
+
+*	to ensure traceability between the decision task and the simulation results
+
+The Simulation Request therefore contains a subset of metadata that is transferred to the Simulation Task when the task is created.
+
+Conceptually, the relationship can be described as:
+
+*Decision Task* -> creates -> *Simulation Request* -> initiates -> *Simulation Task*
+
+The Simulation Task may later extend or refine the information originally provided in the Simulation Request.
+
+=== Attributes Transferred from the Simulation Request
+
+Certain attributes defined for the Simulation Task are expected to originate from the Simulation Request and be transferred during the creation of the Simulation Task.
+
+In particular, attributes belonging to the following groups should typically be provided by the Simulation Request:
+
+*	Administrative Data
+*	Analysis
+These attributes describe the context, purpose, and basic configuration of the simulation activity and are normally known at the time the simulation is requested.
+
+Typical examples include:
+
+*	simulation objective
+
+*	requesting project or program
+
+*	responsible organization
+
+*	simulation type
+
+*	target system or product
+
+Providing these attributes within the Simulation Request ensures that the Simulation Task is created with a well-defined scope and context.
+
+=== Optional Attributes in the Simulation Request
+
+Attributes belonging to other Simulation Task groups may also be included in a Simulation Request, but their presence is optional.
+
+These may include attributes from groups such as:
+
+*	Requirements
+
+*	Design
+
+*	Model
+
+*	Execution
+
+*	Results
+
+If such information is already available at the time the Simulation Request is created, it may be included to provide additional guidance for the Simulation Task.
+
+However, in many cases this information becomes available only during the execution of the Simulation Task and is therefore added later in the simulation process.
+
+=== Role in Traceability
+
+The Simulation Request plays an important role in establishing traceability across the simulation lifecycle.
+
+By linking:
+
+*	the *Decision Task*
+
+*	the *Simulation Task*
+
+*	and the *Simulation Results*
+
+it enables a transparent documentation of why a simulation was requested, how it was executed, and how the results support engineering decisions.
+
+This traceability is essential for collaborative engineering environments and long-term data management.
 
