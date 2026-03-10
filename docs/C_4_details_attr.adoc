@@ -1,1 +1,39 @@
+[appendix]
+== Composite attributes of MIC Simulation Task Extension Attributes
 
+The attributes marked with an asterisk (*) have the same sub-attributes listed below.
+
+==== Attribute X Name (is listed in the main list)
+Obligation:: see Main list
+
+==== Attribute X Version
+
+Attribute description:: The _Overall Product Version_ is a human readable version designation for the overall product.
+Obligation:: same as attribute X name
+Can have multiple values:: Yes
+Value examples:: 
+Additional explanation and rationale:: The _Overall Product Version_ attribute is essential information that helps keep track of which _Overall Product Version_ the simulation task was generated for.
+
+==== Attribute X  Identifier
+
+Attribute description:: The _Overall Product Identifier_ is the unique master ID of the overall product within the company's project management IT infrastructure, whose development or validation requires the respective simulation. If the company has a versioning mechanism for products in the project management IT infrastructure, the version ID is included in the identifier so that the product can be referenced with version accuracy.
+Obligation:: same as attribute X name
+Can have multiple values:: Yes
+Value examples:: 
+Additional explanation and rationale:: The (version accurate) _Overall Product Identifier_ attribute is essential information needed to facilitate automated traceability to the overall product for which the simulation is initially requested and executed. "Overall product? can also refer to a customer's product if a company develops and simulates a relevant product as a system or component specifically for a customer product.
+
+==== Attribute X  URL
+
+Attribute description:: The _Overall Product URL_ is an alternate way to identify the overall product. All information given to the _Overall Product Identifier_ attribute apply here.
+Obligation:: Optional
+Can have multiple values:: Yes
+Value examples:: 
+Additional explanation and rationale:: All of the information provided for the _Overall Product Identifier_ attribute applies here as well.
+
+==== Attribute X  Full Name
+
+Attribute description:: The _Overall Product Full Name_ is the commonly known name of the overall product, whose development or validation requires the respective simulation.
+Obligation:: Optional
+Can have multiple values:: Yes
+Value examples:: 
+Additional explanation and rationale:: Providing the _Overall Product Full Name_ attribute with potentially relevant details helps quickly understand the overall product context for which the simulation is initially requested and executed. "Overall product? can also refer to a customer's product if a company develops and simulates a relevant product as a system or component specifically for a customer product.
