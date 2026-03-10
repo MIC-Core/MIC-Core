@@ -6,6 +6,8 @@ The attributes marked with an asterisk (*) have the same sub-attributes listed b
 ==== #Attribute X Name*# (is listed in the main list)
 Obligation:: see Main list
 
+*Sub-attributes*
+
 ==== #Attribute X Version#
 
 Attribute description:: The _Overall Product Version_ is a human readable version designation for the overall product.
