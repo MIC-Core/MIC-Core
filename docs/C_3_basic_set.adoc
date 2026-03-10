@@ -139,7 +139,7 @@ The following attribute groups are defined:
 
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
-| Attribute Group| Descriptiong
+| Attribute Group| Descripting
 | Administrative Data | Basic identification and project context of the simulation task
 | Analysis | Purpose and object of the simulation
 | Used Elements | Key tools and models used in the simulation
@@ -152,11 +152,12 @@ This grouping allows simple implementation while supporting common traceability 
 
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
-| MIC Core Name| SRMD Mapping | Short Explanation
-| Model name | administrative-data.model.name | Human-readable way of referring to the model. Usually short and clear. Not necessarily unique.
-| Model identifier | administrative-data.model.identifier | Unique identifier for the model.
-| Model description | administrative-data.model.description | Human-readable, textual, general overview. Highlights important information about the model.
-| Model supplier | administrative-data.model.supplier | The responsible body and, if applicable, organizational unit within the body, that is responsible for supplying the model.
+| Attribute Name| Group | Obligation | Description | Typical Source
+| Ordering project | Administrative Data | Mandatory | Unique name of the ordering project | Project management tool
+| Simulation task name | Administrative Data | Mandatory | Unique name of the simulation task | Project management tool
+| Simulation task ID | Administrative Data | Mandatory | Unique identifier of the simulation task | Tool / system
+| Item under Test | Analysis | Mandatory | System, component, or product being analyzed | Tool / system
+| Simulation Objective | Analysis | Mandatory
 | Model confidentiality level | administrative-data.model.confidentiality-level | Protection level to apply to the model.
 | Legal restriction | administrative-data.legal-restriction | Defines the rules governing the distribution and usage of the simulation model, including licensing,
 | Release | administrative-data.release | Unique identifier, preferably human-readable (i.e. semantically meaningfull), for the release of a particular simulation model.
