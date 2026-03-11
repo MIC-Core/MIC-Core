@@ -55,9 +55,9 @@ Mapping of MIC Simulation Task Extension to SSP Traceability STMD Format
 | Test case requirements  | requirements.test-cases | Mandatory | The Test case requirements is the description of the goals and objectives of a test case.
 | Required modeled effect | requirements.models.effects-considered | Recommended | The Required modeled effect is a real-world physical effect that is to be considered in the modeling.
 | Further model requirements | requirements.models.further-model-requirements | Recommended | The Further model requirements is additional requirements placed on a model, including things that explcitly shall / are not be considered in the model.
-| Simulation model confidentiality level | requirements.model.confidentiality | Recommended | The Simulation model confidentiality level is a  classification with respect to the access to classified information.
-| Value distribution function  | requirements.parameters-value-distribution-function | Recommended | The Value distribution function (value deviation) specifies the probability of deviations certain value.
-| Parameter confidentiality level | requirements.parameter.confidentiality | Recommended | The Parameter confidentiality level is a  classification with respect to the access to classified information.
+| Simulation model confidentiality level requirements | requirements.model.confidentiality | Recommended | The Simulation model confidentiality level is a  classification with respect to the access to classified information.
+| Value distribution function requirements  | requirements.parameters-value-distribution-function | Recommended | The Value distribution function (value deviation) specifies the probability of deviations certain value.
+| Parameter confidentiality level requirements | requirements.parameter.confidentiality | Recommended | The Parameter confidentiality level is a  classification with respect to the access to classified information.
 | Simulation integration requirement | requirements.simulation-integration | Recommended | A Simulation integration requirement is a requirement placed on the interaction of the simulation setup elements.
 | Quality assurance requirements | requirements.quality-assurance | Recommended | A Quality assurance requirements is a requirements that is placed on the quality assurance in the requirements phase.
 | Requirements verification result | requirements.verification | Recommended | The Requirements verification result is the result of the verication activity  in the requirements phase.
@@ -92,23 +92,20 @@ Mapping of MIC Simulation Task Extension to SSP Traceability STMD Format
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
 | MIC Sim. Task Name| STMD Mapping | Obligation | Short Explanation
-| Simulation model name | implementation.model.name | Mandatory | The Simulation model name is the given name for the implemented simulation model within the company
-| Parameter name | implementation.parameters.name | Mandatory | The Parameter name is the given name for the implemented (set of) parameters within the company
-| Simulation environment name | implementation.simulation-environment.name | Mandatory | The Simulation environment name  is the given name for the implemented simulation environment within the company
-| Test case name | implementation.test-cases.name | Mandatory | The Test case name is the given name for the implemented test cases within the company
+| Implemented Simulation model name | implementation.model.name | Mandatory | The Simulation model name is the given name for the implemented simulation model within the company
+| Implemented Parameter name | implementation.parameters.name | Mandatory | The Parameter name is the given name for the implemented (set of) parameters within the company
+| Implemented Simulation environment name | implementation.simulation-environment.name | Mandatory | The Simulation environment name  is the given name for the implemented simulation environment within the company
+| Implemented Test case name | implementation.test-cases.name | Mandatory | The Test case name is the given name for the implemented test cases within the company
 | Simulation integration name  | implementation.simulation-integration.name | Mandatory | The Simulation integration is the given name for the implemented simulation integration within the company
-| Simulation model confidentiality level | implementation.model.confidentiality | Recommended | The Simulation model confidentiality level is a  classification with respect to the access to classified information.
-| Simulation model quality | implementation.model.quality | Recommended | The Simulation model quality is a statement of any kind that describes the model quality actually achieved by implementation.
-| Parameter confidentiality level | implementation.parameter.confidentiality | Recommended | The Parameter confidentiality level is a  classification with respect to the access to classified information.
-| Parameter quality  | implementation.paramters.quality | Recommended | The Parameter quality is a statement of any kind that describes the parameter quality actually achieved by implementation.
-| Parameter confidentiality level | arequirements.parameter.confidentiality | Recommended | The Parameter confidentiality level is a  classification with respect to the access to classified information.
-| Simulation integration requirement | requirements.simulation-integration | Recommended | A Simulation integration requirement is a requirement placed on the interaction of the simulation setup elements.
-| Quality assurance requirements | requirements.quality-assurance | Recommended | A Quality assurance requirements is a requirements that is placed on the quality assurance in the requirements phase.
-| Requirements verification result | requirements.verification | Recommended | The Requirements verification result is the result of the verication activity  in the requirements phase.
-| Model quality requirement | requirements.models.quality-requirements | Optional | A Model quality requirement is a requirement placed on a simulation model.
-| Parameter quality requirement | requirements.parameters.quality-requirements | Optional | A Parameter quality requirement is a requirement placed on (a set of) parameters.
-| Simulation environment quality requirement | requirements.simulation-environment.quality-requirements | Optional | A Simulation environment quality requirement is a requirement placed on the simulation environment.
-| Simulation integration quality requirement | requirements.simulation-integration.quality-requirements | Optional | A Simulation integration quality requirement is a requirement that is placed on the simulation integration.
-| Test case quality requirement | equirements.test-cases.quality-requirements | Optional | A Test case quality requirement is a requirement that is placed on a test case.
+| Implemented Simulation model confidentiality level | implementation.model.confidentiality | Recommended | The Simulation model confidentiality level is a  classification with respect to the access to classified information.
+| Implemented Simulation model quality | implementation.model.quality | Recommended | The Simulation model quality is a statement of any kind that describes the model quality actually achieved by implementation.
+| Implemented Parameter confidentiality level | implementation.parameter.confidentiality | Recommended | The Parameter confidentiality level is a  classification with respect to the access to classified information.
+| Implemented Parameter quality  | implementation.paramters.quality | Recommended | The Parameter quality is a statement of any kind that describes the parameter quality actually achieved by implementation.
+| Implemented Simulation environment quality | implementation.simulation-environment.quality | Recommended | The Simulation environment quality is a statement of any kind that describes the simulation environmet quality actually achieved by implementation.
+| Implemented Test case confidentiality level | implementation.test-cases.confidentiality | Recommended | The Test case confidentiality level is a  classification with respect to the access to classified information.
+| Implemented simulation integration setting  | implementation.simulation-integration.setings | Recommended | Parameter setting of the simulation integration, i.e.  Solver setting 
+| Implemented Simulation integration quality | implementation.simulation-integration.quality | Recommended | The Simulation integration quality is a statement of any kind that describes the simulation integration quality actually achieved by implementation.
+| Implementation quality assurance results | Implementation quality assurance results | Recommended | The Implementation quality assurance results describe the outcome of quality measuments done.
+| Implementation quality verdict | implementation.verdict | Optional | The Implementatiuon quality verdict is the yes or no resp. passed or failed decicsion to the final implementation quality assurance.
 |===
 
