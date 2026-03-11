@@ -457,7 +457,13 @@ Can have multiple values:: Yes
 Value examples:: 
 Additional explanation and rationale:: Providing _Test Case Quality Requirement_ attribute helps specify the implementation of test cases.
 
+==== Analysis
 
+[cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
+|===
+| MIC Sim. Task Name| Obligation | Attribute description | Can have multiple values | Value examples | Additional explanation and rationale
+| Name of Item under test | Mandatory | The _Name of Item under Test_ specifies the product, system, component, or software, etc. that is subject of a simulation being requested by a simulation request or performed by a simulation task. | Yes | camera34, camera34-A-sampleV23 | Providing the _Name of Item under Test_ attribute helps clarifying the subject of simulation.
+|===
 
 === Design
 
