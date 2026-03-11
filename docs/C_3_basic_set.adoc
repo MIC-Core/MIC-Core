@@ -119,7 +119,7 @@ Such information can be captured using extended metadata sets defined in this sp
 
 The basic set should therefore be considered as a *foundation layer* that can be extended without affecting interoperability.
 
-===Implementation Considerations
+=== Implementation Considerations
 
 When implementing the basic attribute set, it is recommended that organizations prioritize:
 
