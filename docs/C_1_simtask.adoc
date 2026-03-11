@@ -318,7 +318,7 @@ Additional explanation and rationale:: The _Analysis Phase Verification Result_ 
 
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
-| MIC Sim. Task Name| Obligation | Attribute description | an have multiple values | Value examples | Additional explanation and rationale
+| MIC Sim. Task Name| Obligation | Attribute description | Can have multiple values | Value examples | Additional explanation and rationale
 | Name of Item under test | Mandatory | The _Name of Item under Test_ specifies the product, system, component, or software, etc.  that is subject of a simulation being requested by a simulation request or performed by a simulation task. |  Yes | camera34, camera34-A-sampleV23 | Providing the _Name of Item under Test_ attribute helps clarifying the subject of simulation.
 | Simulation objective | Mandatory | The Simulation objective represents the engineering question that is to be answered by the simulation task. | Yes | e.g. assessment of the camera resolution by simulation | Providing the _Simulation Objective_ attribute helps keep the focus on the target and to ensures that the entire simulation task is streamlined to the target.
 |===
