@@ -32,21 +32,37 @@ Mapping of MIC Simulation Task Extension to SSP Traceability STMD Format
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
 | MIC Sim. Task Name| STMD Mapping | Obligation | Short Explanation
-| Name of Item under test | analysis.item-under-test.name | Mandatory |The Item under test specifies the product, system, component, or software, etc.  that is subject of a simulation being requested
-| OSimulation objective |analysis.simulation-task.objectives | Mandatory |The Simulation objective represents the engineering question that is to be answered by the simulation task. 
-| Simulation further requirement | analysis.simulation-task.further-requirements | Mandatory |The Simulation further requirement describes what is to be determined, confirmed, or neglected by a simulation.
-| Quality criterion | analysis.quality-aspects | Mandatory |A Quality criterion is a quality requirement that must be met during the simulation, particularly given the importance of the decision to be made.
+| Name of Item under test | analysis.item-under-test.name | Mandatory | The Item under test specifies the product, system, component, or software, etc.  that is subject of a simulation being requested
+| OSimulation objective |analysis.simulation-task.objectives | Mandatory | The Simulation objective represents the engineering question that is to be answered by the simulation task. 
+| Simulation further requirement | analysis.simulation-task.further-requirements | Mandatory | The Simulation further requirement describes what is to be determined, confirmed, or neglected by a simulation.
+| Quality criterion | analysis.quality-aspects | Mandatory | A Quality criterion is a quality requirement that must be met during the simulation, particularly given the importance of the decision to be made.
 | Higher level engineering task | analysis.engineering-task.higher-level | Recommended | The Higher level engineering task is a higher level engineering task that sets the context of the specific engineering task.
-| Specific Product Name | administrative.specific-product.name | Recommended |The Specific product name is the unique master name of the specific product within the company
-| Simulation task confidentiality level | administrative.simulation-task.confidentiality | Recommended |The Simulation task confidentiality level is a  classification with respect to the access to contained information.
-| Predicted simulation start date | administrative.simulation-task.date.start | Recommended |The Predicted simulation start date is the date at which all information will have been provided so that the simulation service can start.
-| Requested simulation delivery date | administrative.simulation-task.date.delivery | Recommended |The Requested simulation delivery date is the due date that the simulation results will be appreciated by the ordering person or organization. 
-| Requesting person | administrative.contact.customer-person | Recommended |The Requesting person is the person who needs the obtained simulation results 
-| Requesting entity | administrative.contact.customer-entity | Recommended |The Requesting entity is the department or external company that needs the obtained simulation results 
-| Contracting person | administrative.contact.contractor-person | Recommended |The Contracting person is the person who accepts the simulation request to provide a simulation service.
-| Contracting entity | administrative.contact.contractor-entity | Recommended |The Contracting entity is the department or external company who accepts the simulation request to provide a simulation service.
-| Simulation request creator name | administrative.simulation-request.contact.insert-name | Optional |The Simulation request creator name is the name or other regulatory-compliant valid identifier of the person who initially created the simulation request
-| Simulation request creation date | administrative.simulation-request.date.submitted-system | Optional |The Simulation request  creation date is the date when the simulation request in the project management IT system was created
-| Simulation task creator name | administrative.simulation-task.contact.insert-name | Optional |The Simulation task creator name is the name or other regulatory-compliant valid identifier of the person who initially created the simulation task
-| Simulation task creation date | administrative.simulation-task.date.creation | Optional |The Simulation request creation date is the date the simulation request in the project management IT system was created.
+| Specific engineering task | analysis.engineering-task.specific | Recommended | The Specific engineering task is the engineering that directly benefits from the simulation results.
+| Verification criterion | analysis.verification | Recommended | A Verification criterion is a quality requirement that must be met during the simulation in order to verify that the simulation results align with the specified objectives of the simulation task
+| Validation criterion | analysis.validation | Recommended | A Validation criterion is a quality requirement that must be met during the simulation in order to validate that the simulation results align with the needs of the specific engineering task that requested the simulation.
+| Analysis verification result  | analysis.verification | Recommended | The Analysis verification result is the conclusion of the analysis phase closing verification.
 |===
+
+==== Requirements
+
+[cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
+|===
+| MIC Sim. Task Name| STMD Mapping | Obligation | Short Explanation
+| Name of Item under test | analysis.item-under-test.name | Mandatory | The Item under test specifies the product, system, component, or software, etc.  that is subject of a simulation being requested
+| OSimulation objective |analysis.simulation-task.objectives | Mandatory | The Simulation objective represents the engineering question that is to be answered by the simulation task. 
+| Simulation further requirement | analysis.simulation-task.further-requirements | Mandatory | The Simulation further requirement describes what is to be determined, confirmed, or neglected by a simulation.
+| Quality criterion | analysis.quality-aspects | Mandatory | A Quality criterion is a quality requirement that must be met during the simulation, particularly given the importance of the decision to be made.
+| Higher level engineering task | analysis.engineering-task.higher-level | Recommended | The Higher level engineering task is a higher level engineering task that sets the context of the specific engineering task.
+| Specific engineering task | analysis.engineering-task.specific | Recommended | The Specific engineering task is the engineering that directly benefits from the simulation results.
+| Verification criterion | analysis.verification | Recommended | A Verification criterion is a quality requirement that must be met during the simulation in order to verify that the simulation results align with the specified objectives of the simulation task
+| Validation criterion | analysis.validation | Recommended | A Validation criterion is a quality requirement that must be met during the simulation in order to validate that the simulation results align with the needs of the specific engineering task that requested the simulation.
+| Analysis verification result  | analysis.verification | Recommended | The Analysis verification result is the conclusion of the analysis phase closing verification.
+| Requesting entity | administrative.contact.customer-entity | Recommended |The Requesting entity is the department or external company that needs the obtained simulation results 
+| Contracting person | administrative.contact.contractor-person | Recommended | The Contracting person is the person who accepts the simulation request to provide a simulation service.
+| Contracting entity | administrative.contact.contractor-entity | Recommended | The Contracting entity is the department or external company who accepts the simulation request to provide a simulation service.
+| Simulation request creator name | administrative.simulation-request.contact.insert-name | Optional | The Simulation request creator name is the name or other regulatory-compliant valid identifier of the person who initially created the simulation request
+| Simulation request creation date | administrative.simulation-request.date.submitted-system | Optional | The Simulation request  creation date is the date when the simulation request in the project management IT system was created
+| Simulation task creator name | administrative.simulation-task.contact.insert-name | Optional | The Simulation task creator name is the name or other regulatory-compliant valid identifier of the person who initially created the simulation task
+| Simulation task creation date | administrative.simulation-task.date.creation | Optional | The Simulation request creation date is the date the simulation request in the project management IT system was created.
+|===
+
