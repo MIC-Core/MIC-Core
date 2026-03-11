@@ -85,7 +85,8 @@ Examples include:
 
 *	simulation tools
 
-*	relevant parameters or test cases
+*	(relevant parameters or test cases)
+** the decision what are the specific relevant parameters is usecase specific and needs user interaction or specific tool support. Therefore in brackets as basic attributes  
 
 *Results*
 
