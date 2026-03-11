@@ -57,32 +57,7 @@ Mapping of MIC Simulation Task Extension to SSP Traceability STMD Format
 | Further model requirements | requirements.models.further-model-requirements | Recommended | The Further model requirements is additional requirements placed on a model, including things that explcitly shall / are not be considered in the model.
 | Simulation model confidentiality level | requirements.model.confidentiality | Recommended | The Simulation model confidentiality level is a  classification with respect to the access to classified information.
 | Value distribution function  | requirements.parameters-value-distribution-function | Recommended | The Value distribution function (value deviation) specifies the probability of deviations certain value.
-| Parameter confidentiality level | arequirements.parameter.confidentiality | Recommended | The Parameter confidentiality level is a  classification with respect to the access to classified information.
-| Simulation integration requirement | requirements.simulation-integration | Recommended | A Simulation integration requirement is a requirement placed on the interaction of the simulation setup elements.
-| Quality assurance requirements | requirements.quality-assurance | Recommended | A Quality assurance requirements is a requirements that is placed on the quality assurance in the requirements phase.
-| Requirements verification result | requirements.verification | Recommended | The Requirements verification result is the result of the verication activity  in the requirements phase.
-| Model quality requirement | requirements.models.quality-requirements | Optional | A Model quality requirement is a requirement placed on a simulation model.
-| Parameter quality requirement | requirements.parameters.quality-requirements | Optional | A Parameter quality requirement is a requirement placed on (a set of) parameters.
-| Simulation environment quality requirement | requirements.simulation-environment.quality-requirements | Optional | A Simulation environment quality requirement is a requirement placed on the simulation environment.
-| Simulation integration quality requirement | requirements.simulation-integration.quality-requirements | Optional | A Simulation integration quality requirement is a requirement that is placed on the simulation integration.
-| Test case quality requirement | equirements.test-cases.quality-requirements | Optional | A Test case quality requirement is a requirement that is placed on a test case.
-|===
-
-==== Requirements
-
-[cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
-|===
-| MIC Sim. Task Name| STMD Mapping | Obligation | Short Explanation
-| Model purpose and objectives | requirements.models.purpose-objectives | Mandatory | The Model purpose and objectives are indicating, based on the simulation purpose and objectives, individual model purpose and objectives.
-| Modeled entity | requirements.models.subject-information.modeled-entity | Mandatory | The Modeled entity is the real-world entity that is to be modeled.
-| Entity parameters | requirements.parameters.subject-information.parametrized-entity | Mandatory | The Entity parameters reference provided parameters of the entity to be modeled.
-| Simulation environment requirement | requirements.simulation-environment | Mandatory | A Simulation environment requirement is a requirement placed on the simulation environment.
-| Test case requirements  | requirements.test-cases | Mandatory | The Test case requirements is the description of the goals and objectives of a test case.
-| Required modeled effect | requirements.models.effects-considered | Recommended | The Required modeled effect is a real-world physical effect that is to be considered in the modeling.
-| Further model requirements | requirements.models.further-model-requirements | Recommended | The Further model requirements is additional requirements placed on a model, including things that explcitly shall / are not be considered in the model.
-| Simulation model confidentiality level | requirements.model.confidentiality | Recommended | The Simulation model confidentiality level is a  classification with respect to the access to classified information.
-| Value distribution function  | requirements.parameters-value-distribution-function | Recommended | The Value distribution function (value deviation) specifies the probability of deviations certain value.
-| Parameter confidentiality level | arequirements.parameter.confidentiality | Recommended | The Parameter confidentiality level is a  classification with respect to the access to classified information.
+| Parameter confidentiality level | requirements.parameter.confidentiality | Recommended | The Parameter confidentiality level is a  classification with respect to the access to classified information.
 | Simulation integration requirement | requirements.simulation-integration | Recommended | A Simulation integration requirement is a requirement placed on the interaction of the simulation setup elements.
 | Quality assurance requirements | requirements.quality-assurance | Recommended | A Quality assurance requirements is a requirements that is placed on the quality assurance in the requirements phase.
 | Requirements verification result | requirements.verification | Recommended | The Requirements verification result is the result of the verication activity  in the requirements phase.
@@ -94,6 +69,25 @@ Mapping of MIC Simulation Task Extension to SSP Traceability STMD Format
 |===
 
 ==== Design
+
+[cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
+|===
+| MIC Sim. Task Name| STMD Mapping | Obligation | Short Explanation
+| Model design specification | design.models | Recommended | A Model design specification is the definition of how models are to be implemented, including model approaches, interfaces model structure, etc.
+| Parameter design specification | design.parameters | Recommended | A Parameter design specification is the definition of how parameters are to be implemented, including including parameter structures, names, values, tolerances, etc.
+| Simulation environment design specification | design.simulation-environment | Recommended | A Simulation environment design specification is the definition of how simulation environment is to be implemented or which tool and version should be used
+| Simulation integration design specification | design.simulation-integration | Recommended | A Simulation integration design specification is the definition of how simulation components are to be integrated
+| Test case design specification  | design.test-cases | Recommended | A Test case design specification is the definition of how test cases are to be implemented.
+| Design quality assurance | design.quality-assurance | Recommended | A Design phase quality assurance describe a quality assurance measure in the design phase.
+| Design verification result | design.verification | Recommended | The Design verification result is the result of the verication activity  in the design phase.
+| Model design quality requirement | design.models.quality-requirements | Optional | A Model design quality requirement is a requirement that is placed on a simulation model.
+| Parameter design quality requirement | Parameter design quality requirement | Optional | A Parameter design quality requirement is a requirement that is placed on (a set of) parameters.
+| Simulation design environment quality requirement | design.simulation-environment.quality-requirements | Optional | A Simulation design environment quality requirement is a requirement that is placed on a simulation environment.
+| Simulation design integration quality requirement | design.simulation-integration.quality-requirements | Optional | A Simulation design integration quality requirement is a requirement that is placed on a simulation environment.
+| Test case design quality requirement | design.test-cases.quality-requirements | Optional | A Test case design quality requirement is a requirement that is placed on a test cases.
+|===
+
+==== Implementation
 
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
