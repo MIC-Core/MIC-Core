@@ -155,6 +155,7 @@ This grouping allows simple implementation while supporting common traceability 
 |===
 | Attribute Name| Group | Obligation | Description | Typical Source
 | Ordering project | Administrative Data | Mandatory | Unique name of the ordering project | Project management tool
+| Specific Product Name | Administrative Data | Mandatory | Unique name of the specific product | Project management tool
 | Simulation task name | Administrative Data | Mandatory | Unique name of the simulation task | Project management tool
 | Simulation task ID | Administrative Data | Mandatory | Unique identifier of the simulation task | Tool / system
 | Item under Test | Analysis | Mandatory | System, component, or product being analyzed | Tool / system
