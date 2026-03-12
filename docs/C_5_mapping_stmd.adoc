@@ -139,7 +139,7 @@ Mapping of MIC Simulation Task Extension to SSP Traceability STMD Format
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
 | MIC Sim. Task Name| STMD Mapping | Obligation | Short Explanation
-| Objectives fulfilled name | fulfillment.objectives | Mandatory | The Objective fulfilled attribute is the clear and unambigious documentation of a objective fulfillment decision with a predifiened set of applicable entries, that indicates whether the objectives linked with the simulation task are fulfilled or not or whether a statement of the objectives fulfillment ist not possible
+| Objectives fulfilled | fulfillment.objectives | Mandatory | The Objective fulfilled attribute is the clear and unambigious documentation of a objective fulfillment decision with a predifiened set of applicable entries, that indicates whether the objectives linked with the simulation task are fulfilled or not or whether a statement of the objectives fulfillment ist not possible
 | Credibility fulfilled | fulfillment.credibility | Mandatory | The Credibility fulfilled attribute is the clear and unambigious documentation of a credibility fulfillment decision with a predifiened set of applicable entries, that indicates whether the simulation task fulfills credibility requirements or not or whether a statement of the credibility fulfillment ist not possible.
 | Task status | fulfillment.task-status | Mandatory | The Task status attribute is the assessment of the entire simulation task. The attribute shows whether the task is still in progress, abortet, finished or checked out (possible in status in progress)
 | Fulfillment date | fulfillment.date | Recommended | Date of the Fulfillment of the simulation task
