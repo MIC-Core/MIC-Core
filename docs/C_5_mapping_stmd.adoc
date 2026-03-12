@@ -8,7 +8,7 @@ Mapping of MIC Simulation Task Extension to SSP Traceability STMD Format
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
 | MIC Sim. Task Name| STMD Mapping | Obligation | Short Explanation
-| Specific Product Name | administrative.specific-product.name | Mandatory | The Specific product name is the unique master name of the specific product
+| Specific Product Name | administrative.specific-product.name | #Mandatory# | The Specific product name is the unique master name of the specific product
 | Ordering Project Name |administrative.ordering-project.name | #Mandatory# | The Ordering project name is the unique master name of the ordering development project 
 | Simulation request name | administrative.simulation-request.name | Mandatory | The Simulation request name is the unique name of the simulation request
 | Simulation task name | administrative.simulation-task.name | #Mandatory# | The Simulation task name is the unique name of the simulation task
