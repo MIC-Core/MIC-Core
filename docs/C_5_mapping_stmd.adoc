@@ -33,7 +33,7 @@ Mapping of MIC Simulation Task Extension to SSP Traceability STMD Format
 |===
 | MIC Sim. Task Name| STMD Mapping | Obligation | Short Explanation
 | Name of Item under test | analysis.item-under-test.name | #Mandatory# | The Item under test specifies the product, system, component, or software, etc.  that is subject of a simulation being requested
-| Simulation objective | analysis.simulation-task.objectives | Mandatory | The Simulation objective represents the engineering question that is to be answered by the simulation task. 
+| Simulation objective | analysis.simulation-task.objectives | #Mandatory# | The Simulation objective represents the engineering question that is to be answered by the simulation task. 
 | Simulation further requirement | analysis.simulation-task.further-requirements | Mandatory | The Simulation further requirement describes what is to be determined, confirmed, or neglected by a simulation.
 | Quality criterion | analysis.quality-aspects | #Mandatory# | A Quality criterion is a quality requirement that must be met during the simulation, particularly given the importance of the decision to be made.
 | Higher level engineering task | analysis.engineering-task.higher-level | Recommended | The Higher level engineering task is a higher level engineering task that sets the context of the specific engineering task.
