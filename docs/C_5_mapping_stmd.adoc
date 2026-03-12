@@ -9,9 +9,9 @@ Mapping of MIC Simulation Task Extension to SSP Traceability STMD Format
 |===
 | MIC Sim. Task Name| STMD Mapping | Obligation | Short Explanation
 | Specific Product Name | administrative.specific-product.name | Mandatory | The Specific product name is the unique master name of the specific product
-| Ordering Project Name |administrative.ordering-project.name | *Mandatory* | The Ordering project name is the unique master name of the ordering development project 
+| Ordering Project Name |administrative.ordering-project.name | #Mandatory# | The Ordering project name is the unique master name of the ordering development project 
 | Simulation request name | administrative.simulation-request.name | Mandatory | The Simulation request name is the unique name of the simulation request
-| Simulation task name | administrative.simulation-task.name | *Mandatory* | The Simulation task name is the unique name of the simulation task
+| Simulation task name | administrative.simulation-task.name | #Mandatory# | The Simulation task name is the unique name of the simulation task
 | Overall product name | administrative.overall-product.name | Recommended | The Overall product name is the unique master name of the overall product 
 | Specific Product Name | administrative.specific-product.name | Recommended | The Specific product name is the unique master name of the specific product within the company
 | Simulation task confidentiality level | administrative.simulation-task.confidentiality | Recommended | The Simulation task confidentiality level is a  classification with respect to the access to contained information.
@@ -32,10 +32,10 @@ Mapping of MIC Simulation Task Extension to SSP Traceability STMD Format
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
 | MIC Sim. Task Name| STMD Mapping | Obligation | Short Explanation
-| Name of Item under test | analysis.item-under-test.name | *Mandatory* | The Item under test specifies the product, system, component, or software, etc.  that is subject of a simulation being requested
+| Name of Item under test | analysis.item-under-test.name | #Mandatory# | The Item under test specifies the product, system, component, or software, etc.  that is subject of a simulation being requested
 | Simulation objective | analysis.simulation-task.objectives | Mandatory | The Simulation objective represents the engineering question that is to be answered by the simulation task. 
 | Simulation further requirement | analysis.simulation-task.further-requirements | Mandatory | The Simulation further requirement describes what is to be determined, confirmed, or neglected by a simulation.
-| Quality criterion | analysis.quality-aspects | Mandatory | A Quality criterion is a quality requirement that must be met during the simulation, particularly given the importance of the decision to be made.
+| Quality criterion | analysis.quality-aspects | #Mandatory# | A Quality criterion is a quality requirement that must be met during the simulation, particularly given the importance of the decision to be made.
 | Higher level engineering task | analysis.engineering-task.higher-level | Recommended | The Higher level engineering task is a higher level engineering task that sets the context of the specific engineering task.
 | Specific engineering task | analysis.engineering-task.specific | Recommended | The Specific engineering task is the engineering that directly benefits from the simulation results.
 | Verification criterion | analysis.verification | Recommended | A Verification criterion is a quality requirement that must be met during the simulation in order to verify that the simulation results align with the specified objectives of the simulation task
@@ -115,10 +115,10 @@ Mapping of MIC Simulation Task Extension to SSP Traceability STMD Format
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
 | MIC Sim. Task Name| STMD Mapping | Obligation | Short Explanation
-| Used simulation model name | execution.model.names | Mandatory | The Used simulation model name is the given name of a simulation model actually used in simulation execution.
-| Used parameter name | execution.parameters.names | Mandatory | The Used parameter name is the given name of a parameter or parameter set actually used in simulation execution.
+| Used simulation model name | execution.model.names | #Mandatory# | The Used simulation model name is the given name of a simulation model actually used in simulation execution.
+| Used parameter name | execution.parameters.names | *Mandatory?* | The Used parameter name is the given name of a parameter or parameter set actually used in simulation execution.
 | Used test case name | execution.test-cases.names | Mandatory |The Used test case name is the given name of a test case actually used in simulation execution.
-| Used tool name | execution.tool.name | Mandatory | The Used tool name is the given name of a tool actually used in simulation execution.
+| Used tool name | execution.tool.name | #Mandatory# | The Used tool name is the given name of a tool actually used in simulation execution.
 | Execution raw data | execution.data | Recommended | The attribute Execution raw data refers to the data that originally resulted from a simulation run before any digital or manual processing was carried out.
 | Used tool settings | execution.tool.settings | Recommended | The Used tool settings is a tool specific setting actually applied to in simulation execution.
 | Execution log | execution.log | Optional | The Execution log records all relevant activities within the simulation environment chronologically and usually saves them in a simple text file with the date and time, sometimes even in millisecond intervals.
@@ -139,9 +139,9 @@ Mapping of MIC Simulation Task Extension to SSP Traceability STMD Format
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
 | MIC Sim. Task Name| STMD Mapping | Obligation | Short Explanation
-| Objectives fulfilled | fulfillment.objectives | Mandatory | The Objective fulfilled attribute is the clear and unambigious documentation of a objective fulfillment decision with a predifiened set of applicable entries, that indicates whether the objectives linked with the simulation task are fulfilled or not or whether a statement of the objectives fulfillment ist not possible
-| Credibility fulfilled | fulfillment.credibility | Mandatory | The Credibility fulfilled attribute is the clear and unambigious documentation of a credibility fulfillment decision with a predifiened set of applicable entries, that indicates whether the simulation task fulfills credibility requirements or not or whether a statement of the credibility fulfillment ist not possible.
-| Task status | fulfillment.task-status | Mandatory | The Task status attribute is the assessment of the entire simulation task. The attribute shows whether the task is still in progress, abortet, finished or checked out (possible in status in progress)
+| Objectives fulfilled | fulfillment.objectives | #Mandatory# | The Objective fulfilled attribute is the clear and unambigious documentation of a objective fulfillment decision with a predifiened set of applicable entries, that indicates whether the objectives linked with the simulation task are fulfilled or not or whether a statement of the objectives fulfillment ist not possible
+| Credibility fulfilled | fulfillment.credibility | #Mandatory# | The Credibility fulfilled attribute is the clear and unambigious documentation of a credibility fulfillment decision with a predifiened set of applicable entries, that indicates whether the simulation task fulfills credibility requirements or not or whether a statement of the credibility fulfillment ist not possible.
+| Task status | fulfillment.task-status | #Mandatory# | The Task status attribute is the assessment of the entire simulation task. The attribute shows whether the task is still in progress, abortet, finished or checked out (possible in status in progress)
 | Fulfillment date | fulfillment.date | Recommended | Date of the Fulfillment of the simulation task
 | Fulfillment evidence | fulfillment.evidence | Recommended | The Fulfillment evidence attribute links a more detailed report documenting the objective, credibility and task fulfillment assessment and decision.
 |===
