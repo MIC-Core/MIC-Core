@@ -210,32 +210,13 @@ This grouping supports common basic use cases such as *search, overview, analysi
 
 === Basic Attribute Set
 
-[cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
-|===
-| Attribute Name| Group | Obligation | Description | Typical Source
-| Ordering project | Administrative Data | Mandatory | Unique name of the ordering project | Project management tool
-| Specific Product Name | Administrative Data | Mandatory | Unique name of the specific product | Project management tool
-| Simulation task name | Administrative Data | Mandatory | Unique name of the simulation task | Project management tool
-| Simulation task ID | Administrative Data | Mandatory | Unique identifier of the simulation task | Tool / system
-| Item under Test | Analysis | Mandatory | System, component, or product being analyzed | Tool / system
-| Simulation Objective | Analysis | Mandatory | Objective or purpose of the simulation | User
-| Quality, credibility Criterion | Analysis | Mandatory | Criteria used to evaluate simulation success | User
-| Used Model | Used Elements | Mandatory | Model used for the simulation | Tool / system
-| Used Model Version | Used Elements | Mandatory | Version of model used for the simulation | Tool / system
-| Used Tool | Used Elements | Mandatory | Tool used for the simulation | Tool / system
-| Used Tool Version | Used Elements | Mandatory | Version of Tool used for the simulation | Tool / system
-| Task status | Result Status | Mandatory | Is the task still in progress abortet, finished | User
-| Credibility fulfilled | Result Status | Mandatory | Documentation of the credibility fulfillment decision | User
-| Objectives fulfilled | Result Status | Mandatory | Documentation of the objectives fulfillment decision  | User
-|===
-
-=== Basic Attribute Set Reduced (update 2026.03.13)
 
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
 | Attribute Name| Group | Obligation | Description | Typical Source
 | Ordering project | Administrative Data | Recommended | Unique name of the ordering project | Project management tool
 | Specific Product | Administrative Data | Recommended | Unique name of the specific product | Project management tool
+| Simulation Request | Administrative Data | Recommended | Unique name of the Simulation Request | Project management tool
 | Simulation task | Administrative Data | Mandatory | Unique name of the simulation task | Project management tool
 | Item under Test | Analysis | Mandatory | System, component, or product being analyzed | Tool / system
 | Simulation Objective | Analysis | Recommended | Objective or purpose of the simulation | User
@@ -243,13 +224,44 @@ This grouping supports common basic use cases such as *search, overview, analysi
 | Used Model | Used Elements | Mandatory | Model used for the simulation | Tool / system
 | Used Parameter | Used Elements | Optional | Parameter used for the simulation | user (selection)
 | Used Tool | Used Elements | Mandatory | Tool used for the simulation | Tool / system
+| Used Test Cases | Used Elements | Optional | Test cases used for the simulation | user (selection)
 | Task status | Result Status | Mandatory | Is the task still in progress abortet, finished | User
 | Credibility fulfilled | Result Status | Recommended | Documentation of the credibility fulfillment decision | User
 | Objectives fulfilled | Result Status | Recommended | Documentation of the objectives fulfillment decision  | User
 |===
 
+For several key elements such as *products, simulation request, simulation tasks, models, and tools, it is recommended that at least the following information is available: name, identifier, and version.
 
-=== Example Traceability Usage
+This specification does not prescribe how these identifiers or versioning schemes shall be implemented. Organizations should use their existing company-specific conventions.
+
+=== Considerations for Parameters and Test Cases
+
+Some information elements that are often important for deeper analysis or reproducibility of simulations are only included as optional in the basic attribute set.
+
+*Used Parameters*
+
+Information about *used simulation parameters* can be highly relevant for understanding and reproducing simulation results. However, the identification of the parameters that are truly relevant for a simulation task is typically *simulation-specific and use-case dependent.*
+
+In many cases, determining the relevant parameters requires:
+
+*	user interaction
+
+*	engineering judgement
+
+*	or dedicated tool support
+
+Including parameters in a minimal attribute set would therefore introduce additional effort for the user and could negatively affect user acceptance. For this reason, *used parameters are only included as optional in the basic attribute set, although they may be recommended in the extended metadata sets.
+
+=== Test Cases
+
+Test cases are another important element for describing simulation activities. However, currently there are *no widely established cross-tool standards for the description and exchange of simulation test cases.*
+
+Most simulation tools provide only *tool-specific and proprietary export formats* for test cases and related execution settings.
+
+Because of this lack of standardized representations, *test cases are only included as optional in the basic attribute set. Organizations may include such information in extended metadata structures or tool-specific integrations.
+ 
+
+=== Example TUse Cases
 
 The defined attribute set enables several basic traceability use cases.
 
@@ -269,11 +281,16 @@ Example queries:
 
 The attributes *used Model, used Tool, and simulation Objective* allow engineers to identify simulation tasks that may serve as templates for new simulations.
 
-*Project traceability*
+*Analysis of simulation activities*
 
-The attribute simulationRequestID links the simulation task to the corresponding simulation request and therefore provides traceability to the originating engineering decision or project context.
+Basic metadata allow organizations to analyze simulation activities, for example:
 
-=== Automatic Metadata Generatio
+*	which tools are used in which contexts
+*	which models are used for specific analyses
+*	which simulations support specific products or projects
+
+
+=== Automatic Metadata Generation
 To ensure high user acceptance, the basic attribute set is designed so that a large portion of the metadata can be generated automatically.
 
 Typical examples include:
