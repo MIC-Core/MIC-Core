@@ -1,21 +1,55 @@
 [appendix]
 == Basic Set of Attributes
 
+=== Introduction
+Within the basic attribute set, a small number of attributes provide the most essential information required to support basic functionalities such as search, overview, analysis, and identification of reusable simulation tasks.
+
+The following attributes represent the *essential elements of the minimal metadata set:*
+
+*	*Simulation Task*
+
+*	*Item under Test*
+
+*	*Simulation Objective*
+
+*	*Used Model*
+
+*	*Used Tool*
+
+Together, these attributes allow users to understand at a basic level:
+
+*	what simulation was performed
+
+*	what system or component was analyzed
+
+*	what the purpose of the simulation was
+
+*	which model was used
+
+*	which tool was used to perform the simulation
+
+Even this small set of attributes already enables several basic use cases, such as searching for simulations, identifying similar simulation tasks, or selecting candidate simulations for reuse.
+
+
 === Purpose 
 
-Metadata for simulation tasks are currently only sparsely established in industrial environments. Different tools and organizations often use heterogeneous or proprietary metadata structures, which limits the ability to trace, search, and reuse simulation results.
+Metadata for simulation tasks are currently only sparsely established in industrial environments. Different tools and organizations often use heterogeneous or proprietary metadata structures, which limits the ability to analyze, search, and reuse simulation information across projects and tools.
 
-To lower the barrier for implementation, this specification defines a *minimal basic set of attributes* for simulation tasks. The goal of this basic set is not to provide a comprehensive metadata model, but to define the *minimum information required to support basic traceability* of simulation activities.
+To lower the barrier for implementation, this specification defines a *minimal basic set of attributes* for simulation tasks. 
 
-This minimal attribute set enables immediate benefits for essential use cases such as:
+The goal of this basic set is *not to provide a comprehensive metadata model*, but to define a *minimal set of information that enables basic functionalities and use cases* such as analysis, search, overview, and reuse of simulation tasks.
 
-*	search for existing simulation tasks
+It is important to note that *traceability requirements are always use-case specific.* Depending on the intended use case, different metadata attributes may be required. Therefore, the attribute set defined in this appendix does *not attempt to cover all possible traceability requirements.*
 
-*	identification of simulations related to a specific product or project
+Instead, it defines a *small common baseline* that can support several basic use cases and that can easily be extended for more advanced or domain-specific scenarios.
 
-*	reuse of existing simulation setups
+Typical basic use cases include:
 
-*	overview of simulation context and objectives
+*	searching for existing simulation tasks
+*	identifying simulations related to a specific product or project
+*	obtaining an overview of performed simulations
+*	identifying candidate simulations for reuse
+*	performing simple evaluations of simulation activities
 
 The basic set can serve as a *starting point for organizations introducing simulation metadata management* and may be extended with additional attributes depending on specific use cases.
 
@@ -29,7 +63,7 @@ Only attributes that provide clear value for traceability and reuse are included
 
 *High user acceptance*
 
-User acceptance is considered a critical success factor. Therefore, the attribute set avoids excessive manual data entry requirements.
+User acceptance is considered a critical success factor. Therefore, the attribute set avoids excessive manual data entry requirements and focuses on information that is typically already available.
 
 *Tool-supported metadata generation*
 
@@ -47,9 +81,9 @@ Typical sources for metadata include:
 
 === Scope of the Basic Attribute Set
 
-The basic attribute set focuses on metadata that support *basic traceability of simulation tasks.*
+The basic attribute set focuses on metadata that support *basic functionalities such as search, overview, analysis, and reuse of simulation tasks.*
 
-These attributes typically cover three main aspects:
+The attributes cover four main aspects:
 
 *Administrative and project context*
 
@@ -57,11 +91,11 @@ Information that connects the simulation task to a project or request context.
 
 Examples include:
 
-*	simulation task name
+*	ordering project
 
-*	associated project or simulation request
+*	specific product
 
-*	responsible organization or engineer
+*	simulation task
 
 *Simulation context*
 
@@ -86,7 +120,8 @@ Examples include:
 *	simulation tools
 
 *	(relevant parameters or test cases)
-** the decision what are the specific relevant parameters is usecase specific and needs user interaction or specific tool support. Therefore in brackets as basic attributes  
+
+The identification of specific relevant parameters is *use-case dependent* and may require user interaction or tool-specific support. Therefore, these elements are considered optional in the basic attribute set. 
 
 *Results*
 
@@ -102,9 +137,33 @@ Examples include:
 
 This information enables users to understand *what was simulated, why it was simulated, and with which tools and models the simulation was performed.*
 
+=== Identification of Core Elements
+For several key elements within the basic attribute set, it is recommended that the following information be available:
+
+*	*Name*
+
+*	*Identifier*
+
+*	*Version*
+
+This applies in particular to:
+
+*	specific product
+
+*	simulation task
+
+*	item under test
+
+*	used model
+
+*	used tool
+
+No specific format or implementation mechanism is defined by this specification. Organizations should use their *existing company-specific conventions, identifiers, and versioning schemes.*
+
+
 === Relation to Extended Metadata
 
-The basic attribute set is intentionally limited to information required for *basic traceability, search, and reuse.*
+The basic attribute set is intentionally limited to information required for basic use cases
 
 More detailed metadata may be required for advanced use cases such as:
 
@@ -116,7 +175,7 @@ More detailed metadata may be required for advanced use cases such as:
 
 *	detailed analysis of simulation execution
 
-Such information can be captured using extended metadata sets defined in this specification or in organization-specific extensions.
+Such information can be captured using *extended metadata sets* defined in this specification or in organization-specific extensions.
 
 The basic set should therefore be considered as a *foundation layer* that can be extended without affecting interoperability.
 
@@ -182,6 +241,7 @@ This grouping allows simple implementation while supporting common traceability 
 | Simulation Objective | Analysis | Recommended | Objective or purpose of the simulation | User
 | Quality, credibility Criterion | Analysis | Recommended | Criteria used to evaluate simulation success | User
 | Used Model | Used Elements | Mandatory | Model used for the simulation | Tool / system
+| Used Parameter | Used Elements | Optional | Parameter used for the simulation | user (selection)
 | Used Tool | Used Elements | Mandatory | Tool used for the simulation | Tool / system
 | Task status | Result Status | Mandatory | Is the task still in progress abortet, finished | User
 | Credibility fulfilled | Result Status | Recommended | Documentation of the credibility fulfillment decision | User
