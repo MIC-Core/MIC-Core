@@ -170,6 +170,25 @@ This grouping allows simple implementation while supporting common traceability 
 | Objectives fulfilled | Result Status | Mandatory | Documentation of the objectives fulfillment decision  | User
 |===
 
+=== Basic Attribute Set Reduced (update 2026.03.13)
+
+[cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
+|===
+| Attribute Name| Group | Obligation | Description | Typical Source
+| Ordering project | Administrative Data | Recommended | Unique name of the ordering project | Project management tool
+| Specific Product | Administrative Data | Recommended | Unique name of the specific product | Project management tool
+| Simulation task | Administrative Data | Mandatory | Unique name of the simulation task | Project management tool
+| Item under Test | Analysis | Mandatory | System, component, or product being analyzed | Tool / system
+| Simulation Objective | Analysis | Recommended | Objective or purpose of the simulation | User
+| Quality, credibility Criterion | Analysis | Recommended | Criteria used to evaluate simulation success | User
+| Used Model | Used Elements | Mandatory | Model used for the simulation | Tool / system
+| Used Tool | Used Elements | Mandatory | Tool used for the simulation | Tool / system
+| Task status | Result Status | Mandatory | Is the task still in progress abortet, finished | User
+| Credibility fulfilled | Result Status | Recommended | Documentation of the credibility fulfillment decision | User
+| Objectives fulfilled | Result Status | Recommended | Documentation of the objectives fulfillment decision  | User
+|===
+
+
 === Example Traceability Usage
 
 The defined attribute set enables several basic traceability use cases.
