@@ -193,7 +193,7 @@ This approach helps ensure both *data quality and user acceptance,* which are es
 
 === Structure of the Basic Attribute Set
 
-The basic attribute set is structured into a small number of logical groups representing the minimal information required for traceability of simulation tasks.
+The basic attribute set is structured into a small number of logical groups.
 
 The following attribute groups are defined:
 
@@ -206,7 +206,7 @@ The following attribute groups are defined:
 | Result Status | High-level outcome of the simulation task | 
 |===
 
-This grouping allows simple implementation while supporting common traceability use cases such as search, overview, and reuse of simulation tasks.
+This grouping supports common basic use cases such as *search, overview, analysis, and reuse of simulation tasks.*
 
 === Basic Attribute Set
 
