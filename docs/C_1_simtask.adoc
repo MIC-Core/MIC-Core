@@ -24,6 +24,28 @@ While the MIC Core specification provides metadata for simulation models, it doe
 
 This extension addresses this gap.
 
+[plantuml]
+----
+Decision Task
+      |
+      v
+Simulation Request
+      |
+      v
+Simulation Task
+      |
+      v
+Simulation Models (MIC Core Metadata)
+      |
+      v
+Simulation Results
+
+Simulation Results --> Search
+Simulation Results --> Analysis
+Simulation Results --> Reuse
+----
+
+
 === Purpose of this Extension
 
 The purpose of this extension is to introduce a *standardized semantic structure for metadata describing simulation tasks and simulation requests.*
