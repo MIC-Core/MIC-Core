@@ -281,7 +281,7 @@ Most simulation tools provide only *tool-specific and proprietary export formats
 Because of this lack of standardized representations, *test cases are only included as optional in the basic attribute set. Organizations may include such information in extended metadata structures or tool-specific integrations.
  
 
-=== Example TUse Cases
+=== Example Use Cases
 
 The defined attribute set enables several basic traceability use cases.
 
