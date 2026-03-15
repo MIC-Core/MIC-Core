@@ -30,6 +30,24 @@ Together, these attributes allow users to understand at a basic level:
 
 Even this small set of attributes already enables several basic use cases, such as searching for simulations, identifying similar simulation tasks, or selecting candidate simulations for reuse.
 
+[plantuml]
+----
+Decision Task
+      |
+      v
+Simulation Request
+      |
+      v
+Simulation Task
+      |
+      v
+Simulation Results
+
+Simulation Results --> Search
+Simulation Results --> Analysis
+Simulation Results --> Reuse
+----
+
 
 === Purpose 
 
