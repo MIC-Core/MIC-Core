@@ -8,9 +8,9 @@ Mapping of MIC Simulation Task Extension to SSP Traceability STMD Format
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
 | MIC Sim. Task Name| STMD Mapping | Obligation | Short Explanation
-| Specific Product Name | administrative.specific-product.name | #Mandatory# | The Specific product name is the unique master name of the specific product
-| Ordering Project Name |administrative.ordering-project.name | #Mandatory# | The Ordering project name is the unique master name of the ordering development project 
-| Simulation request name | administrative.simulation-request.name | Mandatory | The Simulation request name is the unique name of the simulation request
+| Specific Product Name | administrative.specific-product.name | Recommended | The Specific product name is the unique master name of the specific product
+| Ordering Project Name |administrative.ordering-project.name | Recommended | The Ordering project name is the unique master name of the ordering development project 
+| Simulation request name | administrative.simulation-request.name | Recommended | The Simulation request name is the unique name of the simulation request
 | Simulation task name | administrative.simulation-task.name | #Mandatory# | The Simulation task name is the unique name of the simulation task
 | Overall product name | administrative.overall-product.name | Recommended | The Overall product name is the unique master name of the overall product 
 | Specific Product Name | administrative.specific-product.name | Recommended | The Specific product name is the unique master name of the specific product within the company
@@ -33,9 +33,9 @@ Mapping of MIC Simulation Task Extension to SSP Traceability STMD Format
 |===
 | MIC Sim. Task Name| STMD Mapping | Obligation | Short Explanation
 | Name of Item under test | analysis.item-under-test.name | #Mandatory# | The Item under test specifies the product, system, component, or software, etc.  that is subject of a simulation being requested
-| Simulation objective | analysis.simulation-task.objectives | #Mandatory# | The Simulation objective represents the engineering question that is to be answered by the simulation task. 
-| Simulation further requirement | analysis.simulation-task.further-requirements | Mandatory | The Simulation further requirement describes what is to be determined, confirmed, or neglected by a simulation.
-| Quality criterion | analysis.quality-aspects | #Mandatory# | A Quality criterion is a quality requirement that must be met during the simulation, particularly given the importance of the decision to be made.
+| Simulation objective | analysis.simulation-task.objectives | Recommended | The Simulation objective represents the engineering question that is to be answered by the simulation task. 
+| Simulation further requirement | analysis.simulation-task.further-requirements | Recommended | The Simulation further requirement describes what is to be determined, confirmed, or neglected by a simulation.
+| Quality criterion | analysis.quality-aspects | Recommended | A Quality criterion is a quality requirement that must be met during the simulation, particularly given the importance of the decision to be made.
 | Higher level engineering task | analysis.engineering-task.higher-level | Recommended | The Higher level engineering task is a higher level engineering task that sets the context of the specific engineering task.
 | Specific engineering task | analysis.engineering-task.specific | Recommended | The Specific engineering task is the engineering that directly benefits from the simulation results.
 | Verification criterion | analysis.verification | Recommended | A Verification criterion is a quality requirement that must be met during the simulation in order to verify that the simulation results align with the specified objectives of the simulation task
@@ -48,11 +48,11 @@ Mapping of MIC Simulation Task Extension to SSP Traceability STMD Format
 [cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
 |===
 | MIC Sim. Task Name| STMD Mapping | Obligation | Short Explanation
-| Model purpose and objectives | requirements.models.purpose-objectives | Mandatory | The Model purpose and objectives are indicating, based on the simulation purpose and objectives, individual model purpose and objectives.
-| Modeled entity | requirements.models.subject-information.modeled-entity | Mandatory | The Modeled entity is the real-world entity that is to be modeled.
-| Entity parameters | requirements.parameters.subject-information.parametrized-entity | Mandatory | The Entity parameters reference provided parameters of the entity to be modeled.
-| Simulation environment requirement | requirements.simulation-environment | Mandatory | A Simulation environment requirement is a requirement placed on the simulation environment.
-| Test case requirements  | requirements.test-cases | Mandatory | The Test case requirements is the description of the goals and objectives of a test case.
+| Model purpose and objectives | requirements.models.purpose-objectives | Recommended | The Model purpose and objectives are indicating, based on the simulation purpose and objectives, individual model purpose and objectives.
+| Modeled entity | requirements.models.subject-information.modeled-entity | Recommended | The Modeled entity is the real-world entity that is to be modeled.
+| Entity parameters | requirements.parameters.subject-information.parametrized-entity | Recommended | The Entity parameters reference provided parameters of the entity to be modeled.
+| Simulation environment requirement | requirements.simulation-environment | Recommended | A Simulation environment requirement is a requirement placed on the simulation environment.
+| Test case requirements  | requirements.test-cases | Recommended | The Test case requirements is the description of the goals and objectives of a test case.
 | Required modeled effect | requirements.models.effects-considered | Recommended | The Required modeled effect is a real-world physical effect that is to be considered in the modeling.
 | Further model requirements | requirements.models.further-model-requirements | Recommended | The Further model requirements is additional requirements placed on a model, including things that explcitly shall / are not be considered in the model.
 | Simulation model confidentiality level requirements | requirements.model.confidentiality | Recommended | The Simulation model confidentiality level is a  classification with respect to the access to classified information.
