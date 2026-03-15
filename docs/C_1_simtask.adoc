@@ -123,7 +123,7 @@ The attributes defined in this extension are categorized into three obligation l
 
 *	Optional – additional information supporting organization-specific or advanced use cases
 
-Mandatory attributes represent the *minimum set of metadata required to support basic functionalities,* such as:
+Mandatory attributes represent the *minimum set of metadata required to support basic use cases, functionalities,* such as:
 
 *	search for simulation tasks
 
