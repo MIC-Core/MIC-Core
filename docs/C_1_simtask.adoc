@@ -91,23 +91,61 @@ This process distinguishes the following phases:
 Each phase contains specific metadata attributes that describe the state and context of the simulation task within the engineering workflow.
 This process-oriented structure supports traceability across the complete lifecycle of a simulation task.
 
-=== Traceability and Credibility
-In large engineering organizations, simulation results often serve as evidence for design decisions, verification activities, and certification processes.
+=== Obligation Levels and Use-Case Dependency
 
-For this reason, the traceability of simulation activities and the credibility of simulation results are essential.
+The attributes defined in this extension are categorized into three obligation levels:
 
-To support this objective, the attributes defined in this extension are categorized into three obligation levels:
+*	Mandatory – required to support the defined basic use cases or functionalities
 
-*	*Mandatory* – required to ensure traceability and reproducibility
+*	Recommended – important for consistent documentation and extended analysis
 
-*	*Recommended* – important for consistent documentation
+*	Optional – additional information supporting organization-specific or advanced use cases
 
-*	*Optional* – additional information supporting extended use cases
+Mandatory attributes represent the *minimum set of metadata required to support basic functionalities,* such as:
 
-Mandatory attributes are considered essential to document simulation tasks in a way that allows reliable interpretation and verification of simulation results.
+*	search for simulation tasks
+
+*	analysis of simulation activities
+
+*	identification of reusable simulation setups
+
+*	understanding of the simulation context
+
+However, the specific *traceability, analysis, or documentation requirements of an organization are typically use-case dependent.*
+
+Therefore, implementations of this standard should evaluate which additional metadata attributes are required for their specific environment.
+
+The classification *Recommended* and *Optional* allows organizations to extend the metadata set according to their needs without losing semantic consistency.
+
+=== Role of Semantic Standardization
+
+A key objective of this extension is the standardization of metadata semantics, not the restriction of possible metadata structures.
+
+This means that the standard defines:
+
+*	*which metadata concepts exist*
+
+*	*how they are semantically defined*
+
+*	*how they relate to each other*
+
+At the same time, organizations remain free to:
+
+*	extend the attribute set
+
+*	introduce additional attributes
+
+*	integrate company-specific metadata structures
+
+as long as the defined semantics remain consistent.
+
+This approach allows organizations to implement the standard *incrementally and according to their specific engineering processes.*
 
 == MIC Simulation Task Extension Attributes
-This chapter introduces and describes the list of MIC Simulation Task Extension Attributes. Each attribute is introduced with a attribute description and whether the attribute can be instantiated multiple times or not. To enhance the understanding of an attribute, some value examples and, if applicable, additional explanations or rationales for the attribute are provided .
+
+This chapter introduces and describes the list of MIC Simulation Task Extension Attributes. 
+
+Each attribute is introduced with a attribute description and whether the attribute can be instantiated multiple times or not. To enhance the understanding of an attribute, some value examples and, if applicable, additional explanations or rationales for the attribute are provided .
 
 The attributes are organized by the following attribute groups (process phases):
 
@@ -128,7 +166,10 @@ The attributes are organized by the following attribute groups (process phases):
 * Fulfillment
 
 === Composite attributes
-Attributes marked with an asterisk (*) represent composite attributes with a predefined internal structure. In the list the sub-attributes are not separately listed.
+
+Attributes marked with an asterisk (*) represent *composite attributes with a predefined internal structure.* 
+
+In the list the sub-attributes are not separately listed.
 
 Example:
 
@@ -145,6 +186,8 @@ The attribute includes the following sub-attributes (details in appendix):
 *	URL
 
 *	Full Name
+
+*List off Attributes*
 
 === *Administration*
 
