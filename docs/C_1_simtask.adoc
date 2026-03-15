@@ -1,13 +1,14 @@
 == Introduction for MIC Simulation Task Extension
 
 === Motivation 
+
 Simulation-based engineering has become an essential component of modern product development. Simulation models are increasingly exchanged between organizations and engineering domains in order to support design decisions, verification activities, and system validation.
 
-The *MIC Core specification* provides a standardized approach for describing metadata of simulation models. It enables consistent identification, management, and exchange of simulation models across organizations.
+The MIC-Core Standard provides a standardized approach for describing metadata of simulation models. It enables consistent identification, management, and exchange of simulation models across organizations.
 
 However, simulation models are rarely used in isolation. In engineering practice they are typically applied within *simulation tasks* that follow a structured engineering workflow. These simulation tasks are initiated by *simulation requests*, use simulation models and other resources, and produce results that support engineering decisions.
 
-In complex development environments, especially in large organizations and cross-company collaborations, the traceability of simulation activities becomes critical. It must be possible to answer questions such as:
+In complex development environments, especially in large organizations and cross-company collaborations, the *traceability and understanding of simulation activities* becomes critical. It must be possible to answer questions such as:
 
 *	Which engineering question was addressed by a simulation?
 
@@ -24,22 +25,29 @@ While the MIC Core specification provides metadata for simulation models, it doe
 This extension addresses this gap.
 
 === Purpose of this Extension
-The purpose of this extension is to introduce a *standardized metadata structure for simulation tasks and simulation requests.*
+
+The purpose of this extension is to introduce a *standardized semantic structure for metadata describing simulation tasks and simulation requests.*
 
 The extension enables:
 
-*	traceability of simulation activities
+*	improved understanding of simulation activities
 
-*	reproducibility of simulation results
+*	support for search, analysis, and reuse of simulation tasks
 
-*	consistent documentation of simulation processes
+*	documentation of simulation processes
 
 *	improved collaboration across engineering teams and organizations
 
 The extension defines harmonized metadata attributes describing simulation tasks along the phases of a simulation engineering process.
 
+The attributes defined in this extension provide a *common semantic* basis for describing simulation tasks. However, the specific selection of attributes that are required in a given environment is *application-specific and may depend on organizational needs, engineering processes, and use cases.*
+
+
 === Relation to MIC Core
+
 This document is an extension of the *MIC Core specification.*
+
+The principles and guidelines described in the introduction of the MIC Core specification also *apply to this extension.*
 
 The extension does not modify the existing MIC Core model metadata definitions. Instead, it complements them by introducing metadata describing the *context in which simulation models are used.*
 
@@ -55,7 +63,11 @@ The definition of metadata attributes in this document follows the same methodol
 
 *	clear semantic definitions
 
+The goal of this extension is therefore not to *prescribe a fixed metadata implementation,* but to define a *consistent semantic framework* that can be adopted and extended by organizations.
+
+
 === Simulation Process Context
+
 The metadata structure defined in this extension follows a simulation process aligned with the *Credible Simulation Process Framework.*
 
 This process distinguishes the following phases:
