@@ -30,6 +30,8 @@ Together, these attributes allow users to understand at a basic level:
 
 Even this small set of attributes already enables several basic use cases, such as searching for simulations, identifying similar simulation tasks, or selecting candidate simulations for reuse.
 
+The following illustrates how this information is linked to the development and simulation process.
+
 [plantuml]
 ----
 Decision Task
