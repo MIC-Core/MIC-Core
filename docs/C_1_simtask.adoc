@@ -189,7 +189,7 @@ The attributes are organized by the following attribute groups (process phases):
 
 === Composite attributes
 
-Attributes marked with an *asterisk ( * )* represent *composite attributes with a predefined internal structure.* 
+Attributes marked with an *asterisk ( * )* represent *composite or sub-attributes with a predefined internal structure.* 
 
 In the list the sub-attributes are not separately listed.
 
