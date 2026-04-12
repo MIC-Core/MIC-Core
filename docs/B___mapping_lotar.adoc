@@ -18,7 +18,7 @@ Additional information and related LOTAR standards are in the section <<Informat
 
 In the following, the mapping of the MIC Core standard attributes to the attributes of the LOTAR standard will be shown.
 
-=== Maping of MIC Core attributes to the LOTAR standard
+=== Mapping of MIC Core attributes to the LOTAR standard
 
 The following table shows the mapping of MIC Core attributes to LOTAR attributes.
 In the first column the attributes defined in the MIC Core are listed.
@@ -26,7 +26,7 @@ The second column lists the mapping of the attribute names to the LOTAR attribut
 In column three an abbreviated explanation of the attributes is listed to provide a better overview.
 
 
-[cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
+[cols="1,^2m,17",align="center",frame="topbot",options="header"]
 |===
 | MIC Core Name| LOTAR Mapping | Short Explanation
 | Model name | modelName | Human-readable way of referring to the model. Usually short and clear. Not necessarily unique.
@@ -35,7 +35,7 @@ In column three an abbreviated explanation of the attributes is listed to provid
 | Model supplier | Organisation | The responsible body and, if applicable, organizational unit within the body, that is responsible for supplying the model.
 | Model confidentiality level | accessControl | Protection level to apply to the model.
 | Legal restriction | distributionMarking | Defines the rules governing the distribution and usage of the simulation model, including licensing,
-| Release | baselineProductID | Unique identifier, preferably human-readable (i.e. semantically meaningfull), for the release of a particular simulation model.
+| Release | baselineProductID | Unique identifier, preferably human-readable (i.e. semantically meaningful), for the release of a particular simulation model.
 | Release date | approvalDate | Date, and possibly time and timezone, of the release of a simulation model. Must respect ISO 8601.
 | Release type| maturityState | Relates to the maturity of the model.
 | Model purpose | modelPurpose | Purpose for which the model has been built/validated.

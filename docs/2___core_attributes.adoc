@@ -1,8 +1,7 @@
+[[mic-core-attributes]]
 == MIC Core Attributes
 
-[[mic-core-attributes]]
-
-This chapter introduces and describes the list of MIC core attributes. Each attribute is introduced with a attribute description and an indication of the attribute obligation, i.e., whether the attribute is mandatory, recommended, or optional, and whether the attribute can be instantiated multiple times or not. To enhance the understanding of an attribute, some value examples and, if applicable, additional explanations or rationales for the attribute are provided .
+This chapter introduces and describes the list of MIC core attributes. Each attribute is introduced with a attribute description and an indication of the attribute obligation, i.e., whether the attribute is mandatory, recommended, or optional, and whether the attribute can be instantiated multiple times or not. To enhance the understanding of an attribute, some value examples and, if applicable, additional explanations or rationales for the attribute are provided.
 
 The attributes are organized by the following attribute groups:
 
@@ -56,7 +55,7 @@ Value entry examples::
 
 * //server/home/user/models/mymodel
 
-Additional explanation and rationale:: The model identifier, unlike the model name, is typically unchangeable. Different releases of a model may have the same model identifier is the same. In this case, both the model identifier and the model release are required for model desambiguation.
+Additional explanation and rationale:: The model identifier, unlike the model name, is typically unchangeable. Different releases of a model may have the same model identifier is the same. In this case, both the model identifier and the model release are required for model disambiguation.
 
 ==== Model description
 
@@ -76,7 +75,7 @@ Additional explanation and rationale:: For the recipient of a simulation model, 
 
 ==== Release 
 
-Attribute description:: Unique identifier, preferably human-readable (i.e. semantically meaningfull), for the release of a particular simulation model. Represents the result of the intentional act of releasing a model at a particular stage to a particular audience (different from the more general notion of version).
+Attribute description:: Unique identifier, preferably human-readable (i.e. semantically meaningful), for the release of a particular simulation model. Represents the result of the intentional act of releasing a model at a particular stage to a particular audience (different from the more general notion of version).
 
 Obligation:: Mandatory
 
@@ -104,11 +103,11 @@ Value entry examples::
 
 * 2023-03-27T12:27:04Z
 
-Additional explanation and rationale:: Release dates permit to clarify the chronolgy of releases (How old is a simulation model? What simulation model came first? etc.).
+Additional explanation and rationale:: Release dates permit to clarify the chronology of releases (How old is a simulation model? What simulation model came first? etc.).
 
 ==== Release type
 
-Attribute description::  Relates to the maturity of the model. To be distinguished from a changing status (e.g. outdated). Fixed at the time of the release and not changing. Allows the receiver to evaluate the usage limitations of a given release (e.g. a prelease shall not be used for final system validation).
+Attribute description::  Relates to the maturity of the model. To be distinguished from a changing status (e.g. outdated). Fixed at the time of the release and not changing. Allows the receiver to evaluate the usage limitations of a given release (e.g. a pre-release shall not be used for final system validation).
 
 Obligation:: Recommended
 
@@ -126,7 +125,7 @@ Value entry examples::
 
 ==== Model supplier
 
-Attribute description::  The responsible body and, if applicable, organizational unit within the body, that is responsible for supplying the model. Can be different from the owner or the creator of the model. Should be as specific as possible but also durable, avoiding for example specific people names. Relevant personal data protection guidelines should be takend into account. In case of model assembly, responsible of the overall assembly.
+Attribute description::  The responsible body and, if applicable, organizational unit within the body, that is responsible for supplying the model. Can be different from the owner or the creator of the model. Should be as specific as possible but also durable, avoiding for example specific people names. Relevant personal data protection guidelines should be taken into account. In case of model assembly, responsible of the overall assembly.
 
 Obligation:: Mandatory
 
@@ -198,7 +197,7 @@ Value entry examples::
 
 * Automated driving function validation in an OEM environment at object-list level
 
-* Efficency evaluation of a gear box in combination with a SW-function
+* Efficiency evaluation of a gear box in combination with a SW-function
 
 === Subject information
 
@@ -218,7 +217,7 @@ Value entry examples::
 * Gear box type xyz23
 * Electrical car, model X, version Y, configuration Z
 
-Additional explanation and rationale:: The modelled entity can typically be a system whose development is supported by simulation. There may not be any specific modelled ententy when a simulation rather represents general physical phenomena.
+Additional explanation and rationale:: The modeled entity can typically be a system whose development is supported by simulation. There may not be any specific modeled entity when a simulation rather represents general physical phenomena.
 
 === Implementation
 
@@ -244,11 +243,11 @@ Note: As this attribute can have multiple values, some of the examples below cou
 
 * Sensor model is purely object-list driven
 
-* Weather effects are not modelled.
+* Weather effects are not modeled.
 
 * Typical hydraulic fluid is used, the medium is isotropic
 
-* Acausal thermal and electrical modelling with through and accross variables
+* Acausal thermal and electrical modeling with through and across variables
 
 * The car is represented as a single track model
 
@@ -292,7 +291,7 @@ Value entry examples::
 
 ==== Software and hardware environment requirements 
 
-Requirements regarding the software and hardware environment of the model, such as specific tool versions required or hardware required to achieve sufficient perfomance. 
+Requirements regarding the software and hardware environment of the model, such as specific tool versions required or hardware required to achieve sufficient performance. 
 
 Obligation:: Recommended
 
@@ -375,5 +374,4 @@ Value entry examples::
 
 * link Report XS
 
-Additional explanation and rationale:: A Inspecting the reports may help deciding wheather the validation and verification fulfill the expectatioons in detail with respect to the intended usage in a certain use case. Hence, it is recommended to provuide the report if, available.
-
+Additional explanation and rationale:: Inspecting the reports may help deciding whether the validation and verification fulfill the expectations in detail with respect to the intended usage in a certain use case. Hence, it is recommended to provide the report if available.
