@@ -8,13 +8,13 @@ It is normative for any mapping to the SRMD format that uses the specified class
 === Introduction
 
 In the following, an exemplary implementation of the MIC Core standard into the SRMD metadata format will be shown.
-The SRMD (Simulation Resoure Meta Data) metadata format is one of the formats specified in the SSP Traceability specification.
+The SRMD (Simulation Resource Meta Data) metadata format is one of the formats specified in the SSP Traceability specification.
 These formats form part of the Modelica Association Project SSP (System Structuring and Parametrization) provided format specifications.
 The SRMD format allows to specify any metadata or other attributes in the form of key value pairs in an XML-based format.
 The format description also specifies where this metadata file should be stored in an FMU or SSP archive.
 The SSP Traceability specification is a normative reference for this appendix.
 
-=== Maping of MIC Core attributes to the SRMD format
+=== Mapping of MIC Core attributes to the SRMD format
 
 The `type` attribute of the `Classification` element must be specified as `org.mic-core.mic-core`.
 This `Classification` element must only contain `ClassificationEntry` elements with `keyword` attributes from the following table.
@@ -26,9 +26,9 @@ The second column lists the conversion of the attribute names to SRMD classifica
 For easier machine processability, clustering via presented terms separated by a period is used here.
 No spaces are used.
 In column three an abbreviated explanation of the attributes is listed to provide a better overview.
-Note that the abbreviated explanations are not considered a normative part of this specification, and should not be considered to suupercede the normative definitions in the MIC Core specification.
+Note that the abbreviated explanations are not considered a normative part of this specification, and should not be considered to supersede the normative definitions in the MIC Core specification.
 
-[cols="1>m,2^e,7<",width="70%",align="center",frame="topbot",options="header"]
+[cols="1,^2m,17",align="center",frame="topbot",options="header"]
 |===
 | MIC Core Name| SRMD Mapping | Short Explanation
 | Model name | administrative-data.model.name | Human-readable way of referring to the model. Usually short and clear. Not necessarily unique.
@@ -37,7 +37,7 @@ Note that the abbreviated explanations are not considered a normative part of th
 | Model supplier | administrative-data.model.supplier | The responsible body and, if applicable, organizational unit within the body, that is responsible for supplying the model.
 | Model confidentiality level | administrative-data.model.confidentiality-level | Protection level to apply to the model.
 | Legal restriction | administrative-data.legal-restriction | Defines the rules governing the distribution and usage of the simulation model, including licensing,
-| Release | administrative-data.release | Unique identifier, preferably human-readable (i.e. semantically meaningfull), for the release of a particular simulation model.
+| Release | administrative-data.release | Unique identifier, preferably human-readable (i.e. semantically meaningful), for the release of a particular simulation model.
 | Release date | administrative-data.release.date | Date, and possibly time and timezone, of the release of a simulation model. Must respect ISO 8601.
 | Release type| administrative-data.release.type | Relates to the maturity of the model.
 | Model purpose | purpose-objectives.model | Purpose for which the model has been built/validated.

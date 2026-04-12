@@ -10,8 +10,8 @@ For efficient exchange and reuse
 
 Currently there are several standards for model meta data, or they are being developed from several organisations
 
-
-=== What is MIC Core [[what-is-mic-core]]
+[[what-is-mic-core]]
+=== What is MIC Core
 MIC Core is defining a standard of core attributes (key information on simulation models that enables proper useage in the usecases) that other standards can adopt, extend, refine.
 Goal is to have a set of aligned attributes, that means
 
@@ -21,7 +21,7 @@ Goal is to have a set of aligned attributes, that means
 The development of MIC Core was prompted by the Model Identity Card (MIC) (see <<MIC>>) and other metadata standards and the realization that certain core attributes should be standardized across the different metadata standards. 
 
 === Overview
-In the moment existing "standards" for simulation model meta data adress specific use cases, engineering domains or simulation levels like causal, acausal, geometry level, realtime,.... 
+In the moment existing "standards" for simulation model meta data address specific use cases, engineering domains or simulation levels like causal, acausal, geometry level, realtime,.... 
 We want to extract and align the core information from this approaches for
 
 * traceability 
@@ -30,10 +30,10 @@ We want to extract and align the core information from this approaches for
 ** on process information
 ** or how to implement
 
-We are open to future transfer of that specification to an other offical standardization body
+We are open to future transfer of that specification to another official standardization body
 
 * in the moment it is a cooperation of organizations
-* the harmonization activity is result of a long standing cooperation of irt-systemX and prostep ivip, as well as more resent exchanges with other organisations   
+* the harmonization activity is result of a long standing cooperation of irt-systemX and prostep ivip, as well as more recent exchanges with other organizations
      
 === Properties and Guiding Ideas
 The goal of MIC Core is not to have one standard, but to identify and harmonize the overlapping attributes.
@@ -48,9 +48,9 @@ We identified similar attributes in the standards like
 * General information.Name
 * ModelName  
 
-and definded a "Common Attribute Name" *Model Name*. 
+and defined a "Common Attribute Name" *Model Name*. 
 
-The specific attributes differ slightly due to the naming conventions in the different standards. The important point was then the alignment of explanation and interpretation of the attribute name. With that approach a mapping and common understanding is achived. 
+The specific attributes differ slightly due to the naming conventions in the different standards. The important point was then the alignment of explanation and interpretation of the attribute name. With that approach a mapping and common understanding is achieved. 
 
 We introduced three different kinds of attributes: Mandatory, Recommended, Optional.
 
