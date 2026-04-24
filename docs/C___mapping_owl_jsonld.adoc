@@ -1,0 +1,132 @@
+[appendix]
+== Mapping of MIC Core to OWL Ontology and JSON-LD
+
+This appendix is an optional part of the MIC Core specification.
+It provides a formal representation of the MIC Core standard attributes as an OWL ontology, a SHACL shape model for validation, and a JSON-LD context for serialisation.
+These artefacts allow MIC Core metadata to be expressed and exchanged using standard Semantic Web technologies.
+
+=== Introduction
+
+==== Semantic Web Technologies
+
+The Semantic Web stack provides a family of interoperable standards that enable the unambiguous description and exchange of structured data across systems and organisations.
+The key standards used in this appendix are:
+
+* **RDF** (Resource Description Framework) – a graph-based data model in which facts are expressed as subject–predicate–object triples.
+* **OWL** (Web Ontology Language) – an RDF vocabulary for defining classes, properties, and logical constraints, enabling formal machine-readable knowledge representation.
+* **SHACL** (Shapes Constraint Language) – an RDF vocabulary for expressing structural and value constraints on RDF graphs, used here to validate MIC Core metadata.
+* **JSON-LD** (JSON for Linked Data) – a JSON-based serialisation format for RDF that uses a context document to map compact JSON terms to full ontology IRIs.
+
+==== Design Decisions
+
+The MIC Core ontology assigns a single OWL class `mic:SimulationModel` to represent a simulation model.
+All MIC Core attributes are modelled as OWL properties whose domain is `mic:SimulationModel`.
+Attributes with textual or date values use `owl:DatatypeProperty`, while the Verification & Validation Report attribute, which carries an IRI reference, uses `owl:ObjectProperty` with range `mic:Report`.
+
+The ontology namespace is `https://mic-core.org/ontology/mic-core#` with preferred prefix `mic`.
+
+The SRMD keyword mapping from <<Appendix A>> is preserved in the ontology as `skos:mappingRelation` annotations on each property.
+
+=== OWL Ontology
+
+The MIC Core OWL ontology is provided as a Turtle file (`ontology/mic-core.ttl`).
+
+==== Classes
+
+[cols="1m,3",frame="topbot",options="header"]
+|===
+| Class IRI | Description
+| mic:SimulationModel | A simulation model described by MIC Core metadata attributes.
+| mic:Report | A verification or validation report identified by its IRI (e.g. a link to a PDF document).
+|===
+
+==== Properties
+
+The following table lists all ontology properties.
+The obligation and cardinality columns reflect the constraints defined in <<mic-core-attributes>>.
+The SRMD keyword column refers to the mapping defined in <<Appendix A>>.
+
+[cols="2m,1,1,1,3m",align="center",frame="topbot",options="header"]
+|===
+| Property | Property type | Obligation | Cardinality | SRMD keyword
+| mic:modelName | DatatypeProperty (xsd:string) | Mandatory | exactly 1 | administrative-data.model.name
+| mic:modelIdentifier | DatatypeProperty (xsd:string) | Recommended | 0..1 | administrative-data.model.identifier
+| mic:modelDescription | DatatypeProperty (xsd:string) | Recommended | 0..1 | administrative-data.model.description
+| mic:modelSupplier | DatatypeProperty (xsd:string) | Mandatory | exactly 1 | administrative-data.model.supplier
+| mic:modelConfidentialityLevel | DatatypeProperty (xsd:string) | Mandatory | exactly 1 | administrative-data.model.confidentiality-level
+| mic:legalRestriction | DatatypeProperty (xsd:string) | Optional | 0..* | administrative-data.legal-restriction
+| mic:release | DatatypeProperty (xsd:string) | Mandatory | exactly 1 | administrative-data.release
+| mic:releaseDate | DatatypeProperty (xsd:date) | Recommended | 0..1 | administrative-data.release.date
+| mic:releaseType | DatatypeProperty (xsd:string) | Recommended | 0..1 | administrative-data.release.type
+| mic:modelPurpose | DatatypeProperty (xsd:string) | Recommended | 0..1 | purpose-objectives.model
+| mic:modelledEntity | DatatypeProperty (xsd:string) | Recommended | 0..1 | subject-information.modelled-entity
+| mic:modelingChoice | DatatypeProperty (xsd:string) | Recommended | 0..* | implementation.modeling-choice
+| mic:modelLimitations | DatatypeProperty (xsd:string) | Recommended | 0..* | implementation.model.limitations
+| mic:modelClassification | DatatypeProperty (xsd:string) | Recommended | 0..* | implementation.model.classification
+| mic:softwareHardwareEnvironmentRequirements | DatatypeProperty (xsd:string) | Recommended | 0..* | implementation.software-hardware-environment-requirements
+| mic:verificationStatus | DatatypeProperty (xsd:string) | Recommended | 0..1 | verification-validation.verification-status
+| mic:validationStatus | DatatypeProperty (xsd:string) | Recommended | 0..1 | verification-validation.validation-status
+| mic:verificationValidationProcedureAndCriteria | DatatypeProperty (xsd:string) | Recommended | 0..* | verification-validation.procedure-criteria
+| mic:verificationValidationReport | ObjectProperty (mic:Report) | Recommended | 0..* | verification-validation.report
+|===
+
+==== Ontology Source
+
+[source,turtle]
+----
+include::../ontology/mic-core.ttl[]
+----
+
+=== SHACL Shape Model
+
+The MIC Core SHACL shape model is provided as a Turtle file (`ontology/mic-core-shacl.ttl`).
+It defines a `sh:NodeShape` targeting `mic:SimulationModel` instances and validates the cardinality and datatype of every MIC Core property.
+
+The SHACL constraint severity follows the MIC Core obligation levels:
+
+* `sh:Violation` – constraint on a Mandatory attribute.  Conforming data MUST satisfy these constraints.
+* `sh:Warning` – constraint on a Recommended attribute.  Conforming data SHOULD satisfy these constraints.
+* `sh:Info` – constraint on an Optional attribute.  No cardinality is enforced; the shape serves as documentation only.
+
+==== SHACL Source
+
+[source,turtle]
+----
+include::../ontology/mic-core-shacl.ttl[]
+----
+
+=== JSON-LD Mapping
+
+JSON-LD uses a context document to map compact JSON terms to their full IRI counterparts, enabling interoperability with the RDF data model.
+The MIC Core JSON-LD context (`ontology/mic-core-context.jsonld`) provides the following mapping:
+
+* The JSON key `"@type": "SimulationModel"` expands to `mic:SimulationModel`.
+* All attribute keys expand to the corresponding `mic:` property IRI.
+* Single-value attributes are represented as plain JSON values.
+* Multi-value attributes use `"@container": "@set"`, so they are always represented as a JSON array even when only one value is present.
+* The `releaseDate` attribute is typed as `xsd:date`.
+* The `verificationValidationReport` attribute is typed as `"@type": "@id"`, meaning each value is an IRI.  Report resources may carry a `"label"` key (mapping to `rdfs:label`) for a human-readable name.
+
+==== JSON-LD Context Source
+
+[source,json]
+----
+include::../ontology/mic-core-context.jsonld[]
+----
+
+=== Example in JSON-LD Syntax
+
+The following example is semantically equivalent to the SRMD example shown in <<Appendix A>>.
+It uses the MIC Core JSON-LD context and represents the same simulation model metadata.
+
+[source,json]
+----
+include::../examples/MICCoreExample.jsonld[]
+----
+
+The example illustrates:
+
+* Single-value mandatory attributes (`modelName`, `modelSupplier`, `modelConfidentialityLevel`, `release`) appearing as plain JSON strings.
+* The `releaseDate` attribute as an `xsd:date`-typed value.
+* Multi-value attributes (`modelClassification`, `modelLimitations`, `modelingChoice`, `softwareHardwareEnvironmentRequirements`, `verificationValidationProcedureAndCriteria`) appearing as JSON arrays.
+* Two verification/validation reports referenced by IRI, each carrying a human-readable `label`.

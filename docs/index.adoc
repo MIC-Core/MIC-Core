@@ -27,3 +27,5 @@ include::4___literature.adoc[]
 include::A___mapping_srmd.adoc[]
 
 include::B___mapping_lotar.adoc[]
+
+include::C___mapping_owl_jsonld.adoc[]

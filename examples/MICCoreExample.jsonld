@@ -1,0 +1,36 @@
+{
+  "@context": "https://mic-core.org/ontology/mic-core-context.jsonld",
+  "@type": "SimulationModel",
+  "@id": "urn:example:MyModel",
+  "modelName": "MyModel",
+  "modelIdentifier": "MyModel",
+  "modelDescription": "Model of something",
+  "modelSupplier": "PMSF",
+  "release": "1.0.0",
+  "releaseDate": "2023-11-11",
+  "releaseType": "Final",
+  "modelConfidentialityLevel": "0: public",
+  "modelledEntity": "Entity",
+  "modelPurpose": "Initial",
+  "modelClassification": ["Physics"],
+  "modelLimitations": ["Ignores quantum effects"],
+  "modelingChoice": ["Modeling Choice"],
+  "softwareHardwareEnvironmentRequirements": ["Requirements"],
+  "verificationStatus": "Status",
+  "validationStatus": "Validated",
+  "verificationValidationProcedureAndCriteria": [
+    "Fullfills all requirements and is valid within 5% of real world part over operating range"
+  ],
+  "verificationValidationReport": [
+    {
+      "@id": "VerificationReport.pdf",
+      "@type": "Report",
+      "label": "Verification Report"
+    },
+    {
+      "@id": "ValidationReport.pdf",
+      "@type": "Report",
+      "label": "Validation Report"
+    }
+  ]
+}

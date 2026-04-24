@@ -1,0 +1,97 @@
+{
+  "@context": {
+    "mic": "https://mic-core.org/ontology/mic-core#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "SimulationModel": "mic:SimulationModel",
+    "Report": "mic:Report",
+
+    "modelName": {
+      "@id": "mic:modelName",
+      "@type": "xsd:string"
+    },
+    "modelIdentifier": {
+      "@id": "mic:modelIdentifier",
+      "@type": "xsd:string"
+    },
+    "modelDescription": {
+      "@id": "mic:modelDescription",
+      "@type": "xsd:string"
+    },
+    "modelSupplier": {
+      "@id": "mic:modelSupplier",
+      "@type": "xsd:string"
+    },
+    "modelConfidentialityLevel": {
+      "@id": "mic:modelConfidentialityLevel",
+      "@type": "xsd:string"
+    },
+    "legalRestriction": {
+      "@id": "mic:legalRestriction",
+      "@type": "xsd:string",
+      "@container": "@set"
+    },
+    "release": {
+      "@id": "mic:release",
+      "@type": "xsd:string"
+    },
+    "releaseDate": {
+      "@id": "mic:releaseDate",
+      "@type": "xsd:date"
+    },
+    "releaseType": {
+      "@id": "mic:releaseType",
+      "@type": "xsd:string"
+    },
+    "modelPurpose": {
+      "@id": "mic:modelPurpose",
+      "@type": "xsd:string"
+    },
+    "modelledEntity": {
+      "@id": "mic:modelledEntity",
+      "@type": "xsd:string"
+    },
+    "modelingChoice": {
+      "@id": "mic:modelingChoice",
+      "@type": "xsd:string",
+      "@container": "@set"
+    },
+    "modelLimitations": {
+      "@id": "mic:modelLimitations",
+      "@type": "xsd:string",
+      "@container": "@set"
+    },
+    "modelClassification": {
+      "@id": "mic:modelClassification",
+      "@type": "xsd:string",
+      "@container": "@set"
+    },
+    "softwareHardwareEnvironmentRequirements": {
+      "@id": "mic:softwareHardwareEnvironmentRequirements",
+      "@type": "xsd:string",
+      "@container": "@set"
+    },
+    "verificationStatus": {
+      "@id": "mic:verificationStatus",
+      "@type": "xsd:string"
+    },
+    "validationStatus": {
+      "@id": "mic:validationStatus",
+      "@type": "xsd:string"
+    },
+    "verificationValidationProcedureAndCriteria": {
+      "@id": "mic:verificationValidationProcedureAndCriteria",
+      "@type": "xsd:string",
+      "@container": "@set"
+    },
+    "verificationValidationReport": {
+      "@id": "mic:verificationValidationReport",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "label": "rdfs:label"
+  }
+}
