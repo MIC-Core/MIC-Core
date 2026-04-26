@@ -1,0 +1,229 @@
+@prefix mic:   <https://mic-core.org/ontology/mic-core#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+
+# ---------------------------------------------------------------------------
+# Ontology declaration
+# ---------------------------------------------------------------------------
+
+<https://mic-core.org/ontology/mic-core>
+    a owl:Ontology ;
+    rdfs:label "MIC Core Ontology"@en ;
+    rdfs:comment "OWL ontology for the Model Identity Card (MIC) Core specification. It defines the set of harmonised simulation-model metadata attributes agreed upon by IRT SystemX and prostep ivip."@en ;
+    dcterms:title "MIC Core Ontology"@en ;
+    dcterms:description "This ontology formalises the MIC Core attribute set so that simulation model metadata can be expressed, exchanged and validated in standard Semantic-Web formats (RDF/OWL, SHACL, JSON-LD)."@en ;
+    dcterms:creator "IRT SystemX and prostep ivip" ;
+    dcterms:rights "Copyright (C) 2022-2025 IRT SystemX and 2022-2025 prostep ivip." ;
+    vann:preferredNamespacePrefix "mic" ;
+    vann:preferredNamespaceUri "https://mic-core.org/ontology/mic-core#" ;
+    owl:versionInfo "1.0" .
+
+# ---------------------------------------------------------------------------
+# Classes
+# ---------------------------------------------------------------------------
+
+mic:SimulationModel
+    a owl:Class ;
+    rdfs:label "Simulation Model"@en ;
+    rdfs:comment "A simulation model described by MIC Core metadata attributes."@en .
+
+mic:Report
+    a owl:Class ;
+    rdfs:label "Report"@en ;
+    rdfs:comment "A verification or validation report referenced from a simulation model. Instances are identified by their IRI (e.g. a link to a PDF document)."@en .
+
+# ---------------------------------------------------------------------------
+# Administrative Data properties
+# ---------------------------------------------------------------------------
+
+mic:modelName
+    a owl:DatatypeProperty ;
+    rdfs:label "model name"@en ;
+    rdfs:comment "Human-readable way of referring to the model. Usually short and clear. Not necessarily unique. To be distinguished from the model identifier and file name."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative-data.model.name"@en .
+
+mic:modelIdentifier
+    a owl:DatatypeProperty ;
+    rdfs:label "model identifier"@en ;
+    rdfs:comment "Unique identifier for the model. Possibly only locally unique within a given IT system. The syntax and interpretation are open to the implementer (URI, UUID, path, ...)."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative-data.model.identifier"@en .
+
+mic:modelDescription
+    a owl:DatatypeProperty ;
+    rdfs:label "model description"@en ;
+    rdfs:comment "Human-readable, textual, general overview. Highlights important information about the model."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative-data.model.description"@en .
+
+mic:modelSupplier
+    a owl:DatatypeProperty ;
+    rdfs:label "model supplier"@en ;
+    rdfs:comment "The responsible body and, if applicable, the organisational unit within the body, that is responsible for supplying the model."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative-data.model.supplier"@en .
+
+mic:modelConfidentialityLevel
+    a owl:DatatypeProperty ;
+    rdfs:label "model confidentiality level"@en ;
+    rdfs:comment "Protection level to apply to the model. Recommended values: '0: public', '1: internal', '2: confidential', '3: strictly confidential'."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative-data.model.confidentiality-level"@en .
+
+mic:legalRestriction
+    a owl:DatatypeProperty ;
+    rdfs:label "legal restriction"@en ;
+    rdfs:comment "Rules governing the distribution and usage of the simulation model, including licensing (royalties, right to modify, related contracts, ...)."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Optional. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative-data.legal-restriction"@en .
+
+mic:release
+    a owl:DatatypeProperty ;
+    rdfs:label "release"@en ;
+    rdfs:comment "Unique identifier, preferably human-readable, for the release of a particular simulation model."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Mandatory. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative-data.release"@en .
+
+mic:releaseDate
+    a owl:DatatypeProperty ;
+    rdfs:label "release date"@en ;
+    rdfs:comment "Date, and possibly time and timezone, of the release of a simulation model. Must respect ISO 8601."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:date ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative-data.release.date"@en .
+
+mic:releaseType
+    a owl:DatatypeProperty ;
+    rdfs:label "release type"@en ;
+    rdfs:comment "Relates to the maturity of the model (e.g. pre-release, production release). Fixed at the time of release."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: administrative-data.release.type"@en .
+
+# ---------------------------------------------------------------------------
+# Purpose and Objectives properties
+# ---------------------------------------------------------------------------
+
+mic:modelPurpose
+    a owl:DatatypeProperty ;
+    rdfs:label "model purpose"@en ;
+    rdfs:comment "Purpose for which the model has been built/validated. Free textual field for short human-readable description."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: purpose-objectives.model"@en .
+
+# ---------------------------------------------------------------------------
+# Subject Information properties
+# ---------------------------------------------------------------------------
+
+mic:modelledEntity
+    a owl:DatatypeProperty ;
+    rdfs:label "modelled entity"@en ;
+    rdfs:comment "Name or description of the object represented by the simulation model."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: subject-information.modelled-entity"@en .
+
+# ---------------------------------------------------------------------------
+# Implementation properties
+# ---------------------------------------------------------------------------
+
+mic:modelingChoice
+    a owl:DatatypeProperty ;
+    rdfs:label "modeling choice"@en ;
+    rdfs:comment "Explanation of the modeling choices, assumptions or simplifications made during the implementation of the model."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.modeling-choice"@en .
+
+mic:modelLimitations
+    a owl:DatatypeProperty ;
+    rdfs:label "model limitations"@en ;
+    rdfs:comment "Restrictions on the use of the model. Especially important if not self-evident to a user."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.model.limitations"@en .
+
+mic:modelClassification
+    a owl:DatatypeProperty ;
+    rdfs:label "model classification"@en ;
+    rdfs:comment "Keyword-based classification of the model in terms of physics, engineering or implementation. Recommended to use reverse-domain notation prefix to reference a scheme."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.model.classification"@en .
+
+mic:softwareHardwareEnvironmentRequirements
+    a owl:DatatypeProperty ;
+    rdfs:label "software and hardware environment requirements"@en ;
+    rdfs:comment "Requirements regarding the software and hardware environment of the model, such as specific tool versions or hardware required."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: implementation.software-hardware-environment-requirements"@en .
+
+# ---------------------------------------------------------------------------
+# Verification and Validation properties
+# ---------------------------------------------------------------------------
+
+mic:verificationStatus
+    a owl:DatatypeProperty ;
+    rdfs:label "verification status"@en ;
+    rdfs:comment "Indicates whether a given verification procedure has been followed to successfully reach verification criteria."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: verification-validation.verification-status"@en .
+
+mic:validationStatus
+    a owl:DatatypeProperty ;
+    rdfs:label "validation status"@en ;
+    rdfs:comment "Indicates whether a given validation procedure has been followed to successfully reach validation criteria."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Single value."@en ;
+    skos:mappingRelation "SRMD classification keyword: verification-validation.validation-status"@en .
+
+mic:verificationValidationProcedureAndCriteria
+    a owl:DatatypeProperty ;
+    rdfs:label "verification and validation procedure and criteria"@en ;
+    rdfs:comment "Steps and methods followed as well as criteria to reach. Verification and validation can be covered together or separately."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range xsd:string ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: verification-validation.procedure-criteria"@en .
+
+mic:verificationValidationReport
+    a owl:ObjectProperty ;
+    rdfs:label "verification and validation report"@en ;
+    rdfs:comment "Report describing the results of verification and/or validation. The value is a resource identified by its IRI (e.g. a link to a PDF). A human-readable label may be provided via rdfs:label on the report resource."@en ;
+    rdfs:domain mic:SimulationModel ;
+    rdfs:range mic:Report ;
+    skos:note "Obligation: Recommended. Multiple values allowed."@en ;
+    skos:mappingRelation "SRMD classification keyword: verification-validation.report"@en .

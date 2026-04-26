@@ -1,0 +1,266 @@
+@prefix mic:   <https://mic-core.org/ontology/mic-core#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# ---------------------------------------------------------------------------
+# SHACL Shapes for the MIC Core Ontology
+# ---------------------------------------------------------------------------
+#
+# Constraint severity mapping:
+#   sh:Violation  ->  Mandatory attributes (must be present for conformance)
+#   sh:Warning    ->  Recommended attributes (should be present)
+#   (Optional attributes are not constrained by minCount)
+#
+# sh:maxCount 1 is set for single-value attributes.
+# Multi-value attributes do not carry an sh:maxCount constraint.
+# ---------------------------------------------------------------------------
+
+<https://mic-core.org/ontology/mic-core-shacl>
+    a owl:Ontology ;
+    rdfs:label "MIC Core SHACL Shapes"@en ;
+    rdfs:comment "SHACL node and property shapes for validating simulation model metadata against the MIC Core specification."@en ;
+    dcterms:creator "IRT SystemX and prostep ivip" ;
+    owl:imports <https://mic-core.org/ontology/mic-core> ;
+    owl:versionInfo "1.0" .
+
+# ---------------------------------------------------------------------------
+# SimulationModel shape
+# ---------------------------------------------------------------------------
+
+mic:SimulationModelShape
+    a sh:NodeShape ;
+    sh:targetClass mic:SimulationModel ;
+    rdfs:label "SimulationModel Shape"@en ;
+    rdfs:comment "Validates that a mic:SimulationModel instance carries all required MIC Core metadata attributes."@en ;
+
+    # -----------------------------------------------------------------------
+    # Administrative Data - Mandatory
+    # -----------------------------------------------------------------------
+
+    sh:property [
+        sh:path mic:modelName ;
+        sh:name "model name" ;
+        sh:description "Human-readable way of referring to the model." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "mic:modelName is mandatory and must appear exactly once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path mic:modelSupplier ;
+        sh:name "model supplier" ;
+        sh:description "The responsible body supplying the model." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "mic:modelSupplier is mandatory and must appear exactly once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path mic:modelConfidentialityLevel ;
+        sh:name "model confidentiality level" ;
+        sh:description "Protection level to apply to the model." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "mic:modelConfidentialityLevel is mandatory and must appear exactly once."@en ;
+    ] ;
+
+    sh:property [
+        sh:path mic:release ;
+        sh:name "release" ;
+        sh:description "Unique identifier for the release of the simulation model." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "mic:release is mandatory and must appear exactly once."@en ;
+    ] ;
+
+    # -----------------------------------------------------------------------
+    # Administrative Data - Recommended (single value)
+    # -----------------------------------------------------------------------
+
+    sh:property [
+        sh:path mic:modelIdentifier ;
+        sh:name "model identifier" ;
+        sh:description "Unique identifier for the model." ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "mic:modelIdentifier is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path mic:modelDescription ;
+        sh:name "model description" ;
+        sh:description "Human-readable general overview of the model." ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "mic:modelDescription is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path mic:releaseDate ;
+        sh:name "release date" ;
+        sh:description "Date of the release of the simulation model (ISO 8601)." ;
+        sh:datatype xsd:date ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "mic:releaseDate is recommended and must be an xsd:date value."@en ;
+    ] ;
+
+    sh:property [
+        sh:path mic:releaseType ;
+        sh:name "release type" ;
+        sh:description "Maturity of the model release." ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "mic:releaseType is recommended."@en ;
+    ] ;
+
+    # -----------------------------------------------------------------------
+    # Administrative Data - Optional (no minCount constraint)
+    # -----------------------------------------------------------------------
+
+    sh:property [
+        sh:path mic:legalRestriction ;
+        sh:name "legal restriction" ;
+        sh:description "Rules governing the distribution and usage of the model." ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Info ;
+        sh:message "mic:legalRestriction is optional."@en ;
+    ] ;
+
+    # -----------------------------------------------------------------------
+    # Purpose and Objectives - Recommended
+    # -----------------------------------------------------------------------
+
+    sh:property [
+        sh:path mic:modelPurpose ;
+        sh:name "model purpose" ;
+        sh:description "Purpose for which the model has been built/validated." ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "mic:modelPurpose is recommended."@en ;
+    ] ;
+
+    # -----------------------------------------------------------------------
+    # Subject Information - Recommended
+    # -----------------------------------------------------------------------
+
+    sh:property [
+        sh:path mic:modelledEntity ;
+        sh:name "modelled entity" ;
+        sh:description "Name or description of the object represented by the model." ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "mic:modelledEntity is recommended."@en ;
+    ] ;
+
+    # -----------------------------------------------------------------------
+    # Implementation - Recommended (multi-value)
+    # -----------------------------------------------------------------------
+
+    sh:property [
+        sh:path mic:modelingChoice ;
+        sh:name "modeling choice" ;
+        sh:description "Explanation of modeling choices, assumptions or simplifications." ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "mic:modelingChoice is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path mic:modelLimitations ;
+        sh:name "model limitations" ;
+        sh:description "Restrictions on the use of the model." ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "mic:modelLimitations is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path mic:modelClassification ;
+        sh:name "model classification" ;
+        sh:description "Keyword-based classification of the model." ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "mic:modelClassification is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path mic:softwareHardwareEnvironmentRequirements ;
+        sh:name "software and hardware environment requirements" ;
+        sh:description "Requirements regarding the software and hardware environment." ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "mic:softwareHardwareEnvironmentRequirements is recommended."@en ;
+    ] ;
+
+    # -----------------------------------------------------------------------
+    # Verification and Validation - Recommended
+    # -----------------------------------------------------------------------
+
+    sh:property [
+        sh:path mic:verificationStatus ;
+        sh:name "verification status" ;
+        sh:description "Whether a verification procedure has been successfully followed." ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "mic:verificationStatus is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path mic:validationStatus ;
+        sh:name "validation status" ;
+        sh:description "Whether a validation procedure has been successfully followed." ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "mic:validationStatus is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path mic:verificationValidationProcedureAndCriteria ;
+        sh:name "verification and validation procedure and criteria" ;
+        sh:description "Steps, methods, and criteria for verification and/or validation." ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message "mic:verificationValidationProcedureAndCriteria is recommended."@en ;
+    ] ;
+
+    sh:property [
+        sh:path mic:verificationValidationReport ;
+        sh:name "verification and validation report" ;
+        sh:description "Report(s) describing verification and/or validation results." ;
+        sh:class mic:Report ;
+        sh:nodeKind sh:IRI ;
+        sh:severity sh:Warning ;
+        sh:message "mic:verificationValidationReport is recommended and must reference a mic:Report by IRI."@en ;
+    ] .
+
+# ---------------------------------------------------------------------------
+# Report shape
+# ---------------------------------------------------------------------------
+
+mic:ReportShape
+    a sh:NodeShape ;
+    sh:targetClass mic:Report ;
+    rdfs:label "Report Shape"@en ;
+    rdfs:comment "Validates that a mic:Report instance is identified by an IRI."@en ;
+
+    sh:nodeKind sh:IRI .

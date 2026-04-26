@@ -68,6 +68,41 @@ jobs:
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       uses: actions/upload-pages-artifact@v4
 
+  check-examples:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v6
+
+    - name: Inline JSON-LD context for local validation
+      run: |
+        python3 - <<'EOF'
+        import json
+        with open('ontology/mic-core-context.jsonld') as f:
+            ctx = json.load(f)['@context']
+        with open('examples/MICCoreExample.jsonld') as f:
+            data = json.load(f)
+        data['@context'] = ctx
+        with open('/tmp/MICCoreExample-inlined.jsonld', 'w') as f:
+            json.dump(data, f, indent=2)
+        EOF
+
+    - name: Validate JSON-LD example against SHACL shapes
+      run: |
+        docker run --rm \
+          -v "$(pwd)/ontology:/ontology" \
+          -v "/tmp:/tmp" \
+          docker.io/ashleysommer/pyshacl:latest \
+          poetry run pyshacl \
+          -s /ontology/mic-core-shacl.ttl \
+          -e /ontology/mic-core.ttl \
+          -df json-ld \
+          --allow-warnings \
+          /tmp/MICCoreExample-inlined.jsonld
+
   publish-html:
     needs: generate-html
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
