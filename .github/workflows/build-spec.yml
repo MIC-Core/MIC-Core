@@ -96,7 +96,7 @@ jobs:
           -v "$(pwd)/ontology:/ontology" \
           -v "/tmp:/tmp" \
           docker.io/ashleysommer/pyshacl:latest \
-          pyshacl \
+          poetry run pyshacl \
           -s /ontology/mic-core-shacl.ttl \
           -e /ontology/mic-core.ttl \
           -df json-ld \
